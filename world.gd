@@ -11,4 +11,20 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	icon.rotate(delta * 6)
-	anticrist_3.rotate(delta * -6)
+	anticrist_3.rotate(delta * -1)
+	anticrist_3.position.x += delta*300
+	anticrist_3.position.x += delta*300
+	anticrist_3.position.x += delta*300
+	anticrist_3.position.x += delta*300
+	anticrist_3.position.y -= delta*300
+	anticrist_3.position.y -= delta*300
+	anticrist_3.position.y -= delta*300
+	anticrist_3.position.y -= delta*300
+	anticrist_3.position.x -= delta*300
+	anticrist_3.position.x -= delta*300
+	anticrist_3.position.x -= delta*300
+	anticrist_3.position.x -= delta*300
+	anticrist_3.position.y += delta*300
+	anticrist_3.position.y += delta*300
+	anticrist_3.position.y += delta*300
+	anticrist_3.position.y += delta*300
