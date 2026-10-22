@@ -3,6 +3,7 @@ extends Node2D
 @onready var icon: Sprite2D = $christ
 @onready var anticrist_3: Sprite2D = $anticrist/anticrist2/anticrist3
 @onready var anticrist2: Sprite2D = $anticrist/anticrist2
+@onready var anticrist1: Sprite2D = $anticrist
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -17,4 +18,5 @@ func _process(delta: float) -> void:
 	anticrist_3.position.x -= delta*9999
 	anticrist_3.position.y += delta*9999
 	anticrist2.position.x += delta*9
-	anticrist2.position.y -= delta*9
+	anticrist2.position.y += delta*9
+	anticrist1.rotate(delta+99)
