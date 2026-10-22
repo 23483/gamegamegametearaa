@@ -1,12 +1,13 @@
 extends Node2D
 
+
 @onready var icon: Sprite2D = $christ
 @onready var anticrist_3: Sprite2D = $anticrist/anticrist2/anticrist3
 @onready var anticrist2: Sprite2D = $anticrist/anticrist2
 @onready var anticrist1: Sprite2D = $anticrist
 @onready var Icon22: Sprite2D = $Icon22
 @onready var icon33: Sprite2D = $icon33
-@onready var nope: Sprite2D = $nope
+@onready var nope: CharacterBody2D = $nope
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -25,14 +26,11 @@ func _process(delta: float) -> void:
 	anticrist1.rotate(delta*2)
 
 	if Input.is_action_pressed("ui_jump"):
-		nope.position.y -= delta*20
+		nope.position.y -= delta*50
 	if Input.is_action_pressed("left"):
-		nope.position.x -=delta*20
+		nope.position.x -=delta*50
 	if Input.is_action_pressed("right"):
-		nope.position.x += delta*20
+		nope.position.x += delta*50
 	if Input.is_action_pressed("down"):
-		nope.position.y += delta*20
-	
-
-	
+		nope.position.y += delta*50
 	

@@ -2,6 +2,20 @@
 
 [ext_resource type="Script" uid="uid://cqu7pt68rj2am" path="res://the assets/world.gd" id="1_7o8ph"]
 [ext_resource type="Texture2D" uid="uid://ba2510k2p4n28" path="res://the assets/icon.svg" id="2_lx3ct"]
+[ext_resource type="Script" uid="uid://d17xecw84sgo4" path="res://the assets/nope.gd" id="3_lx3ct"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_evk7e"]
+load_path = "res://.godot/imported/icon.svg-e052b7d90af666ea18bdcb4932291504.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_311yx"]
+size = Vector2(145.03752, 242)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxej4"]
+atlas = ExtResource("2_lx3ct")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lx3ct"]
+radius = 59.0
+height = 118.0
 
 [node name="World" type="Node2D" unique_id=492060198]
 script = ExtResource("1_7o8ph")
@@ -33,6 +47,25 @@ position = Vector2(-404.00003, -444.87805)
 scale = Vector2(5.3199725, 4.5973954)
 texture = ExtResource("2_lx3ct")
 
-[node name="nope" type="Sprite2D" parent="." unique_id=1567071863]
-position = Vector2(376, 264)
-texture = ExtResource("2_lx3ct")
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=8968005]
+position = Vector2(2177.5007, 768)
+scale = Vector2(9.156251, 1)
+
+[node name="wall" type="Sprite2D" parent="StaticBody2D" unique_id=2076096369]
+position = Vector2(-176.00005, -184)
+texture = SubResource("CompressedTexture2D_evk7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=481666635]
+position = Vector2(-169.66559, -128)
+shape = SubResource("RectangleShape2D_311yx")
+
+[node name="nope" type="CharacterBody2D" parent="." unique_id=225389506]
+script = ExtResource("3_lx3ct")
+
+[node name="Sprite2D" type="Sprite2D" parent="nope" unique_id=1336374816]
+position = Vector2(175, 186)
+texture = SubResource("AtlasTexture_jxej4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nope" unique_id=1721742724]
+position = Vector2(167, 183)
+shape = SubResource("CapsuleShape2D_lx3ct")
