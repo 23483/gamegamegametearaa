@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://f6lfri1uthvi"]
+
+[ext_resource type="Script" uid="uid://cqu7pt68rj2am" path="res://the assets/world.gd" id="1_7o8ph"]
+[ext_resource type="Texture2D" uid="uid://ba2510k2p4n28" path="res://the assets/icon.svg" id="2_lx3ct"]
+
+[node name="World" type="Node2D" unique_id=492060198]
+script = ExtResource("1_7o8ph")
+
+[node name="christ" type="Sprite2D" parent="." unique_id=1218916339]
+position = Vector2(470, 160)
+texture = ExtResource("2_lx3ct")
+
+[node name="anticrist" type="Sprite2D" parent="." unique_id=346813076]
+position = Vector2(531, 333)
+scale = Vector2(0.484375, 0.484375)
+texture = ExtResource("2_lx3ct")
+
+[node name="anticrist2" type="Sprite2D" parent="anticrist" unique_id=1524330872]
+position = Vector2(389, -3)
+texture = ExtResource("2_lx3ct")
+
+[node name="anticrist3" type="Sprite2D" parent="anticrist/anticrist2" unique_id=409951582]
+position = Vector2(-233, -6)
+texture = ExtResource("2_lx3ct")
+
+[node name="Icon22" type="Sprite2D" parent="." unique_id=963756833]
+position = Vector2(309, 406.5)
+scale = Vector2(0.24999999, 0.32031253)
+texture = ExtResource("2_lx3ct")
+
+[node name="icon33" type="Sprite2D" parent="Icon22" unique_id=1055841382]
+position = Vector2(-404.00003, -444.87805)
+scale = Vector2(5.3199725, 4.5973954)
+texture = ExtResource("2_lx3ct")
+
+[node name="nope" type="Sprite2D" parent="." unique_id=1567071863]
+position = Vector2(376, 264)
+texture = ExtResource("2_lx3ct")
