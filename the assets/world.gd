@@ -25,9 +25,13 @@ func _process(delta: float) -> void:
 	anticrist1.rotate(delta*2)
 
 	if Input.is_action_pressed("ui_jump"):
-		nope.position.y += delta*10
-	
-	
+		nope.position.y -= delta*20
+	if Input.is_action_pressed("left"):
+		nope.position.x -=delta*20
+	if Input.is_action_pressed("right"):
+		nope.position.x += delta*20
+	if Input.is_action_pressed("down"):
+		nope.position.y += delta*20
 	
 
 	
