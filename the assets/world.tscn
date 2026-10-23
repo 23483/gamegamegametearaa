@@ -4,11 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://ba2510k2p4n28" path="res://the assets/icon.svg" id="2_lx3ct"]
 [ext_resource type="Script" uid="uid://d17xecw84sgo4" path="res://the assets/nope.gd" id="3_lx3ct"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrrg6"]
+size = Vector2(120, 120)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_evk7e"]
 load_path = "res://.godot/imported/icon.svg-e052b7d90af666ea18bdcb4932291504.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_311yx"]
-size = Vector2(145.03752, 242)
+size = Vector2(152.51877, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jxej4"]
 atlas = ExtResource("2_lx3ct")
@@ -17,11 +20,25 @@ atlas = ExtResource("2_lx3ct")
 radius = 59.0
 height = 118.0
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lx3ct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxej4"]
+size = Vector2(50.19111, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3towl"]
+size = Vector2(120, 128.00003)
+
 [node name="World" type="Node2D" unique_id=492060198]
 script = ExtResource("1_7o8ph")
 
-[node name="christ" type="Sprite2D" parent="." unique_id=1218916339]
-position = Vector2(470, 160)
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=2001703611]
+position = Vector2(468, 156)
+
+[node name="inconthingy" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1382321909]
+shape = SubResource("RectangleShape2D_wrrg6")
+
+[node name="christ" type="Sprite2D" parent="StaticBody2D5" unique_id=1218916339]
+position = Vector2(2, 4)
 texture = ExtResource("2_lx3ct")
 
 [node name="anticrist" type="Sprite2D" parent="." unique_id=346813076]
@@ -38,12 +55,12 @@ position = Vector2(-233, -6)
 texture = ExtResource("2_lx3ct")
 
 [node name="Icon22" type="Sprite2D" parent="." unique_id=963756833]
-position = Vector2(309, 406.5)
+position = Vector2(304, 383.99997)
 scale = Vector2(0.24999999, 0.32031253)
 texture = ExtResource("2_lx3ct")
 
 [node name="icon33" type="Sprite2D" parent="Icon22" unique_id=1055841382]
-position = Vector2(-404.00003, -444.87805)
+position = Vector2(-96.00003, -524.4876)
 scale = Vector2(5.3199725, 4.5973954)
 texture = ExtResource("2_lx3ct")
 
@@ -56,16 +73,46 @@ position = Vector2(-176.00005, -184)
 texture = SubResource("CompressedTexture2D_evk7e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=481666635]
-position = Vector2(-169.66559, -128)
+position = Vector2(-168.79187, -184)
 shape = SubResource("RectangleShape2D_311yx")
 
 [node name="nope" type="CharacterBody2D" parent="." unique_id=225389506]
 script = ExtResource("3_lx3ct")
 
 [node name="Sprite2D" type="Sprite2D" parent="nope" unique_id=1336374816]
-position = Vector2(175, 186)
+position = Vector2(120, 360)
 texture = SubResource("AtlasTexture_jxej4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nope" unique_id=1721742724]
-position = Vector2(167, 183)
+position = Vector2(120, 360)
 shape = SubResource("CapsuleShape2D_lx3ct")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1331006545]
+position = Vector2(632, 584)
+scale = Vector2(9.156251, 1)
+physics_material_override = SubResource("PhysicsMaterial_lx3ct")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=380101296]
+position = Vector2(1048, 352)
+scale = Vector2(3.625, 1)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D3" unique_id=335141440]
+position = Vector2(28.689636, 96)
+texture = ExtResource("2_lx3ct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=381067683]
+position = Vector2(29.301758, 96)
+scale = Vector2(2.5258622, 1)
+shape = SubResource("RectangleShape2D_jxej4")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1752766898]
+
+[node name="plat" type="Sprite2D" parent="StaticBody2D4" unique_id=1902429578]
+position = Vector2(856, 216)
+scale = Vector2(2.75, 0.4375)
+texture = ExtResource("2_lx3ct")
+
+[node name="platf" type="CollisionShape2D" parent="StaticBody2D4" unique_id=177482152]
+position = Vector2(856.00006, 216)
+scale = Vector2(2.75, 0.4375)
+shape = SubResource("RectangleShape2D_3towl")
