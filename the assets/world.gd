@@ -11,7 +11,7 @@ extends Node2D
 @onready var nope: CharacterBody2D = $nope
 @onready var platee: Sprite2D = $StaticBody2D4/plat
 @onready var platf: CollisionShape2D = $StaticBody2D4/platf
-
+@onready var p2: CharacterBody2D = $p2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,9 +36,16 @@ func _process(delta: float) -> void:
 	platee.rotate(delta*2)
 	platf.rotate(delta*2)
 
-	if Input.is_action_pressed("ui_jump"):
+	if Input.is_action_pressed("p1jump"):
 		nope.position.y -= delta*90
 	if Input.is_action_pressed("left"):
 		nope.position.x -=delta*150
 	if Input.is_action_pressed("right"):
 		nope.position.x += delta*150
+	
+	if Input.is_action_pressed("p2jump"):
+		p2.position.y -= delta*90
+	if Input.is_action_pressed("p2left"):
+		p2.position.x -=delta*150
+	if Input.is_action_pressed("p2right"):
+		p2.position.x += delta*150
