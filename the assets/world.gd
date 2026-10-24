@@ -47,3 +47,7 @@ func _process(delta: float) -> void:
 		p2.position.x -=delta*150
 	if Input.is_action_pressed("p2right"):
 		p2.position.x += delta*150
+
+
+func _on_spikes_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

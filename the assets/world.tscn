@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://d30iyjhurdvan" path="res://the assets/watergirl.jpg" id="14_mihkp"]
 [ext_resource type="Script" uid="uid://bwgjobg8r5iak" path="res://camera.gd" id="16_ro3bi"]
 [ext_resource type="Texture2D" uid="uid://c6ryycery1uos" path="res://the assets/images.jpg" id="17_1on4i"]
+[ext_resource type="Texture2D" uid="uid://b3828a71bjfml" path="res://the assets/gCJMjc.png" id="19_6xr1h"]
+[ext_resource type="Script" uid="uid://cevofepgq8xyy" path="res://spike.gd" id="19_crjw8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrrg6"]
 size = Vector2(120, 120)
@@ -56,6 +58,10 @@ size = Vector2(840, 1968)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pa1jj"]
 size = Vector2(842, 1816)
 
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_140hh"]
+custom_solver_bias = 1.0
+points = PackedVector2Array(24, 32, -24, 32, 0, -8)
+
 [node name="World" type="Node2D" unique_id=492060198]
 script = ExtResource("1_7o8ph")
 
@@ -66,7 +72,7 @@ position = Vector2(468, 156)
 shape = SubResource("RectangleShape2D_wrrg6")
 
 [node name="christ" type="Sprite2D" parent="StaticBody2D5" unique_id=311197202]
-position = Vector2(156, -76)
+position = Vector2(4, 4)
 scale = Vector2(0.18630573, 0.18630573)
 texture = ExtResource("2_blbh7")
 
@@ -76,7 +82,7 @@ scale = Vector2(0.020073596, 0.03723397)
 texture = ExtResource("3_4absh")
 
 [node name="icon33" type="Sprite2D" parent="Icon22" unique_id=1024137373]
-position = Vector2(-887.63965, -1435.6367)
+position = Vector2(-1025.2041, -1477.1445)
 scale = Vector2(1.7541492, 1.2951121)
 texture = ExtResource("3_fk81r")
 
@@ -96,12 +102,12 @@ shape = SubResource("RectangleShape2D_311yx")
 script = ExtResource("3_lx3ct")
 
 [node name="Sprite2D" type="Sprite2D" parent="nope" unique_id=1336374816]
-position = Vector2(232, 456)
+position = Vector2(200, 464)
 scale = Vector2(0.2499999, 0.2500002)
 texture = SubResource("AtlasTexture_jxej4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nope" unique_id=1721742724]
-position = Vector2(232, 456)
+position = Vector2(200, 464)
 shape = SubResource("CapsuleShape2D_lx3ct")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1331006545]
@@ -400,7 +406,7 @@ scale = Vector2(1.0000008, 1)
 shape = SubResource("RectangleShape2D_pv3gu")
 
 [node name="Plank19" type="Sprite2D" parent="StaticBody2D10" unique_id=486610704]
-position = Vector2(4117.333, -8428.57)
+position = Vector2(4111.992, -8428.566)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
@@ -555,6 +561,21 @@ scale = Vector2(1.7897092, 4.3847876)
 texture = ExtResource("17_1on4i")
 
 [node name="Imawallges2" type="Sprite2D" parent="." unique_id=267857900]
-position = Vector2(1552.25, -460.25003)
+position = Vector2(1549.2501, -460.25003)
 scale = Vector2(1.7885907, 4.383669)
 texture = ExtResource("17_1on4i")
+
+[node name="spikes" type="Area2D" parent="." unique_id=1718985038]
+position = Vector2(-600, 736)
+script = ExtResource("19_crjw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes" unique_id=420230774]
+position = Vector2(1080.255, -336.75)
+shape = SubResource("ConvexPolygonShape2D_140hh")
+
+[node name="spike" type="Sprite2D" parent="spikes" unique_id=459908037]
+position = Vector2(1080.255, -328.75003)
+scale = Vector2(0.15399992, 0.18600024)
+texture = ExtResource("19_6xr1h")
+
+[connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
