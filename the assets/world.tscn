@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://bqg6mbx6gjiux" path="res://p2.gd" id="14_g23vd"]
 [ext_resource type="Texture2D" uid="uid://d30iyjhurdvan" path="res://the assets/watergirl.jpg" id="14_mihkp"]
 [ext_resource type="Script" uid="uid://bwgjobg8r5iak" path="res://camera.gd" id="16_ro3bi"]
+[ext_resource type="Texture2D" uid="uid://c6ryycery1uos" path="res://the assets/images.jpg" id="17_1on4i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrrg6"]
 size = Vector2(120, 120)
@@ -142,8 +143,8 @@ position = Vector2(-136.93515, -4)
 shape = SubResource("RectangleShape2D_311yx")
 
 [node name="HandOnGrass" type="Sprite2D" parent="." unique_id=48045530]
-position = Vector2(576, 656)
-scale = Vector2(1.2866666, 0.34649682)
+position = Vector2(574.3075, 800.00006)
+scale = Vector2(1.4987183, 0.7133758)
 texture = ExtResource("4_evk7e")
 
 [node name="Box" type="Sprite2D" parent="." unique_id=1380621761]
@@ -245,3 +246,13 @@ zoom = Vector2(2, 2)
 script = ExtResource("16_ro3bi")
 nope = NodePath("../nope")
 p2 = NodePath("../p2")
+
+[node name="wall" type="Sprite2D" parent="." unique_id=260062168]
+position = Vector2(-400, 21.369827)
+scale = Vector2(1.7897092, 2.2310076)
+texture = ExtResource("17_1on4i")
+
+[node name="Imawallges2" type="Sprite2D" parent="." unique_id=267857900]
+position = Vector2(1552.25, 41.84494)
+scale = Vector2(1.7885907, 2.1371589)
+texture = ExtResource("17_1on4i")
