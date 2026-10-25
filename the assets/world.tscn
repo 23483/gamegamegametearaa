@@ -58,9 +58,8 @@ size = Vector2(840, 1968)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pa1jj"]
 size = Vector2(842, 1816)
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_140hh"]
-custom_solver_bias = 1.0
-points = PackedVector2Array(24, 32, -24, 32, 0, -8)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crjw8"]
+size = Vector2(32.00003, 42.75)
 
 [node name="World" type="Node2D" unique_id=492060198]
 script = ExtResource("1_7o8ph")
@@ -98,7 +97,7 @@ texture = SubResource("CompressedTexture2D_evk7e")
 position = Vector2(-168.79187, -211.21875)
 shape = SubResource("RectangleShape2D_311yx")
 
-[node name="nope" type="CharacterBody2D" parent="." unique_id=225389506]
+[node name="nope" type="CharacterBody2D" parent="." unique_id=225389506 groups=["players"]]
 script = ExtResource("3_lx3ct")
 
 [node name="Sprite2D" type="Sprite2D" parent="nope" unique_id=1336374816]
@@ -521,7 +520,24 @@ offset_bottom = 289.0
 text = "wad for godo guy
 arrows for watergirl"
 
-[node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828]
+[node name="Label3" type="Label" parent="Label/Label/Label/Label" unique_id=758192678]
+layout_mode = 0
+offset_left = 312.0
+offset_top = -872.0
+offset_right = 652.0
+offset_bottom = -823.0
+text = "wad for godo guy
+arrows for watergirl"
+
+[node name="Label2" type="Label" parent="Label/Label/Label/Label" unique_id=2022276988]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 248.0
+offset_right = 852.0
+offset_bottom = 297.0
+text = "spike>>>"
+
+[node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828 groups=["players"]]
 script = ExtResource("14_g23vd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="p2" unique_id=148011182]
@@ -549,7 +565,7 @@ shape = SubResource("RectangleShape2D_pa1jj")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2018529889 node_paths=PackedStringArray("nope", "p2")]
 position = Vector2(264, 416)
 scale = Vector2(0.2852349, 0.2852349)
-offset = Vector2(225, 400)
+offset = Vector2(225, 600)
 zoom = Vector2(2, 2)
 script = ExtResource("16_ro3bi")
 nope = NodePath("../nope")
@@ -565,16 +581,27 @@ position = Vector2(1549.2501, -460.25003)
 scale = Vector2(1.7885907, 4.383669)
 texture = ExtResource("17_1on4i")
 
-[node name="spikes" type="Area2D" parent="." unique_id=1718985038]
+[node name="spikes" type="Area2D" parent="." unique_id=1718985038 node_paths=PackedStringArray("p2", "nope")]
 position = Vector2(-600, 736)
 script = ExtResource("19_crjw8")
+p2 = NodePath("../p2")
+nope = NodePath("../nope")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes" unique_id=420230774]
-position = Vector2(1080.255, -336.75)
-shape = SubResource("ConvexPolygonShape2D_140hh")
+position = Vector2(1272.0001, -235.37497)
+shape = SubResource("RectangleShape2D_crjw8")
 
 [node name="spike" type="Sprite2D" parent="spikes" unique_id=459908037]
-position = Vector2(1080.255, -328.75003)
+position = Vector2(1272.2549, -238.75)
+scale = Vector2(0.15399992, 0.18600024)
+texture = ExtResource("19_6xr1h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="spikes" unique_id=1013559634]
+position = Vector2(1352.0002, -829.3749)
+shape = SubResource("RectangleShape2D_crjw8")
+
+[node name="spike2" type="Sprite2D" parent="spikes" unique_id=70256857]
+position = Vector2(1352.255, -832.75)
 scale = Vector2(0.15399992, 0.18600024)
 texture = ExtResource("19_6xr1h")
 

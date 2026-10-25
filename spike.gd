@@ -1,16 +1,25 @@
 extends Area2D
 
-@onready var p2: CharacterBody2D = $p2
-@onready var nope: CharacterBody2D = $nope
+func _ready() -> void:
+	print("SPIKE SCRIPT IS RUNNING")
+	
+func _process(_delta: float) -> void:
+	for body in get_overlapping_bodies():
+		if body.is_in_group("players"):
+			get_tree().call_group("players", "respawn")
 
-@export var nopespawn: Vector2 = Vector2(200, 50)
+@export var p2: CharacterBody2D 
+@export var nope: CharacterBody2D
+
 @export var p2spawn: Vector2 = Vector2(150, 50)
+@export var nopespawn: Vector2 = Vector2(200, 50)
 
-func _on_body_entered(body: Node2D) -> void:
-	if body == p2:
-		body.global_position = p2spawn
-		body.velocity = Vector2.ZERO
+func _on_spikes_body_entered(body: Node2D) -> void:
+	print("SPIKES DETECTED: ", body.name)
+	if body == p2 or body == nope:
+		p2.global_position = p2spawn
+		p2.velocity = Vector2.ZERO
 
-	elif body == nope:
-		body.global_position = nopespawn
-		body.velocity = Vector2.ZERO
+		nope.global_position = nopespawn
+		nope.velocity = Vector2.ZERO
+	

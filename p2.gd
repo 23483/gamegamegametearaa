@@ -23,3 +23,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func respawn() -> void:
+	global_position = Vector2(150, 50)
+	velocity = Vector2.ZERO

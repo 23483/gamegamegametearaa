@@ -13,6 +13,8 @@ extends Node2D
 @onready var platf: CollisionShape2D = $StaticBody2D4/platf
 @onready var p2: CharacterBody2D = $p2
 
+@onready var Maxdistance: float = 1150
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -23,7 +25,12 @@ func _process(delta: float) -> void:
 	icon.rotate(delta * 6)
 	iconthingy.rotate(delta * 6)
 	anticrist_3.rotate(delta * -2)
-
+	
+	var distance = p2.global_position.distance_to(nope.global_position)
+	
+	if distance > Maxdistance:
+		get_tree().call_group("players", "respawn")
+	
 	anticrist_3.position.x -= delta*10
 	anticrist_3.position.y += delta*14
 	anticrist2.position.x += delta*15
@@ -47,7 +54,10 @@ func _process(delta: float) -> void:
 		p2.position.x -=delta*150
 	if Input.is_action_pressed("p2right"):
 		p2.position.x += delta*150
-
+	
+	
 
 func _on_spikes_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+	
+	
