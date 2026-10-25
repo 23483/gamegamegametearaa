@@ -61,3 +61,7 @@ func _on_spikes_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
 	
 	
+
+
+func _on_button_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
