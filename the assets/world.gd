@@ -15,13 +15,18 @@ extends Node2D
 
 @onready var Maxdistance: float = 1150
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+
+	
 	icon.rotate(delta * 6)
 	iconthingy.rotate(delta * 6)
 	anticrist_3.rotate(delta * -2)
@@ -43,8 +48,10 @@ func _process(delta: float) -> void:
 
 	platee.rotate(delta*2)
 	platf.rotate(delta*2)
-
-
+	
+	if Input.is_action_pressed("pause"):
+			get_tree().change_scene_to_file("res://main_menu.tscn")
+		
 	if Input.is_action_pressed("left"):
 		nope.position.x -=delta*150
 	if Input.is_action_pressed("right"):

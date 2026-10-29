@@ -556,6 +556,14 @@ offset_right = 852.0
 offset_bottom = 297.0
 text = "spike>>>"
 
+[node name="Label" type="Label" parent="Label/Label/Label/Label/Label2" unique_id=1850094493]
+layout_mode = 0
+offset_left = -480.0
+offset_top = -88.0
+offset_right = -268.0
+offset_bottom = -65.0
+text = "esc to return to main menu"
+
 [node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828 groups=["players"]]
 script = ExtResource("14_g23vd")
 
@@ -671,7 +679,7 @@ offset_bottom = -1393.0
 text = "if u missed the arrow 
 you can ust jump there"
 
-[node name="Lefrarrow2" type="Sprite2D" parent="StaticBody2D11" unique_id=1875829669]
+[node name="Lefrarrow2" type="Sprite2D" parent="." unique_id=1875829669]
 position = Vector2(176, -1048.0001)
 scale = Vector2(0.23850018, 0.09450018)
 texture = ExtResource("23_b0b1p")

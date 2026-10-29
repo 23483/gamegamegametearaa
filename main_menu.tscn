@@ -39,4 +39,24 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 35
 text = "play"
 
+[node name="Buttquiton" type="Button" parent="." unique_id=770253463]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 552.0
+offset_top = 432.0
+offset_right = 599.0
+offset_bottom = 464.0
+text = "quit"
+
+[node name="controls" type="Button" parent="." unique_id=918245797]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 360.0
+offset_right = 646.0
+offset_bottom = 410.0
+theme_override_font_sizes/font_size = 30
+text = "controls"
+
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttquiton" to="." method="_on_buttquiton_pressed"]
+[connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]
