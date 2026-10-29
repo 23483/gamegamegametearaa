@@ -30,6 +30,7 @@ func _process(delta: float) -> void:
 	
 	if distance > Maxdistance:
 		get_tree().call_group("players", "respawn")
+		$"../CanvasLayer/reset counter".count()
 	
 	anticrist_3.position.x -= delta*10
 	anticrist_3.position.y += delta*14

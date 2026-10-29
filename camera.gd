@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 	var distance = nope.global_position.distance_to(
 		p2.global_position
 	)
-	
+
 	var target_zoom = clamp(
 		zoom_margin / max(distance, 1.0),
 		min_zoom,
