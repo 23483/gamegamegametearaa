@@ -24,12 +24,14 @@
 [ext_resource type="Texture2D" uid="uid://b2bgp1nk5bmmy" path="res://the assets/button.png" id="21_52qn2"]
 [ext_resource type="Texture2D" uid="uid://cqgyc1s2qqyqp" path="res://the assets/lefrarrow.jpg" id="23_b0b1p"]
 [ext_resource type="Texture2D" uid="uid://d2ipxwgeec0pt" path="res://the assets/secret tunnal.webp" id="24_6s4dr"]
+[ext_resource type="Script" uid="uid://b6dwjcnsn138b" path="res://the assets/finish.gd" id="24_hnih1"]
+[ext_resource type="Texture2D" uid="uid://h26ti88iyj4d" path="res://the assets/Happy_Wheels_finish_line.webp" id="24_x0745"]
 [ext_resource type="Script" uid="uid://dijsri427k3h" path="res://the assets/label_4.gd" id="25_ltu8i"]
 [ext_resource type="Script" uid="uid://83gfs41bexok" path="res://the assets/dethtime.gd" id="26_apaj2"]
 [ext_resource type="Script" uid="uid://dtkwdrisea788" path="res://the assets/reset_counter.gd" id="27_gqeht"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrrg6"]
-size = Vector2(120, 120)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqeht"]
+size = Vector2(112, 112)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_evk7e"]
 load_path = "res://.godot/imported/icon.svg-e052b7d90af666ea18bdcb4932291504.ctex"
@@ -74,6 +76,9 @@ size = Vector2(32.00003, 42.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0gdhc"]
 size = Vector2(609.5215, 761.9043)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wy6cu"]
+size = Vector2(533.375, 502.875)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqbdg"]
 size = Vector2(998, 98)
 
@@ -87,12 +92,14 @@ size = Vector2(418.94562, 447.5952)
 script = ExtResource("1_7o8ph")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=2001703611]
-position = Vector2(468, 156)
+position = Vector2(440, 152)
 
 [node name="inconthingy" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1382321909]
-shape = SubResource("RectangleShape2D_wrrg6")
+position = Vector2(36, -4)
+shape = SubResource("RectangleShape2D_gqeht")
 
 [node name="christ" type="Sprite2D" parent="StaticBody2D5" unique_id=311197202]
+position = Vector2(36, -4)
 scale = Vector2(0.18630573, 0.18630573)
 texture = ExtResource("2_blbh7")
 
@@ -530,7 +537,7 @@ offset_top = -248.0
 offset_right = -1010.0
 offset_bottom = -199.0
 text = "platformss^
-this one is also the end "
+"
 
 [node name="Label" type="Label" parent="Label/Label/Label/Label" unique_id=1768926648]
 layout_mode = 0
@@ -684,6 +691,19 @@ position = Vector2(176, -1048.0001)
 scale = Vector2(0.23850018, 0.09450018)
 texture = ExtResource("23_b0b1p")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=604129013 node_paths=PackedStringArray("game_timer")]
+script = ExtResource("24_hnih1")
+game_timer = NodePath("../CanvasLayer/Label4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1310296449]
+position = Vector2(-1720, -1272)
+shape = SubResource("RectangleShape2D_wy6cu")
+
+[node name="HappyWheelsFinishLine" type="Sprite2D" parent="Area2D" unique_id=714826731]
+position = Vector2(-1624, -1152)
+scale = Vector2(0.7763636, 1)
+texture = ExtResource("24_x0745")
+
 [node name="SecretTunnal" type="Sprite2D" parent="." unique_id=2067390827]
 position = Vector2(56, -1120)
 scale = Vector2(0.20133331, 0.20133333)
@@ -774,3 +794,4 @@ script = ExtResource("27_gqeht")
 
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="button" to="." method="_on_button_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

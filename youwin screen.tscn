@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cr8cude0qohfh"]
+
+[ext_resource type="Script" uid="uid://dqu12t80swsfo" path="res://youwin_screen.gd" id="1_x0d1o"]
+
+[node name="Control" type="Control" unique_id=796004929]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x0d1o")
+
+[node name="main" type="Button" parent="." unique_id=616380880]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 264.0
+offset_right = 625.0
+offset_bottom = 295.0
+text = "main menu"
+
+[node name="again" type="Button" parent="." unique_id=1109723421]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -15.5
+offset_right = 43.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "play again"
+
+[node name="Buttonquit3" type="Button" parent="." unique_id=1260127515]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 392.0
+offset_right = 599.0
+offset_bottom = 423.0
+text = "quit"
+
+[node name="Label" type="Label" parent="." unique_id=899700880]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 96.0
+offset_right = 722.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 58
+text = "you win!!!"
+
+[node name="time" type="Label" parent="." unique_id=2023417394]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 200.0
+offset_right = 624.0
+offset_bottom = 248.0
+
+[connection signal="pressed" from="main" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="again" to="." method="_on_again_pressed"]
+[connection signal="pressed" from="Buttonquit3" to="." method="_on_buttonquit_3_pressed"]
