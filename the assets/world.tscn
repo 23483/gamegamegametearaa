@@ -108,8 +108,9 @@ b = Vector2(-3368, -1072)
 [node name="World" type="Node2D" unique_id=492060198]
 script = ExtResource("1_7o8ph")
 
-[node name="colti" parent="." unique_id=951929805 instance=ExtResource("30_u7lg5")]
+[node name="colti" parent="." unique_id=951929805 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
 position = Vector2(-536, 608)
+core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="Coree2" type="Sprite2D" parent="colti" unique_id=430006293]
 position = Vector2(322.75003, -133.25003)
@@ -121,8 +122,9 @@ position = Vector2(322.75003, -133.25003)
 scale = Vector2(0.12499998, 0.12499998)
 shape = SubResource("CircleShape2D_jxej4")
 
-[node name="colecti" parent="." unique_id=1469408676 instance=ExtResource("30_u7lg5")]
+[node name="colecti" parent="." unique_id=1469408676 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
 position = Vector2(624, 240)
+core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="colecti" unique_id=91689385]
 position = Vector2(-456, -144)
@@ -699,7 +701,7 @@ nope = NodePath("../nope")
 p2 = NodePath("../p2")
 
 [node name="wall" type="Sprite2D" parent="." unique_id=260062168]
-position = Vector2(-400, -459.99994)
+position = Vector2(-399.99997, -456)
 scale = Vector2(1.7897092, 4.3847876)
 texture = ExtResource("17_1on4i")
 
@@ -902,8 +904,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("30_enybu")
 
-[node name="Area2D2" parent="." unique_id=845624437 instance=ExtResource("30_u7lg5")]
+[node name="Area2D2" parent="." unique_id=845624437 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
 position = Vector2(424, -376)
+core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=146699271]
 position = Vector2(-2036, -1052.0002)
@@ -973,6 +976,11 @@ scale = Vector2(0.7745688, 1.2928447)
 skew = -0.026653886
 texture = ExtResource("23_b0b1p")
 
+[node name="Area2D8" parent="StaticBody2D10" unique_id=284876762 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
+position = Vector2(2325.331, 2485.7153)
+scale = Vector2(5.3333273, 7.1428556)
+core_counter = NodePath("../../CanvasLayer/cores")
+
 [node name="Lefrarrow2" type="Sprite2D" parent="StaticBody2D10" unique_id=68080739]
 position = Vector2(-1248.427, 731.3259)
 rotation = 1.6079042
@@ -1037,11 +1045,13 @@ shape = SubResource("RectangleShape2D_ymn70")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=1168963157]
 shape = SubResource("SegmentShape2D_jxej4")
 
-[node name="Area2D6" parent="." unique_id=1171919665 instance=ExtResource("30_u7lg5")]
+[node name="Area2D6" parent="." unique_id=1171919665 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
 position = Vector2(-1064, -1704)
+core_counter = NodePath("../CanvasLayer/cores")
 
-[node name="Area2D7" parent="." unique_id=1704332022 instance=ExtResource("30_u7lg5")]
+[node name="Area2D7" parent="." unique_id=1704332022 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
 position = Vector2(1136, -1672)
+core_counter = NodePath("../CanvasLayer/cores")
 
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="button" to="." method="_on_button_body_entered"]
