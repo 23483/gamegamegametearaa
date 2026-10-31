@@ -73,7 +73,7 @@ radius = 56.094116
 height = 112.18823
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr60s"]
-size = Vector2(840, 1464)
+size = Vector2(840, 2192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_140hh"]
 size = Vector2(800, 304)
@@ -91,7 +91,7 @@ size = Vector2(609.5215, 761.9043)
 size = Vector2(533.375, 502.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqbdg"]
-size = Vector2(2051, 98)
+size = Vector2(2151, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_db4e7"]
 size = Vector2(448.87036, 447.5952)
@@ -103,8 +103,8 @@ size = Vector2(418.94562, 447.5952)
 size = Vector2(853.33203, 711.1113)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jxej4"]
-a = Vector2(-904, 728)
-b = Vector2(-3368, -1072)
+a = Vector2(-892, 1352)
+b = Vector2(-3372, -1088)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m80ji"]
 texture = ExtResource("4_evk7e")
@@ -9475,17 +9475,17 @@ position = Vector2(-536, 608)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="Coree2" type="Sprite2D" parent="colti" unique_id=430006293]
-position = Vector2(322.75003, -133.25003)
+position = Vector2(378.75, -157.25)
 scale = Vector2(0.12499998, 0.12499998)
 texture = ExtResource("31_enybu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="colti" unique_id=1645650596]
-position = Vector2(322.75003, -133.25003)
+position = Vector2(378.75, -157.25)
 scale = Vector2(0.12499998, 0.12499998)
 shape = SubResource("CircleShape2D_jxej4")
 
 [node name="colecti" parent="." unique_id=1469408676 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
-position = Vector2(624, 240)
+position = Vector2(644, -544)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="colecti" unique_id=91689385]
@@ -9499,7 +9499,7 @@ scale = Vector2(0.11, 0.11)
 texture = ExtResource("31_enybu")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=2001703611]
-position = Vector2(440, 152)
+position = Vector2(460, -632)
 
 [node name="inconthingy" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1382321909]
 position = Vector2(36, -4)
@@ -9511,7 +9511,7 @@ scale = Vector2(0.18630573, 0.18630573)
 texture = ExtResource("2_blbh7")
 
 [node name="Icon22" type="Sprite2D" parent="." unique_id=1477481585]
-position = Vector2(364.57953, 454.99997)
+position = Vector2(384.57953, -328.99997)
 scale = Vector2(0.020073596, 0.03723397)
 texture = ExtResource("3_4absh")
 
@@ -9529,19 +9529,20 @@ position = Vector2(-176.00005, -184)
 texture = SubResource("CompressedTexture2D_evk7e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=481666635]
-position = Vector2(-180.6997, -223.60938)
+position = Vector2(-179.38576, -231)
 shape = SubResource("RectangleShape2D_311yx")
 
 [node name="nope" type="CharacterBody2D" parent="." unique_id=225389506 groups=["players"]]
+position = Vector2(20, -784)
 script = ExtResource("3_lx3ct")
 
 [node name="Sprite2D" type="Sprite2D" parent="nope" unique_id=1336374816]
-position = Vector2(200, 440)
+position = Vector2(260, 1200)
 scale = Vector2(0.2499999, 0.2500002)
 texture = SubResource("AtlasTexture_jxej4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nope" unique_id=1721742724]
-position = Vector2(200, 440)
+position = Vector2(260, 1200)
 shape = SubResource("CapsuleShape2D_lx3ct")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1331006545]
@@ -9550,7 +9551,7 @@ scale = Vector2(9.156251, 1)
 physics_material_override = SubResource("PhysicsMaterial_lx3ct")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=380101296]
-position = Vector2(1048, 352)
+position = Vector2(1068, -432)
 scale = Vector2(3.625, 1)
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D3" unique_id=335141440]
@@ -9563,6 +9564,7 @@ scale = Vector2(2.5258622, 1)
 shape = SubResource("RectangleShape2D_jxej4")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1752766898]
+position = Vector2(20, -784)
 
 [node name="plat" type="Sprite2D" parent="StaticBody2D4" unique_id=11442629]
 position = Vector2(904, 303.99997)
@@ -9575,7 +9577,7 @@ scale = Vector2(2.75, 0.4375)
 shape = SubResource("RectangleShape2D_3towl")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=2143524641]
-position = Vector2(280, 184)
+position = Vector2(300, -600)
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D6" unique_id=1203273441]
 position = Vector2(-156, 0)
@@ -9587,7 +9589,7 @@ position = Vector2(-144, -16)
 shape = SubResource("RectangleShape2D_311yx")
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=958671413]
-position = Vector2(56.00003, 40)
+position = Vector2(76.00003, -744)
 scale = Vector2(0.18750003, 0.14000002)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=550191851]
@@ -9601,7 +9603,7 @@ scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
 [node name="all the platforms" type="StaticBody2D" parent="." unique_id=1428731223]
-position = Vector2(56.00003, 40)
+position = Vector2(76.00003, -744)
 scale = Vector2(0.18750003, 0.14000002)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="all the platforms" unique_id=536420170]
@@ -9920,12 +9922,12 @@ scale = Vector2(1.4987183, 0.7133758)
 texture = ExtResource("4_evk7e")
 
 [node name="Box" type="Sprite2D" parent="." unique_id=1380621761]
-position = Vector2(1040, 452)
+position = Vector2(1060, -332)
 scale = Vector2(0.5625, 0.265625)
 texture = ExtResource("6_fk81r")
 
 [node name="anticrist" type="Sprite2D" parent="." unique_id=1758437297]
-position = Vector2(568, 408)
+position = Vector2(588, -376)
 scale = Vector2(0.17000005, 0.22368434)
 texture = ExtResource("8_qv3g5")
 
@@ -9940,16 +9942,17 @@ scale = Vector2(0.6057563, 0.6057563)
 texture = ExtResource("10_23e7i")
 
 [node name="Flag" type="Sprite2D" parent="." unique_id=909812100]
-position = Vector2(140, 182)
+position = Vector2(160, -602)
 scale = Vector2(1.5497382, 0.22727273)
 texture = ExtResource("13_mihkp")
 
 [node name="Label" type="Label" parent="." unique_id=49819788]
-offset_left = 416.0
-offset_top = 216.0
-offset_right = 509.0
-offset_bottom = 239.0
+offset_left = 436.0
+offset_top = -568.0
+offset_right = 529.0
+offset_bottom = -545.0
 text = "platformss^"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Label" unique_id=208336341]
 layout_mode = 0
@@ -9958,6 +9961,7 @@ offset_top = 24.0
 offset_right = 501.0
 offset_bottom = 47.0
 text = "platformss^"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Label/Label" unique_id=648787420]
 layout_mode = 0
@@ -9966,6 +9970,7 @@ offset_top = 216.0
 offset_right = 509.0
 offset_bottom = 239.0
 text = "platformss^"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Label/Label/Label" unique_id=1306495541]
 layout_mode = 0
@@ -9975,6 +9980,7 @@ offset_right = -1010.0
 offset_bottom = -199.0
 text = "platformss^
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Label/Label/Label/Label" unique_id=1768926648]
 layout_mode = 0
@@ -9984,6 +9990,7 @@ offset_right = 580.0
 offset_bottom = 305.0
 text = "wad for godo guy
 arrows for watergirl"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="Label/Label/Label/Label" unique_id=758192678]
 layout_mode = 0
@@ -9991,30 +9998,37 @@ offset_top = -1040.0
 offset_right = 340.0
 offset_bottom = -991.0
 text = "hehe u cant go this way"
+metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="Label/Label/Label/Label" unique_id=2022276988]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 248.0
-offset_right = 852.0
-offset_bottom = 297.0
-text = "spike>>>"
-
-[node name="Label" type="Label" parent="Label/Label/Label/Label/Label2" unique_id=1850094493]
-layout_mode = 0
-offset_left = -480.0
-offset_top = -88.0
-offset_right = -268.0
-offset_bottom = -65.0
-text = "esc to return to main menu"
+[node name="Label4" type="Label" parent="Label" unique_id=2022276988]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7311828
+anchor_top = 34.782608
+anchor_right = 0.7311828
+anchor_bottom = 34.782608
+offset_left = 144.0
+offset_top = 240.0
+offset_right = 484.0
+offset_bottom = 289.0
+text = "spike>>>
+(dont touch)"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="Label" unique_id=1476973977]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 8.652535
+anchor_top = 49.073296
+anchor_right = 8.652535
+anchor_bottom = 50.20373
 offset_left = -256.6858
 offset_top = -96.68576
 offset_right = -24.685791
 offset_bottom = -73.68576
-text = "^ these are collectible \"cores\" "
+text = "cores>>>
+(do touch)"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="Label" unique_id=1621133604]
 layout_mode = 0
@@ -10023,24 +10037,27 @@ offset_top = -2234.5
 offset_right = -2522.5
 offset_bottom = -2178.5
 text = "have you collected all the cores?"
+metadata/_edit_use_anchors_ = true
 
 [node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828 groups=["players"]]
+position = Vector2(20, -784)
 script = ExtResource("14_g23vd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="p2" unique_id=148011182]
-position = Vector2(160, 440)
+position = Vector2(140, 1199.75)
 scale = Vector2(0.2852349, 0.2852349)
 shape = SubResource("CapsuleShape2D_jxej4")
 
 [node name="Watergirl" type="Sprite2D" parent="p2" unique_id=646846608]
-position = Vector2(159.75, 440)
+position = Vector2(139.75, 1199.75)
 scale = Vector2(0.070469804, 0.070469804)
 texture = ExtResource("14_mihkp")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=1086870962]
+position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1661275362]
-position = Vector2(-420, -284)
+position = Vector2(-420, 80)
 shape = SubResource("RectangleShape2D_wr60s")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D7" unique_id=2005801869]
@@ -10048,13 +10065,14 @@ position = Vector2(-400, -1288)
 shape = SubResource("RectangleShape2D_140hh")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=606835633]
+position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=1843977273]
 position = Vector2(1571, -524)
 shape = SubResource("RectangleShape2D_pa1jj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2018529889 node_paths=PackedStringArray("nope", "p2")]
-position = Vector2(72, -232)
+position = Vector2(88, -240)
 scale = Vector2(0.2852349, 0.2852349)
 offset = Vector2(225, 600)
 zoom = Vector2(2, 2)
@@ -10063,12 +10081,12 @@ nope = NodePath("../nope")
 p2 = NodePath("../p2")
 
 [node name="wall" type="Sprite2D" parent="." unique_id=260062168]
-position = Vector2(-399.99997, -456)
-scale = Vector2(1.7897092, 4.3847876)
+position = Vector2(-373.99997, -851)
+scale = Vector2(1.7897092, 6.1342273)
 texture = ExtResource("17_1on4i")
 
 [node name="Imawallges2" type="Sprite2D" parent="." unique_id=267857900]
-position = Vector2(1549.2501, -460.25003)
+position = Vector2(1569.2501, -1244.25)
 scale = Vector2(1.7885907, 4.383669)
 texture = ExtResource("17_1on4i")
 
@@ -10079,33 +10097,34 @@ p2 = NodePath("../p2")
 nope = NodePath("../nope")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes" unique_id=420230774]
-position = Vector2(1272.0001, -235.37497)
+position = Vector2(1408, -240)
 shape = SubResource("RectangleShape2D_crjw8")
 
 [node name="spike" type="Sprite2D" parent="spikes" unique_id=459908037]
-position = Vector2(1272.2549, -238.75)
+position = Vector2(1408, -240)
 scale = Vector2(0.15399992, 0.18600024)
 texture = ExtResource("19_6xr1h")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="spikes" unique_id=1013559634]
-position = Vector2(1352.0002, -829.3749)
+position = Vector2(1372.0002, -1613.3749)
 shape = SubResource("RectangleShape2D_crjw8")
 
 [node name="spike2" type="Sprite2D" parent="spikes" unique_id=70256857]
-position = Vector2(1352.255, -832.75)
+position = Vector2(1372.255, -1616.75)
 scale = Vector2(0.15399992, 0.18600024)
 texture = ExtResource("19_6xr1h")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="spikes" unique_id=708819725]
-position = Vector2(1496.0002, -1413.3749)
+position = Vector2(1516.0002, -2197.375)
 shape = SubResource("RectangleShape2D_crjw8")
 
 [node name="spike3" type="Sprite2D" parent="spikes" unique_id=1812590487]
-position = Vector2(1496.255, -1416.75)
+position = Vector2(1516.255, -2200.75)
 scale = Vector2(0.15399992, 0.18600024)
 texture = ExtResource("19_6xr1h")
 
 [node name="button" type="Area2D" parent="." unique_id=107692488 node_paths=PackedStringArray("platform")]
+position = Vector2(20, -784)
 script = ExtResource("21_3b6by")
 platform = NodePath("../StaticBody2D11")
 
@@ -10120,6 +10139,7 @@ scale = Vector2(0.05250005, 0.05250005)
 texture = ExtResource("21_52qn2")
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="." unique_id=757394473]
+position = Vector2(20, -784)
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="StaticBody2D11" unique_id=446095830]
 position = Vector2(1432, -1480)
@@ -10138,13 +10158,15 @@ offset_right = 2507.0
 offset_bottom = -1393.0
 text = "if u missed the arrow 
 you can ust jump there"
+metadata/_edit_use_anchors_ = true
 
 [node name="Lefrarrow2" type="Sprite2D" parent="." unique_id=1875829669]
-position = Vector2(176, -1048.0001)
+position = Vector2(196, -1832.0001)
 scale = Vector2(0.23850018, 0.09450018)
 texture = ExtResource("23_b0b1p")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=604129013 node_paths=PackedStringArray("game_timer")]
+position = Vector2(20, -784)
 script = ExtResource("24_hnih1")
 game_timer = NodePath("../CanvasLayer/Label4")
 
@@ -10158,19 +10180,20 @@ scale = Vector2(0.7763636, 1)
 texture = ExtResource("24_x0745")
 
 [node name="SecretTunnal" type="Sprite2D" parent="." unique_id=2067390827]
-position = Vector2(56, -1120)
+position = Vector2(76, -1904)
 scale = Vector2(0.20133331, 0.20133333)
 texture = ExtResource("24_6s4dr")
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=64922307]
+position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12" unique_id=1485962114]
-position = Vector2(-1822.5, -969)
+position = Vector2(-1872.5, -969)
 shape = SubResource("RectangleShape2D_lqbdg")
 
 [node name="Plank" type="Sprite2D" parent="StaticBody2D12" unique_id=344430709]
-position = Vector2(-1824, -968)
-scale = Vector2(3.2, 0.26)
+position = Vector2(-1874, -968)
+scale = Vector2(3.3562498, 0.26)
 texture = ExtResource("8_8qoub")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D12" unique_id=1376198817]
@@ -10183,6 +10206,7 @@ scale = Vector2(3.2, 0.26)
 texture = ExtResource("8_8qoub")
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="." unique_id=259368608]
+position = Vector2(20, -784)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D13" unique_id=2102783454]
 position = Vector2(-740, -1628)
@@ -10205,73 +10229,83 @@ scale = Vector2(0.2673378, 0.84004474)
 texture = ExtResource("17_1on4i")
 
 [node name="Label2" type="Label" parent="." unique_id=1296938989]
-offset_left = 1736.0
-offset_top = -1584.0
-offset_right = 1896.0
-offset_bottom = -1393.0
+offset_left = 1756.0
+offset_top = -2368.0
+offset_right = 1916.0
+offset_bottom = -2177.0
 text = "not this way
 heheee
 :)"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="." unique_id=51106196]
-offset_left = -640.0
-offset_top = -1536.0
-offset_right = -480.0
-offset_bottom = -1345.0
+offset_left = -620.0
+offset_top = -2320.0
+offset_right = -460.0
+offset_bottom = -2129.0
 text = "not this way either
 hehehehee
 :)"
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1595189058]
 
 [node name="Label4" type="Label" parent="CanvasLayer" unique_id=419347466]
 offset_left = 20.0
-offset_top = 20.0
 offset_right = 21.0
-offset_bottom = 43.0
+offset_bottom = 23.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("25_ltu8i")
+metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Label4" unique_id=696169553]
 wait_time = 10.0
 one_shot = true
 
 [node name="dethtime" type="Label" parent="CanvasLayer" unique_id=1439070107]
-offset_left = 20.0
-offset_right = 60.0
-offset_bottom = 23.0
+anchors_preset = -1
+anchor_left = 0.069000006
+anchor_top = 0.42000002
+anchor_right = 0.069000006
+anchor_bottom = 0.42000002
+offset_left = -59.488007
+offset_top = -252.16
+offset_right = -19.488007
+offset_bottom = -229.16
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("26_apaj2")
+metadata/_edit_use_anchors_ = true
 
 [node name="reset counter" type="Label" parent="CanvasLayer" unique_id=572263946]
-offset_left = 20.0
-offset_top = 40.0
-offset_right = 21.0
-offset_bottom = 63.0
+anchors_preset = -1
+anchor_left = 0.062000003
+anchor_top = 0.395
+anchor_right = 0.062000003
+anchor_bottom = 0.395
+offset_left = -51.424004
+offset_top = -215.96
+offset_right = -50.424004
+offset_bottom = -192.96
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("27_gqeht")
 
 [node name="cores" type="Label" parent="CanvasLayer" unique_id=376849550]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
 offset_left = 20.0
 offset_top = 60.0
-offset_right = -1032.0
-offset_bottom = -565.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 21.0
+offset_bottom = 83.0
 script = ExtResource("30_enybu")
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D2" parent="." unique_id=845624437 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
-position = Vector2(424, -376)
+position = Vector2(444, -1160)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=146699271]
-position = Vector2(-2036, -1052.0002)
+position = Vector2(-2016, -1836.0001)
 scale = Vector2(0.1875002, 0.14000002)
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="StaticBody2D10" unique_id=1378778417]
@@ -10351,7 +10385,7 @@ skew = -0.026653886
 texture = ExtResource("23_b0b1p")
 
 [node name="Area2D3" type="Area2D" parent="." unique_id=409858457 node_paths=PackedStringArray("platform")]
-position = Vector2(-1800, -1312)
+position = Vector2(-1780, -2096)
 scale = Vector2(0.075, 0.045)
 script = ExtResource("21_3b6by")
 platform = NodePath("../StaticBody2D10")
@@ -10367,7 +10401,7 @@ scale = Vector2(0.99999994, 1)
 texture = ExtResource("21_52qn2")
 
 [node name="Area2D4" type="Area2D" parent="." unique_id=1176048234 node_paths=PackedStringArray("platform")]
-position = Vector2(-1800, -1312)
+position = Vector2(-1780, -2096)
 scale = Vector2(0.075, 0.045)
 script = ExtResource("21_3b6by")
 platform = NodePath("../StaticBody2D10")
@@ -10385,7 +10419,7 @@ scale = Vector2(0.99999994, 1)
 texture = ExtResource("21_52qn2")
 
 [node name="Area2D5" type="Area2D" parent="." unique_id=1849350929 node_paths=PackedStringArray("platform")]
-position = Vector2(-1800, -1312)
+position = Vector2(-1780, -2096)
 scale = Vector2(0.075, 0.045)
 script = ExtResource("21_3b6by")
 platform = NodePath("../StaticBody2D10")
@@ -10403,20 +10437,21 @@ scale = Vector2(0.99999976, 1)
 shape = SubResource("RectangleShape2D_ymn70")
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="." unique_id=1711710565]
+position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=1168963157]
 shape = SubResource("SegmentShape2D_jxej4")
 
 [node name="Area2D6" parent="." unique_id=1171919665 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
-position = Vector2(-1064, -1704)
+position = Vector2(-1044, -2488)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="Area2D7" parent="." unique_id=1704332022 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
-position = Vector2(1136, -1672)
+position = Vector2(1156, -2456)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="DarkMatterAnomaly" type="Sprite2D" parent="." unique_id=383454511]
-position = Vector2(528.00006, -688.00006)
+position = Vector2(548.00006, -1472)
 scale = Vector2(0.07246758, 0.093000084)
 texture = ExtResource("33_m80ji")
 
@@ -10426,12 +10461,16 @@ scale = Vector2(13.7992735, 10.752678)
 core_counter = NodePath("../../CanvasLayer/cores")
 
 [node name="ground" type="TileMapLayer" parent="." unique_id=412462106]
-position = Vector2(-167.99994, -743.99994)
+position = Vector2(-147.99994, -1527.9999)
 scale = Vector2(0.99999994, 0.99999994)
 tile_set = SubResource("TileSet_jxej4")
 
 [node name="Area2D8" parent="." unique_id=2065765939 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
-position = Vector2(-264, -1784)
+position = Vector2(-244, -2568)
+core_counter = NodePath("../CanvasLayer/cores")
+
+[node name="Area2D9" parent="." unique_id=457807413 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
+position = Vector2(408, 296)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]

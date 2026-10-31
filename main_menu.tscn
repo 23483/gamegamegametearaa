@@ -16,9 +16,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+offset_left = -464.0
+offset_top = 35.0
+offset_right = 464.0
+offset_bottom = 99.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 46
 text = "godot boy and water girl climb the tower!!"
@@ -56,6 +57,21 @@ offset_right = 646.0
 offset_bottom = 410.0
 theme_override_font_sizes/font_size = 30
 text = "controls"
+
+[node name="Label5" type="Label" parent="." unique_id=1431455409]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.54816127
+anchor_top = 0.3767753
+anchor_right = 0.54816127
+anchor_bottom = 0.7486881
+offset_left = -535.4818
+offset_top = 99.84961
+offset_right = -323.48175
+offset_bottom = 122.84961
+text = "esc to return to main menu btw
+"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttquiton" to="." method="_on_buttquiton_pressed"]

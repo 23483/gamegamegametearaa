@@ -12,9 +12,9 @@ func _process(delta: float) -> void:
 	keptime = delta + keptime
 	kepttime = int(keptime)
 	var mins = int(keptime / 60)
-	print(mins)
+
 	var seconds = kepttime % 60
-	print(seconds)
+
 	var centisecs = int((keptime - kepttime)*100)
 	text = "Gametime: " + str(mins) + ":" + str(seconds) + "." + str(centisecs)
 	

@@ -14,7 +14,7 @@ extends Camera2D
 @export var shake_strength: float = 8.0
 
 var warning_shaking: bool = false
-var base_offset: Vector2 = Vector2(225, 400)
+var base_offset: Vector2 = Vector2(225, 1150)
 
 func _process(delta: float) -> void:
 	if nope == null or p2 == null:
