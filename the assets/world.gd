@@ -12,6 +12,7 @@ extends Node2D
 @onready var platee: Sprite2D = $StaticBody2D4/plat
 @onready var platf: CollisionShape2D = $StaticBody2D4/platf
 @onready var p2: CharacterBody2D = $p2
+@onready var spinn: Sprite2D = $DarkMatterAnomaly
 
 @onready var Maxdistance: float = 1150
 
@@ -48,6 +49,9 @@ func _process(delta: float) -> void:
 
 	platee.rotate(delta*2)
 	platf.rotate(delta*2)
+	spinn.rotate(delta*2)
+	
+	
 	
 	if Input.is_action_pressed("pause"):
 			get_tree().change_scene_to_file("res://main_menu.tscn")
