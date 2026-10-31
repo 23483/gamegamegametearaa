@@ -10430,6 +10430,10 @@ position = Vector2(-167.99994, -743.99994)
 scale = Vector2(0.99999994, 0.99999994)
 tile_set = SubResource("TileSet_jxej4")
 
+[node name="Area2D8" parent="." unique_id=2065765939 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
+position = Vector2(-264, -1784)
+core_counter = NodePath("../CanvasLayer/cores")
+
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="button" to="." method="_on_button_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

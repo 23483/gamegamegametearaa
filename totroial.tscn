@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cykemc335qv86"]
+
+[ext_resource type="Texture2D" uid="uid://l6fkcdvmvgwl" path="res://the assets/hand-on-grass.jpeg" id="1_s6fr4"]
+[ext_resource type="Script" uid="uid://bqg6mbx6gjiux" path="res://p2.gd" id="2_dymqj"]
+[ext_resource type="Texture2D" uid="uid://d30iyjhurdvan" path="res://the assets/watergirl.jpg" id="3_3fv15"]
+[ext_resource type="Texture2D" uid="uid://ba2510k2p4n28" path="res://the assets/icon.svg" id="4_3fv15"]
+[ext_resource type="Script" uid="uid://d17xecw84sgo4" path="res://the assets/nope.gd" id="4_7yxf1"]
+[ext_resource type="Script" uid="uid://bwgjobg8r5iak" path="res://camera.gd" id="5_7yxf1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxej4"]
+size = Vector2(1456, 296)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxej4"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_311yx"]
+radius = 16.0
+height = 32.0
+
+[node name="Node2D" type="Node2D" unique_id=1843753904]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1528470075]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1704010112]
+position = Vector2(448, 1148)
+shape = SubResource("RectangleShape2D_jxej4")
+
+[node name="HandOnGrass" type="Sprite2D" parent="StaticBody2D" unique_id=334146171]
+position = Vector2(456, 1263.75)
+scale = Vector2(1.2, 0.67324835)
+texture = ExtResource("1_s6fr4")
+
+[node name="p2" type="CharacterBody2D" parent="." unique_id=43797133]
+position = Vector2(232, 880)
+script = ExtResource("2_dymqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="p2" unique_id=921161540]
+position = Vector2(16, -8)
+shape = SubResource("CapsuleShape2D_jxej4")
+
+[node name="Watergirl" type="Sprite2D" parent="p2" unique_id=304482764]
+position = Vector2(16.000013, -8.000015)
+scale = Vector2(0.07997762, 0.079977565)
+texture = ExtResource("3_3fv15")
+
+[node name="nope" type="CharacterBody2D" parent="." unique_id=2067469167]
+script = ExtResource("4_7yxf1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nope" unique_id=770459614]
+position = Vector2(370, 906)
+shape = SubResource("CapsuleShape2D_311yx")
+
+[node name="Icon" type="Sprite2D" parent="nope" unique_id=581086317]
+position = Vector2(370, 906)
+scale = Vector2(0.28125, 0.28125)
+texture = ExtResource("4_3fv15")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1555330115 node_paths=PackedStringArray("nope", "p2")]
+position = Vector2(352, 128)
+offset = Vector2(0, -200)
+script = ExtResource("5_7yxf1")
+nope = NodePath("../nope")
+p2 = NodePath("../p2")
