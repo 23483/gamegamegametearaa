@@ -74,7 +74,8 @@ offset_left = 408.0
 offset_top = 576.0
 offset_right = 820.872
 offset_bottom = 608.8
-text = "my pb is 3 mins and 49 seconds with 9/9 cores collected
+text = "my pb is 3 mins and 43
+seconds with 9/9 cores collected
 you should try beat it"
 
 [connection signal="pressed" from="main" to="." method="_on_main_pressed"]
