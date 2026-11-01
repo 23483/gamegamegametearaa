@@ -15,5 +15,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("players"):
 		GameData.checkpoint_position = global_position + Vector2(0, -40)
 		print(GameData.checkpoint_position) 
-		print("Checkpoint position: ", global_position)
-		print("Sprite position: ", $HdLaserKiwi.global_position)
+
+		print("Checkpoint global position: ", global_position)

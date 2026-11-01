@@ -9573,16 +9573,14 @@ scale = Vector2(0.13142206, 0.04108281)
 texture = ExtResource("4_evk7e")
 
 [node name="nope" type="CharacterBody2D" parent="." unique_id=225389506 groups=["players"]]
-position = Vector2(20, -784)
+position = Vector2(264, 416)
 script = ExtResource("3_lx3ct")
 
 [node name="Sprite2D" type="Sprite2D" parent="nope" unique_id=1336374816]
-position = Vector2(260, 1200)
 scale = Vector2(0.2499999, 0.2500002)
 texture = SubResource("AtlasTexture_jxej4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nope" unique_id=1721742724]
-position = Vector2(260, 1200)
 shape = SubResource("CapsuleShape2D_lx3ct")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1331006545]
@@ -9772,7 +9770,7 @@ scale = Vector2(1.0000008, 1)
 shape = SubResource("RectangleShape2D_pv3gu")
 
 [node name="Plank33" type="Sprite2D" parent="all the platforms" unique_id=1032789692]
-position = Vector2(5461.3325, 5742.8564)
+position = Vector2(5461.336, 5742.8555)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
@@ -10110,9 +10108,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="Label/Label/Label/Label" unique_id=1768926648]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.5934066
+anchor_left = -0.43956044
 anchor_top = 14.367347
-anchor_right = -0.5934066
+anchor_right = -0.43956044
 anchor_bottom = 14.367347
 offset_left = 240.0
 offset_top = 256.0
@@ -10178,16 +10176,16 @@ offset_bottom = 1120.0
 text = "buttons move stuff"
 
 [node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828 groups=["players"]]
-position = Vector2(20, -784)
+position = Vector2(136, 416)
 script = ExtResource("14_g23vd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="p2" unique_id=148011182]
-position = Vector2(140, 1199.75)
+position = Vector2(0, -0.25)
 scale = Vector2(0.2852349, 0.2852349)
 shape = SubResource("CapsuleShape2D_jxej4")
 
 [node name="Watergirl" type="Sprite2D" parent="p2" unique_id=646846608]
-position = Vector2(139.75, 1199.75)
+position = Vector2(-0.25, -0.25)
 scale = Vector2(0.070469804, 0.070469804)
 texture = ExtResource("14_mihkp")
 

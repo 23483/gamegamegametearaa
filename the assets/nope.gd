@@ -25,5 +25,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func respawn() -> void:
-	global_position = GameData.checkpoint_position
+	global_position = GameData.checkpoint_position + Vector2(-40, 0)
 	velocity = Vector2.ZERO

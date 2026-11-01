@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 	platee.rotate(delta*2)
 	platf.rotate(delta*2)
 	spinn.rotate(delta*2)
-	spin.rotate(delta*-1)
+	spin.rotate(delta*-1.5)
 	
 	
 	if Input.is_action_pressed("pause"):

@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func respawn() -> void:
-	global_position = GameData.checkpoint_position
+	global_position = GameData.checkpoint_position + Vector2(40, 0)
 	velocity = Vector2.ZERO
-	print("Saved position: ", GameData.checkpoint_position)
-	print("Actual player position: ", global_position)
+	await get_tree().physics_frame
+	print("Position after physics: ", global_position)
