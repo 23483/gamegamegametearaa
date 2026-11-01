@@ -44,9 +44,9 @@ text = "play"
 layout_mode = 1
 anchors_preset = -1
 offset_left = 552.0
-offset_top = 432.0
+offset_top = 464.0
 offset_right = 599.0
-offset_bottom = 464.0
+offset_bottom = 496.0
 text = "quit"
 
 [node name="controls" type="Button" parent="." unique_id=918245797]
@@ -73,6 +73,15 @@ text = "esc to return to main menu btw
 "
 metadata/_edit_use_anchors_ = true
 
+[node name="skip" type="Button" parent="." unique_id=1556434881]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 424.0
+offset_right = 629.0
+offset_bottom = 456.0
+text = "skip totorial"
+
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttquiton" to="." method="_on_buttquiton_pressed"]
 [connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="skip" to="." method="_on_skip_pressed"]

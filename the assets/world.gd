@@ -16,12 +16,19 @@ extends Node2D
 @onready var spin: StaticBody2D = $StaticBody2D17
 @onready var Maxdistance: float = 1150
 
+@export var tutorial_spawn: Vector2 = Vector2(150, -720)
+@export var game_spawn: Vector2 = Vector2(1200, -720)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	var spawn_position = tutorial_spawn
 
-
+	if GameData.skip_tutorial:
+		spawn_position = game_spawn
+	GameData.checkpoint_position = spawn_position
+	p2.respawn()
+	nope.respawn()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

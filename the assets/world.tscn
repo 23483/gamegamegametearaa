@@ -9489,6 +9489,8 @@ height = 93.78168
 
 [node name="World" type="Node2D" unique_id=492060198]
 script = ExtResource("1_7o8ph")
+tutorial_spawn = Vector2(192, 416)
+game_spawn = Vector2(488, -312)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=530082860]
 offset_left = 1277.0
@@ -10159,7 +10161,12 @@ text = "cores>>>
 metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="Label" unique_id=1621133604]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06989247
+anchor_top = 5.673913
+anchor_right = 0.06989247
+anchor_bottom = 5.673913
 offset_left = -2802.5
 offset_top = -2234.5
 offset_right = -2522.5
@@ -10174,6 +10181,14 @@ offset_top = 1008.0
 offset_right = 960.0
 offset_bottom = 1120.0
 text = "buttons move stuff"
+
+[node name="Label6" type="Label" parent="Label" unique_id=1631405041]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 232.0
+offset_right = 124.0
+offset_bottom = 255.0
+text = "checkpoint"
 
 [node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828 groups=["players"]]
 position = Vector2(136, 416)
