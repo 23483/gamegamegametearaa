@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var game_timer: Label
+@export var core: Label
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -10,4 +11,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if get_overlapping_bodies().size() > 1:
 		GameData.final_time = game_timer.keptime
+		GameData.final_core = core.collit
 		get_tree().change_scene_to_file("res://youwin screen.tscn")

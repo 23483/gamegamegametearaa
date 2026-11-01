@@ -4,12 +4,13 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var ttime = GameData.final_time
+	var coree = GameData.final_core
 	var secs = int(ttime)
 	var mins = int(secs / 60)
 	var dissecs = secs % 60
 	var desi = int((ttime - secs)*100)
 	$time.text = "runtime: %02d:%02d.%02d" % [mins, dissecs, desi]
-	
+	$cores.text = "cores collected: " + str(coree) + "/9"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

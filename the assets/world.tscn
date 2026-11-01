@@ -10098,7 +10098,10 @@ text = "platformss^"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Label/Label/Label" unique_id=1306495541]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17204301
+anchor_right = 0.17204301
 offset_left = -1192.0
 offset_top = -248.0
 offset_right = -1010.0
@@ -10320,10 +10323,11 @@ position = Vector2(196, -1832.0001)
 scale = Vector2(0.23850018, 0.09450018)
 texture = ExtResource("23_b0b1p")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=604129013 node_paths=PackedStringArray("game_timer")]
+[node name="Area2D" type="Area2D" parent="." unique_id=604129013 node_paths=PackedStringArray("game_timer", "core")]
 position = Vector2(20, -784)
 script = ExtResource("24_hnih1")
 game_timer = NodePath("../CanvasLayer/Label4")
+core = NodePath("../CanvasLayer/cores")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1310296449]
 position = Vector2(-2810.5, -2042.5)
