@@ -65,6 +65,18 @@ offset_top = 144.0
 offset_right = 632.0
 offset_bottom = 184.0
 
+[node name="pb" type="Label" parent="." unique_id=101963630]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.014
+anchor_bottom = 0.025
+offset_left = 408.0
+offset_top = 576.0
+offset_right = 820.872
+offset_bottom = 608.8
+text = "my pb is 3 mins and 49 seconds with 9/9 cores collected
+you should try beat it"
+
 [connection signal="pressed" from="main" to="." method="_on_main_pressed"]
 [connection signal="pressed" from="again" to="." method="_on_again_pressed"]
 [connection signal="pressed" from="Buttonquit3" to="." method="_on_buttonquit_3_pressed"]
