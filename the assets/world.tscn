@@ -75,6 +75,41 @@ size = Vector2(639.99963, 342.85712)
 radius = 56.094116
 height = 112.18823
 
+[sub_resource type="Gradient" id="Gradient_hder0"]
+offsets = PackedFloat32Array(0, 0.14347826)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sngdr"]
+gradient = SubResource("Gradient_hder0")
+fill = 1
+fill_from = Vector2(0.47948718, 0.5)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_hder0"]
+diffuse_texture = SubResource("GradientTexture2D_sngdr")
+
+[sub_resource type="Curve" id="Curve_fdp85"]
+_data = [Vector2(0.0860215, 0.9107144), 0.0, 0.0, 0, 0, Vector2(0.0860315, 0.9285715), 0.0, 0.0, 0, 0, Vector2(0.5107527, 0.4642858), -1.207792, -1.207792, 0, 0, Vector2(1, 0.09821439), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_hder0"]
+curve = SubResource("Curve_fdp85")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jxej4"]
+lifetime_randomness = 0.56
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 0.4
+angle_min = -291.6
+angle_max = 528.60004
+direction = Vector3(0, -1, 0)
+spread = 90.506
+initial_velocity_min = 32.68
+initial_velocity_max = 71.9
+gravity = Vector3(0, 30, 0)
+scale_min = 0.5
+color = Color(0.768907, 0.7414285, 0.65843195, 1)
+alpha_curve = SubResource("CurveTexture_hder0")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr60s"]
 size = Vector2(840, 2192)
 
@@ -9782,7 +9817,7 @@ scale = Vector2(1.0000008, 1)
 shape = SubResource("RectangleShape2D_pv3gu")
 
 [node name="Plank34" type="Sprite2D" parent="all the platforms" unique_id=1626700768]
-position = Vector2(3669.333, 5742.8564)
+position = Vector2(3680.002, 5742.8555)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
@@ -10206,6 +10241,16 @@ shape = SubResource("CapsuleShape2D_jxej4")
 position = Vector2(-0.25, -0.25)
 scale = Vector2(0.070469804, 0.070469804)
 texture = ExtResource("14_mihkp")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="p2" unique_id=1440049539]
+position = Vector2(0, 16)
+emitting = false
+amount = 20
+texture = SubResource("CanvasTexture_hder0")
+lifetime = 0.72
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_jxej4")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=1086870962]
 position = Vector2(20, -784)

@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @onready var p2: Sprite2D = $Watergirl
 
+@onready var parts: GPUParticles2D = $p2/GPUParticles2D
+
 const SPEED = 250.0
 const JUMP_VELOCITY = -500.0
 var original_y = 0.0
