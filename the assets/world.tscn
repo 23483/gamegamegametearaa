@@ -108,6 +108,35 @@ size = Vector2(122.18179, 146.28574)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pv3gu"]
 size = Vector2(639.99963, 342.85712)
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_311yx"]
+lifetime_randomness = 0.06
+particle_flag_disable_z = true
+direction = Vector3(-4, 1, 0)
+spread = 10.0
+gravity = Vector3(0, 200, 0)
+scale_min = 0.0
+scale_max = 5.5
+color = Color(0.0333333, 1, 0, 1)
+hue_variation_min = -0.17000002
+hue_variation_max = -2.2351742e-08
+turbulence_enabled = true
+collision_mode = 1
+collision_friction = 0.18
+collision_bounce = 0.64
+collision_use_scale = true
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_311yx"]
+polygon = PackedVector2Array(2176, -1371.4277, 2304, -1428.5703, 2517.3333, -1485.7148, 2176, -1028.5713, 1408, -742.8574)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wrrg6"]
+polygon = PackedVector2Array(1983.9993, 8685.718, 2325.3323, 8171.4316, 2111.999, 8742.86)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pa1jj"]
+polygon = PackedVector2Array(1962.6656, 18400.008, 1877.3323, 18000.002, 1962.6656, 17885.723, 2047.999, 18000)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y648p"]
+polygon = PackedVector2Array(-597.333, 29257.145, -725.3329, 29085.717, -725.3329, 29085.717, -938.666, 29257.145)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxej4"]
 radius = 56.094116
 height = 112.18823
@@ -9545,12 +9574,12 @@ position = Vector2(-536, 608)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="Coree2" type="Sprite2D" parent="colti" unique_id=430006293]
-position = Vector2(378.75, -157.25)
+position = Vector2(384.00003, -104)
 scale = Vector2(0.12499998, 0.12499998)
 texture = ExtResource("31_enybu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="colti" unique_id=1645650596]
-position = Vector2(378.75, -157.25)
+position = Vector2(384.00003, -120)
 scale = Vector2(0.12499998, 0.12499998)
 shape = SubResource("CircleShape2D_jxej4")
 
@@ -9612,7 +9641,7 @@ scale = Vector2(0.13142206, 0.04108281)
 texture = ExtResource("4_evk7e")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=48045530 groups=["gregroup"]]
-position = Vector2(-419.5495, -136)
+position = Vector2(-133.84308, 32)
 scale = Vector2(0.20577233, 0.7133758)
 texture = ExtResource("4_evk7e")
 
@@ -9717,6 +9746,13 @@ shape = SubResource("RectangleShape2D_pv3gu")
 position = Vector2(2239.9995, -1114.2855)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
+
+[node name="ectoflo" type="GPUParticles2D" parent="all the platforms/Plank2" unique_id=140239730]
+position = Vector2(895.9995, -10542.8545)
+amount = 10000
+lifetime = 608.1
+visibility_rect = Rect2(-10000, -10000, 20000, 20000)
+process_material = SubResource("ParticleProcessMaterial_311yx")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="all the platforms" unique_id=1502408432]
 position = Vector2(1514.6665, -2199.9995)
@@ -10088,6 +10124,25 @@ position = Vector2(21.333273, -1571.4283)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="all the platforms" unique_id=1506790795]
+position = Vector2(874.6664, -8857.141)
+occluder = SubResource("OccluderPolygon2D_311yx")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="all the platforms/LightOccluder2D" unique_id=2103569837]
+position = Vector2(511.9999, -9371.427)
+scale = Vector2(1.0000002, 1)
+occluder = SubResource("OccluderPolygon2D_wrrg6")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="all the platforms/LightOccluder2D/LightOccluder2D2" unique_id=119969650]
+position = Vector2(213.33322, -11828.57)
+scale = Vector2(1.0000001, 0.99999994)
+occluder = SubResource("OccluderPolygon2D_pa1jj")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="all the platforms/LightOccluder2D/LightOccluder2D2/LightOccluder2D" unique_id=1781313032]
+position = Vector2(127.99992, -8228.572)
+scale = Vector2(1.0000001, 0.99999994)
+occluder = SubResource("OccluderPolygon2D_y648p")
+
 [node name="Box" type="Sprite2D" parent="." unique_id=1380621761]
 position = Vector2(1060, -332)
 scale = Vector2(0.5625, 0.265625)
@@ -10296,7 +10351,7 @@ nope = NodePath("../nope")
 p2 = NodePath("../p2")
 
 [node name="wall" type="Sprite2D" parent="." unique_id=260062168]
-position = Vector2(-373.99997, -851)
+position = Vector2(-375.99997, -856)
 scale = Vector2(1.7897092, 6.1342273)
 texture = ExtResource("17_1on4i")
 
@@ -10783,6 +10838,15 @@ texture = ExtResource("37_w1cq4")
 position = Vector2(3.0517578e-05, -32.00003)
 scale = Vector2(0.046426505, 0.15661712)
 texture = ExtResource("37_sngdr")
+
+[node name="Label4" type="Label" parent="." unique_id=2079249049]
+offset_left = -6200.0
+offset_top = -928.0
+offset_right = -2370.0
+offset_bottom = 487.0
+theme_override_font_sizes/font_size = 500
+text = "this is the
+ halooween one"
 
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="button" to="." method="_on_button_body_entered"]
