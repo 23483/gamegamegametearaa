@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://4ixwweuji582" path="res://the assets/colecore.tscn" id="30_u7lg5"]
 [ext_resource type="Texture2D" uid="uid://cifntiivufuqr" path="res://the assets/coree.jpg" id="31_enybu"]
 [ext_resource type="Texture2D" uid="uid://c1fkie5kppr6f" path="res://the assets/Dark_matter_anomaly.webp" id="33_m80ji"]
+[ext_resource type="Shader" uid="uid://dtmo41t62bkcv" path="res://the assets/sahders.gdshader" id="34_dg3cm"]
 [ext_resource type="VideoStream" uid="uid://b21j084elxr7n" path="res://the assets/djreal.ogv" id="34_lw5hh"]
 [ext_resource type="Script" uid="uid://bqbdgjgetg32i" path="res://the assets/area_2d_12.gd" id="35_hder0"]
 [ext_resource type="Texture2D" uid="uid://ci3yydw4ri6k7" path="res://the assets/HDLaserKiwi.webp" id="36_sngdr"]
@@ -108,35 +109,6 @@ size = Vector2(122.18179, 146.28574)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pv3gu"]
 size = Vector2(639.99963, 342.85712)
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_311yx"]
-lifetime_randomness = 0.06
-particle_flag_disable_z = true
-direction = Vector3(-4, 1, 0)
-spread = 10.0
-gravity = Vector3(0, 200, 0)
-scale_min = 0.0
-scale_max = 5.5
-color = Color(0.0333333, 1, 0, 1)
-hue_variation_min = -0.17000002
-hue_variation_max = -2.2351742e-08
-turbulence_enabled = true
-collision_mode = 1
-collision_friction = 0.18
-collision_bounce = 0.64
-collision_use_scale = true
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_311yx"]
-polygon = PackedVector2Array(2176, -1371.4277, 2304, -1428.5703, 2517.3333, -1485.7148, 2176, -1028.5713, 1408, -742.8574)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wrrg6"]
-polygon = PackedVector2Array(1983.9993, 8685.718, 2325.3323, 8171.4316, 2111.999, 8742.86)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pa1jj"]
-polygon = PackedVector2Array(1962.6656, 18400.008, 1877.3323, 18000.002, 1962.6656, 17885.723, 2047.999, 18000)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y648p"]
-polygon = PackedVector2Array(-597.333, 29257.145, -725.3329, 29085.717, -725.3329, 29085.717, -938.666, 29257.145)
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxej4"]
 radius = 56.094116
 height = 112.18823
@@ -167,6 +139,10 @@ size = Vector2(448.87036, 447.5952)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu4c8"]
 size = Vector2(418.94562, 447.5952)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jxej4"]
+shader = ExtResource("34_dg3cm")
+shader_parameter/saturation = 0.3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymn70"]
 size = Vector2(853.33203, 711.1113)
@@ -9747,13 +9723,6 @@ position = Vector2(2239.9995, -1114.2855)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
-[node name="ectoflo" type="GPUParticles2D" parent="all the platforms/Plank2" unique_id=140239730]
-position = Vector2(895.9995, -10542.8545)
-amount = 10000
-lifetime = 608.1
-visibility_rect = Rect2(-10000, -10000, 20000, 20000)
-process_material = SubResource("ParticleProcessMaterial_311yx")
-
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="all the platforms" unique_id=1502408432]
 position = Vector2(1514.6665, -2199.9995)
 scale = Vector2(1.0000007, 1)
@@ -10123,25 +10092,6 @@ shape = SubResource("RectangleShape2D_pv3gu")
 position = Vector2(21.333273, -1571.4283)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="all the platforms" unique_id=1506790795]
-position = Vector2(874.6664, -8857.141)
-occluder = SubResource("OccluderPolygon2D_311yx")
-
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="all the platforms/LightOccluder2D" unique_id=2103569837]
-position = Vector2(511.9999, -9371.427)
-scale = Vector2(1.0000002, 1)
-occluder = SubResource("OccluderPolygon2D_wrrg6")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="all the platforms/LightOccluder2D/LightOccluder2D2" unique_id=119969650]
-position = Vector2(213.33322, -11828.57)
-scale = Vector2(1.0000001, 0.99999994)
-occluder = SubResource("OccluderPolygon2D_pa1jj")
-
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="all the platforms/LightOccluder2D/LightOccluder2D2/LightOccluder2D" unique_id=1781313032]
-position = Vector2(127.99992, -8228.572)
-scale = Vector2(1.0000001, 0.99999994)
-occluder = SubResource("OccluderPolygon2D_y648p")
 
 [node name="Box" type="Sprite2D" parent="." unique_id=1380621761]
 position = Vector2(1060, -332)
@@ -10570,6 +10520,14 @@ offset_right = 21.0
 offset_bottom = 83.0
 script = ExtResource("30_enybu")
 metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2001471633]
+material = SubResource("ShaderMaterial_jxej4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Area2D2" parent="." unique_id=845624437 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
 position = Vector2(444, -1160)
