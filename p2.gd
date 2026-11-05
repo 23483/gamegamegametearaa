@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @onready var p2: Sprite2D = $Watergirl
 
-@onready var parts: GPUParticles2D = $p2/GPUParticles2D
+@onready var parts: GPUParticles2D = $GPUParticles2D
+
 
 const SPEED = 250.0
 const JUMP_VELOCITY = -500.0
@@ -49,7 +50,6 @@ func _physics_process(delta: float) -> void:
 		tween.tween_property(p2, "scale", Vector2(0.07, 0.07), 0.1)
 		was_running = false
 		
-		
 	if direction == 0 and is_on_floor():
 		p2.scale.x = 0.07 + breath
 		p2.scale.y = 0.07 - breath
@@ -70,7 +70,20 @@ func _physics_process(delta: float) -> void:
 		tween.parallel().tween_property(p2, "position", Vector2(0, 0), 0.15)
 		
 		
-		
+		var colli = get_last_slide_collision()
+		if colli == null:
+			return
+		var plat = colli.get_collider()
+		if plat.is_in_group("wgroup"):
+			parts.modulate = Color.WHITE
+		if plat.is_in_group("gregroup"):
+			parts.modulate = Color.GREEN
+		if plat.is_in_group("brogroup"):
+			parts.modulate = Color.SANDY_BROWN
+		if plat.is_in_group("blugroup"):
+			parts.modulate = Color.SKY_BLUE
+
+		parts.restart()
 func respawn() -> void:
 	global_position = GameData.checkpoint_position + Vector2(40, 0)
 	velocity = Vector2.ZERO

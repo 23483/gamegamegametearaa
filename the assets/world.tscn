@@ -76,13 +76,13 @@ radius = 56.094116
 height = 112.18823
 
 [sub_resource type="Gradient" id="Gradient_hder0"]
-offsets = PackedFloat32Array(0, 0.14347826)
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0, 0.083333336)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_sngdr"]
 gradient = SubResource("Gradient_hder0")
 fill = 1
-fill_from = Vector2(0.47948718, 0.5)
+fill_from = Vector2(0.46134022, 0.52835053)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_hder0"]
 diffuse_texture = SubResource("GradientTexture2D_sngdr")
@@ -107,7 +107,7 @@ initial_velocity_min = 32.68
 initial_velocity_max = 71.9
 gravity = Vector3(0, 30, 0)
 scale_min = 0.5
-color = Color(0.768907, 0.7414285, 0.65843195, 1)
+color = Color(0.76862746, 0.7411765, 0.65882355, 1)
 alpha_curve = SubResource("CurveTexture_hder0")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr60s"]
@@ -9566,7 +9566,7 @@ rotation = -0.82710207
 scale = Vector2(0.11, 0.11)
 texture = ExtResource("31_enybu")
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=2001703611]
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=2001703611 groups=["wgroup"]]
 position = Vector2(460, -632)
 
 [node name="inconthingy" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1382321909]
@@ -9588,7 +9588,7 @@ position = Vector2(-1025.2041, -1477.1445)
 scale = Vector2(1.7541492, 1.2951121)
 texture = ExtResource("3_fk81r")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=8968005]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=8968005 groups=["gregroup"]]
 position = Vector2(2177.5007, 768)
 scale = Vector2(9.156251, 1)
 
@@ -9604,16 +9604,21 @@ shape = SubResource("RectangleShape2D_311yx")
 position = Vector2(-39.481293, -1016)
 shape = SubResource("RectangleShape2D_311yx")
 
-[node name="HandOnGrass" type="Sprite2D" parent="StaticBody2D" unique_id=1395949817]
+[node name="HandOnGrass" type="Sprite2D" parent="StaticBody2D" unique_id=1395949817 groups=["gregroup"]]
 position = Vector2(-115.60419, -1016.125)
 scale = Vector2(0.13142206, 0.04108281)
 texture = ExtResource("4_evk7e")
 
-[node name="nope" type="CharacterBody2D" parent="." unique_id=225389506 groups=["players"]]
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=48045530 groups=["gregroup"]]
+position = Vector2(-139.08537, 32)
+scale = Vector2(0.20577233, 0.7133758)
+texture = ExtResource("4_evk7e")
+
+[node name="nope" type="CharacterBody2D" parent="." unique_id=225389506 groups=["blugroup", "players"]]
 position = Vector2(264, 416)
 script = ExtResource("3_lx3ct")
 
-[node name="Sprite2D" type="Sprite2D" parent="nope" unique_id=1336374816]
+[node name="Sprite2D" type="Sprite2D" parent="nope" unique_id=1336374816 groups=["blugroup"]]
 scale = Vector2(0.2499999, 0.2500002)
 texture = SubResource("AtlasTexture_jxej4")
 
@@ -9625,7 +9630,7 @@ position = Vector2(632, 584)
 scale = Vector2(9.156251, 1)
 physics_material_override = SubResource("PhysicsMaterial_lx3ct")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=380101296]
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=380101296 groups=["brogroup"]]
 position = Vector2(1068, -432)
 scale = Vector2(3.625, 1)
 
@@ -9638,7 +9643,7 @@ position = Vector2(25.379303, 96)
 scale = Vector2(2.5258622, 1)
 shape = SubResource("RectangleShape2D_jxej4")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1752766898]
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1752766898 groups=["wgroup"]]
 position = Vector2(20, -784)
 
 [node name="plat" type="Sprite2D" parent="StaticBody2D4" unique_id=11442629]
@@ -9651,7 +9656,7 @@ position = Vector2(904, 304)
 scale = Vector2(2.75, 0.4375)
 shape = SubResource("RectangleShape2D_3towl")
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=2143524641]
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=2143524641 groups=["wgroup"]]
 position = Vector2(300, -600)
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D6" unique_id=1203273441]
@@ -9663,7 +9668,7 @@ texture = ExtResource("2_lx3ct")
 position = Vector2(-144, -16)
 shape = SubResource("RectangleShape2D_311yx")
 
-[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=958671413]
+[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=958671413 groups=["wgroup"]]
 position = Vector2(76.00003, -744)
 scale = Vector2(0.18750003, 0.14000002)
 
@@ -9677,7 +9682,7 @@ position = Vector2(-0.00016403198, 0)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
-[node name="all the platforms" type="StaticBody2D" parent="." unique_id=1428731223]
+[node name="all the platforms" type="StaticBody2D" parent="." unique_id=1428731223 groups=["wgroup"]]
 position = Vector2(76.00003, -744)
 scale = Vector2(0.18750003, 0.14000002)
 
@@ -10071,11 +10076,6 @@ position = Vector2(21.333273, -1571.4283)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
-[node name="HandOnGrass" type="Sprite2D" parent="." unique_id=48045530]
-position = Vector2(928, 800)
-scale = Vector2(1.8841031, 0.7133758)
-texture = ExtResource("4_evk7e")
-
 [node name="Box" type="Sprite2D" parent="." unique_id=1380621761]
 position = Vector2(1060, -332)
 scale = Vector2(0.5625, 0.265625)
@@ -10228,7 +10228,7 @@ offset_right = 124.0
 offset_bottom = 255.0
 text = "checkpoint"
 
-[node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828 groups=["players"]]
+[node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828 groups=["blugroup", "players"]]
 position = Vector2(136, 416)
 script = ExtResource("14_g23vd")
 
@@ -10237,7 +10237,7 @@ position = Vector2(0, -0.25)
 scale = Vector2(0.2852349, 0.2852349)
 shape = SubResource("CapsuleShape2D_jxej4")
 
-[node name="Watergirl" type="Sprite2D" parent="p2" unique_id=646846608]
+[node name="Watergirl" type="Sprite2D" parent="p2" unique_id=646846608 groups=["blugroup"]]
 position = Vector2(-0.25, -0.25)
 scale = Vector2(0.070469804, 0.070469804)
 texture = ExtResource("14_mihkp")
@@ -10247,12 +10247,12 @@ position = Vector2(0, 16)
 emitting = false
 amount = 20
 texture = SubResource("CanvasTexture_hder0")
-lifetime = 0.72
+lifetime = 0.63
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_jxej4")
 
-[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=1086870962]
+[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=1086870962 groups=["wgroup"]]
 position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1661275362]
@@ -10267,7 +10267,7 @@ shape = SubResource("RectangleShape2D_140hh")
 position = Vector2(2336, 1336)
 shape = SubResource("RectangleShape2D_wr60s")
 
-[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=606835633]
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=606835633 groups=["wgroup"]]
 position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=1843977273]
@@ -10341,7 +10341,7 @@ position = Vector2(1309, -1459)
 scale = Vector2(0.05250005, 0.05250005)
 texture = ExtResource("21_52qn2")
 
-[node name="StaticBody2D11" type="StaticBody2D" parent="." unique_id=757394473]
+[node name="StaticBody2D11" type="StaticBody2D" parent="." unique_id=757394473 groups=["wgroup"]]
 position = Vector2(20, -784)
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="StaticBody2D11" unique_id=446095830]
@@ -10388,7 +10388,7 @@ position = Vector2(76, -1904)
 scale = Vector2(0.20133331, 0.20133333)
 texture = ExtResource("24_6s4dr")
 
-[node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=64922307]
+[node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=64922307 groups=["wgroup"]]
 position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12" unique_id=1485962114]
@@ -10508,7 +10508,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(444, -1160)
 core_counter = NodePath("../CanvasLayer/cores")
 
-[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=146699271]
+[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=146699271 groups=["wgroup"]]
 position = Vector2(-2016, -1836.0001)
 scale = Vector2(0.1875002, 0.14000002)
 
@@ -10643,7 +10643,7 @@ shape = SubResource("RectangleShape2D_ymn70")
 [node name="StaticBody2D14" type="StaticBody2D" parent="." unique_id=1711710565]
 position = Vector2(20, -784)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=1168963157]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=1168963157 groups=["brogroup"]]
 shape = SubResource("SegmentShape2D_jxej4")
 
 [node name="Area2D6" parent="." unique_id=1171919665 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
@@ -10713,19 +10713,19 @@ texture = ExtResource("21_52qn2")
 position = Vector2(8830.761, -4461.5337)
 shape = SubResource("CapsuleShape2D_pa1jj")
 
-[node name="StaticBody2D15" type="StaticBody2D" parent="." unique_id=1964944422]
+[node name="StaticBody2D15" type="StaticBody2D" parent="." unique_id=1964944422 groups=["wgroup"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15" unique_id=1154407317]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15" unique_id=1154407317 groups=["wgroup"]]
 position = Vector2(1446.5, 500)
 shape = SubResource("RectangleShape2D_rvxl3")
 
-[node name="Lefrarrow" type="Sprite2D" parent="StaticBody2D15" unique_id=2111760654]
+[node name="Lefrarrow" type="Sprite2D" parent="StaticBody2D15" unique_id=2111760654 groups=["wgroup"]]
 position = Vector2(1446.5992, 500.90866)
 rotation = 3.14132
 scale = Vector2(0.18823461, 0.083937354)
 texture = ExtResource("23_b0b1p")
 
-[node name="StaticBody2D16" type="StaticBody2D" parent="." unique_id=760632942]
+[node name="StaticBody2D16" type="StaticBody2D" parent="." unique_id=760632942 groups=["wgroup"]]
 
 [node name="Lefrarrow" type="Sprite2D" parent="StaticBody2D16" unique_id=219576175]
 position = Vector2(1720, 544)
@@ -10737,7 +10737,7 @@ texture = ExtResource("23_b0b1p")
 position = Vector2(1721.25, 545.5)
 shape = SubResource("RectangleShape2D_ho870")
 
-[node name="StaticBody2D17" type="StaticBody2D" parent="." unique_id=1246774050]
+[node name="StaticBody2D17" type="StaticBody2D" parent="." unique_id=1246774050 groups=["wgroup"]]
 position = Vector2(1440, 88)
 
 [node name="Spinniy" type="Sprite2D" parent="StaticBody2D17" unique_id=1931226828]
