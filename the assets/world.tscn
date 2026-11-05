@@ -36,6 +36,8 @@
 [ext_resource type="VideoStream" uid="uid://b21j084elxr7n" path="res://the assets/djreal.ogv" id="34_lw5hh"]
 [ext_resource type="Script" uid="uid://bqbdgjgetg32i" path="res://the assets/area_2d_12.gd" id="35_hder0"]
 [ext_resource type="Texture2D" uid="uid://ci3yydw4ri6k7" path="res://the assets/HDLaserKiwi.webp" id="36_sngdr"]
+[ext_resource type="Texture2D" uid="uid://cahjj2eyugdb0" path="res://the assets/Laser-Kiwi-open.webp" id="37_sngdr"]
+[ext_resource type="Texture2D" uid="uid://ds0yj0m44gobu" path="res://the assets/thingyconferi.png" id="37_w1cq4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jxej4"]
 radius = 136.49908
@@ -129,7 +131,7 @@ size = Vector2(609.5215, 761.9043)
 size = Vector2(533.375, 502.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqbdg"]
-size = Vector2(2151, 98)
+size = Vector2(2078, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_db4e7"]
 size = Vector2(448.87036, 447.5952)
@@ -10236,7 +10238,7 @@ offset_left = 84.0
 offset_top = 232.0
 offset_right = 124.0
 offset_bottom = 255.0
-text = "checkpoint"
+text = "<-- checkpoint"
 
 [node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828 groups=["blugroup", "players"]]
 position = Vector2(136, 416)
@@ -10411,7 +10413,7 @@ scale = Vector2(3.3562498, 0.26)
 texture = ExtResource("8_8qoub")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D12" unique_id=1376198817]
-position = Vector2(-3238.5, -1717)
+position = Vector2(-3275, -1717)
 shape = SubResource("RectangleShape2D_lqbdg")
 
 [node name="Plank2" type="Sprite2D" parent="StaticBody2D12" unique_id=1525178261]
@@ -10771,6 +10773,16 @@ shape = SubResource("CapsuleShape2D_311yx")
 position = Vector2(1.4305115e-05, -28.945442)
 scale = Vector2(0.017272737, 0.039886367)
 texture = ExtResource("36_sngdr")
+
+[node name="Thingyconferi" type="Sprite2D" parent="Area2D12" unique_id=2014906147]
+position = Vector2(0.5625, -75.625)
+scale = Vector2(0.18459032, 0.22318178)
+texture = ExtResource("37_w1cq4")
+
+[node name="LaserKiwiOpen" type="Sprite2D" parent="Area2D12" unique_id=604658721]
+position = Vector2(3.0517578e-05, -32.00003)
+scale = Vector2(0.046426505, 0.15661712)
+texture = ExtResource("37_sngdr")
 
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="button" to="." method="_on_button_body_entered"]
