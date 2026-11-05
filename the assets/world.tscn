@@ -60,21 +60,6 @@ atlas = ExtResource("2_lx3ct")
 radius = 16.0
 height = 32.0
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lx3ct"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxej4"]
-size = Vector2(53.296936, 126)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3towl"]
-size = Vector2(122.18179, 146.28574)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pv3gu"]
-size = Vector2(639.99963, 342.85712)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxej4"]
-radius = 56.094116
-height = 112.18823
-
 [sub_resource type="Gradient" id="Gradient_hder0"]
 offsets = PackedFloat32Array(0, 0.083333336)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -109,6 +94,21 @@ gravity = Vector3(0, 30, 0)
 scale_min = 0.5
 color = Color(0.76862746, 0.7411765, 0.65882355, 1)
 alpha_curve = SubResource("CurveTexture_hder0")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lx3ct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxej4"]
+size = Vector2(53.296936, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3towl"]
+size = Vector2(122.18179, 146.28574)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pv3gu"]
+size = Vector2(639.99963, 342.85712)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxej4"]
+radius = 56.094116
+height = 112.18823
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr60s"]
 size = Vector2(840, 2192)
@@ -9625,6 +9625,16 @@ texture = SubResource("AtlasTexture_jxej4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nope" unique_id=1721742724]
 shape = SubResource("CapsuleShape2D_lx3ct")
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="nope" unique_id=371745609]
+position = Vector2(0, 16)
+emitting = false
+amount = 20
+texture = SubResource("CanvasTexture_hder0")
+lifetime = 0.63
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_jxej4")
+
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1331006545]
 position = Vector2(632, 584)
 scale = Vector2(9.156251, 1)
@@ -10148,10 +10158,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="Label/Label/Label/Label" unique_id=1768926648]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.43956044
-anchor_top = 14.367347
-anchor_right = -0.43956044
-anchor_bottom = 14.367347
+anchor_left = -0.3956044
+anchor_top = 13.714286
+anchor_right = -0.3956044
+anchor_bottom = 13.714286
 offset_left = 240.0
 offset_top = 256.0
 offset_right = 580.0
