@@ -9612,7 +9612,7 @@ scale = Vector2(0.13142206, 0.04108281)
 texture = ExtResource("4_evk7e")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=48045530 groups=["gregroup"]]
-position = Vector2(-139.08537, 32)
+position = Vector2(-419.5495, -136)
 scale = Vector2(0.20577233, 0.7133758)
 texture = ExtResource("4_evk7e")
 
