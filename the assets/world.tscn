@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bi4u5rpxx6j60" path="res://the assets/Screenshot 2026-10-23 214845.png" id="2_blbh7"]
 [ext_resource type="Texture2D" uid="uid://ba2510k2p4n28" path="res://the assets/icon.svg" id="2_lx3ct"]
 [ext_resource type="Texture2D" uid="uid://dajaoyjasku1c" path="res://the assets/blackhole.jpg" id="3_4absh"]
+[ext_resource type="Texture2D" uid="uid://biuvvuu5xfo8h" path="res://the assets/theface.jpg" id="3_at6so"]
 [ext_resource type="Texture2D" uid="uid://dx6k28aau2xd7" path="res://the assets/sun.jpg" id="3_fk81r"]
+[ext_resource type="Script" uid="uid://cnrf5qwntxu62" path="res://the assets/scary.gd" id="3_j0mng"]
 [ext_resource type="Script" uid="uid://d17xecw84sgo4" path="res://the assets/nope.gd" id="3_lx3ct"]
 [ext_resource type="Texture2D" uid="uid://2s60c4v5hh0" path="res://the assets/spinniy.jpg" id="4_5txt1"]
 [ext_resource type="Texture2D" uid="uid://l6fkcdvmvgwl" path="res://the assets/hand-on-grass.jpeg" id="4_evk7e"]
@@ -14,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cjdrloig8hru6" path="res://the assets/saturn.jpg" id="9_6d0v1"]
 [ext_resource type="Texture2D" uid="uid://085fotas5gws" path="res://the assets/pluto.jpg" id="10_23e7i"]
 [ext_resource type="Texture2D" uid="uid://0tpry0i40pjh" path="res://the assets/flag.jpg" id="13_mihkp"]
+[ext_resource type="Script" uid="uid://b6dk1wtwdwoav" path="res://the assets/lightblocker.gd" id="13_y648p"]
 [ext_resource type="Script" uid="uid://bqg6mbx6gjiux" path="res://p2.gd" id="14_g23vd"]
 [ext_resource type="Texture2D" uid="uid://d30iyjhurdvan" path="res://the assets/watergirl.jpg" id="14_mihkp"]
 [ext_resource type="Script" uid="uid://bwgjobg8r5iak" path="res://camera.gd" id="16_ro3bi"]
@@ -33,11 +36,15 @@
 [ext_resource type="PackedScene" uid="uid://4ixwweuji582" path="res://the assets/colecore.tscn" id="30_u7lg5"]
 [ext_resource type="Texture2D" uid="uid://cifntiivufuqr" path="res://the assets/coree.jpg" id="31_enybu"]
 [ext_resource type="Texture2D" uid="uid://c1fkie5kppr6f" path="res://the assets/Dark_matter_anomaly.webp" id="33_m80ji"]
+[ext_resource type="Shader" uid="uid://dtmo41t62bkcv" path="res://the assets/sahders.gdshader" id="34_dg3cm"]
 [ext_resource type="VideoStream" uid="uid://b21j084elxr7n" path="res://the assets/djreal.ogv" id="34_lw5hh"]
 [ext_resource type="Script" uid="uid://bqbdgjgetg32i" path="res://the assets/area_2d_12.gd" id="35_hder0"]
 [ext_resource type="Texture2D" uid="uid://ci3yydw4ri6k7" path="res://the assets/HDLaserKiwi.webp" id="36_sngdr"]
 [ext_resource type="Texture2D" uid="uid://cahjj2eyugdb0" path="res://the assets/Laser-Kiwi-open.webp" id="37_sngdr"]
 [ext_resource type="Texture2D" uid="uid://ds0yj0m44gobu" path="res://the assets/thingyconferi.png" id="37_w1cq4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrrg6"]
+size = Vector2(154.2024, 21.63636)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jxej4"]
 radius = 136.49908
@@ -97,6 +104,18 @@ scale_min = 0.5
 color = Color(0.76862746, 0.7411765, 0.65882355, 1)
 alpha_curve = SubResource("CurveTexture_hder0")
 
+[sub_resource type="Gradient" id="Gradient_dg3cm"]
+offsets = PackedFloat32Array(0, 0.9009146)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jxej4"]
+gradient = SubResource("Gradient_dg3cm")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.52047783, 0.49658704)
+fill_to = Vector2(0, 0.721843)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lx3ct"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxej4"]
@@ -138,6 +157,12 @@ size = Vector2(448.87036, 447.5952)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu4c8"]
 size = Vector2(418.94562, 447.5952)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jxej4"]
+shader = ExtResource("34_dg3cm")
+shader_parameter/vignette_strength = 0.7
+shader_parameter/vignette_size = 0.8
+shader_parameter/saturation = 0.3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymn70"]
 size = Vector2(853.33203, 711.1113)
@@ -9514,6 +9539,9 @@ height = 676.92285
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rvxl3"]
 size = Vector2(93, 40)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pv3gu"]
+polygon = PackedVector2Array(1400, 520, 1400, 480, 1496, 480, 1496, 520)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ho870"]
 size = Vector2(114.5, 45)
 
@@ -9540,17 +9568,30 @@ stream = ExtResource("34_lw5hh")
 autoplay = true
 loop = true
 
+[node name="Area2D13" type="Area2D" parent="." unique_id=2067798938]
+position = Vector2(950.00006, 94)
+scale = Vector2(1.2343754, 1.203125)
+script = ExtResource("3_j0mng")
+
+[node name="Theface" type="Sprite2D" parent="Area2D13" unique_id=705914395]
+texture = ExtResource("3_at6so")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D13" unique_id=465262574]
+position = Vector2(85.873344, -124.67532)
+rotation = -1.1867592
+shape = SubResource("RectangleShape2D_wrrg6")
+
 [node name="colti" parent="." unique_id=951929805 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
 position = Vector2(-536, 608)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="Coree2" type="Sprite2D" parent="colti" unique_id=430006293]
-position = Vector2(378.75, -157.25)
+position = Vector2(384.00003, -104)
 scale = Vector2(0.12499998, 0.12499998)
 texture = ExtResource("31_enybu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="colti" unique_id=1645650596]
-position = Vector2(378.75, -157.25)
+position = Vector2(384.00003, -120)
 scale = Vector2(0.12499998, 0.12499998)
 shape = SubResource("CircleShape2D_jxej4")
 
@@ -9612,8 +9653,8 @@ scale = Vector2(0.13142206, 0.04108281)
 texture = ExtResource("4_evk7e")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=48045530 groups=["gregroup"]]
-position = Vector2(-139.08537, 32)
-scale = Vector2(0.20577233, 0.7133758)
+position = Vector2(-139.08539, 32)
+scale = Vector2(0.26502842, 0.7133758)
 texture = ExtResource("4_evk7e")
 
 [node name="nope" type="CharacterBody2D" parent="." unique_id=225389506 groups=["blugroup", "players"]]
@@ -9636,6 +9677,12 @@ lifetime = 0.63
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_jxej4")
+
+[node name="PointLight2D" type="PointLight2D" parent="nope" unique_id=160343219]
+energy = 1.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_jxej4")
+texture_scale = 1.5
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1331006545]
 position = Vector2(632, 584)
@@ -9697,6 +9744,7 @@ texture = ExtResource("8_8qoub")
 [node name="all the platforms" type="StaticBody2D" parent="." unique_id=1428731223 groups=["wgroup"]]
 position = Vector2(76.00003, -744)
 scale = Vector2(0.18750003, 0.14000002)
+script = ExtResource("13_y648p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="all the platforms" unique_id=536420170]
 position = Vector2(1151.9996, -628.57135)
@@ -10264,6 +10312,12 @@ one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_jxej4")
 
+[node name="PointLight2D" type="PointLight2D" parent="p2" unique_id=1750174547]
+energy = 1.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_jxej4")
+texture_scale = 1.5
+
 [node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=1086870962 groups=["wgroup"]]
 position = Vector2(20, -784)
 
@@ -10296,8 +10350,8 @@ nope = NodePath("../nope")
 p2 = NodePath("../p2")
 
 [node name="wall" type="Sprite2D" parent="." unique_id=260062168]
-position = Vector2(-373.99997, -851)
-scale = Vector2(1.7897092, 6.1342273)
+position = Vector2(-375.99997, -853.49994)
+scale = Vector2(1.7897092, 6.1454134)
 texture = ExtResource("17_1on4i")
 
 [node name="Imawallges2" type="Sprite2D" parent="." unique_id=267857900]
@@ -10391,8 +10445,8 @@ position = Vector2(-2810.5, -2042.5)
 shape = SubResource("RectangleShape2D_wy6cu")
 
 [node name="HappyWheelsFinishLine" type="Sprite2D" parent="Area2D" unique_id=714826731]
-position = Vector2(-2714.5, -1922.5)
-scale = Vector2(0.7763636, 1)
+position = Vector2(-2768.579, -1970.5)
+scale = Vector2(0.97301507, 1.2532982)
 texture = ExtResource("24_x0745")
 
 [node name="SecretTunnal" type="Sprite2D" parent="." unique_id=2067390827]
@@ -10408,8 +10462,8 @@ position = Vector2(-1872.5, -969)
 shape = SubResource("RectangleShape2D_lqbdg")
 
 [node name="Plank" type="Sprite2D" parent="StaticBody2D12" unique_id=344430709]
-position = Vector2(-1874, -968)
-scale = Vector2(3.3562498, 0.26)
+position = Vector2(-1874, -894)
+scale = Vector2(3.3562498, 0.6300001)
 texture = ExtResource("8_8qoub")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D12" unique_id=1376198817]
@@ -10465,6 +10519,14 @@ hehehehee
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1595189058]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2001471633]
+material = SubResource("ShaderMaterial_jxej4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label4" type="Label" parent="CanvasLayer" unique_id=419347466]
 offset_left = 20.0
@@ -10690,8 +10752,8 @@ position = Vector2(408, 296)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="Images" type="Sprite2D" parent="." unique_id=769475773]
-position = Vector2(2159, 56.000004)
-scale = Vector2(1, 2.8803132)
+position = Vector2(2159, -130.12503)
+scale = Vector2(1, 3.713087)
 texture = ExtResource("17_1on4i")
 
 [node name="Area2D10" type="Area2D" parent="." unique_id=246523842 node_paths=PackedStringArray("platform")]
@@ -10730,6 +10792,9 @@ shape = SubResource("CapsuleShape2D_pa1jj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15" unique_id=1154407317 groups=["wgroup"]]
 position = Vector2(1446.5, 500)
 shape = SubResource("RectangleShape2D_rvxl3")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D15" unique_id=261844272]
+occluder = SubResource("OccluderPolygon2D_pv3gu")
 
 [node name="Lefrarrow" type="Sprite2D" parent="StaticBody2D15" unique_id=2111760654 groups=["wgroup"]]
 position = Vector2(1446.5992, 500.90866)
@@ -10784,6 +10849,20 @@ position = Vector2(3.0517578e-05, -32.00003)
 scale = Vector2(0.046426505, 0.15661712)
 texture = ExtResource("37_sngdr")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=714556838]
+color = Color(0.30249536, 0.30249542, 0.3024953, 1)
+
+[node name="Label4" type="Label" parent="." unique_id=2079249049]
+offset_left = -6200.0
+offset_top = -928.0
+offset_right = -2370.0
+offset_bottom = 487.0
+theme_override_font_sizes/font_size = 500
+text = "this is the
+ halooween one"
+
+[connection signal="body_entered" from="Area2D13" to="Area2D13" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D13" to="Area2D13" method="_on_body_exited"]
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="button" to="." method="_on_button_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
