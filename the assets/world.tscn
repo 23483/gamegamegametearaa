@@ -9606,6 +9606,42 @@ tracks/3/keys = {
 "update": 0,
 "values": [0.0, 0.48642963, 0.0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("nooooani:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.6666667, 2.79, 3.97, 4.79),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2216, -1328), Vector2(2216, -1328), Vector2(2560, -832), Vector2(2344, -856), Vector2(2216, -864)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ahhhhhhhh:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.1, 2.25, 3.28),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2304, -1272), Vector2(2304, -1272), Vector2(2128, -640), Vector2(2216, -328)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Camera2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.34),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(88, -240), Vector2(2344, -751.99994)]
+}
 
 [sub_resource type="Animation" id="Animation_4gqr0"]
 resource_name = "bridge"
@@ -9640,6 +9676,9 @@ _data = {
 &"RESET": SubResource("Animation_tjndq"),
 &"bridge": SubResource("Animation_4gqr0")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jflkr"]
+size = Vector2(81, 193)
 
 [node name="World" type="Node2D" unique_id=492060198]
 script = ExtResource("1_7o8ph")
@@ -9799,7 +9838,7 @@ position = Vector2(1068, -432)
 scale = Vector2(3.625, 1)
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D3" unique_id=335141440]
-position = Vector2(28.689636, 96)
+position = Vector2(23.172428, 112)
 texture = ExtResource("2_lx3ct")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=381067683]
@@ -10627,7 +10666,6 @@ metadata/_edit_use_anchors_ = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1595189058]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2001471633]
-visible = false
 material = SubResource("ShaderMaterial_jxej4")
 anchors_preset = 15
 anchor_right = 1.0
@@ -10859,8 +10897,8 @@ position = Vector2(408, 296)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="Images" type="Sprite2D" parent="." unique_id=769475773]
-position = Vector2(2159, 229.87497)
-scale = Vector2(1, 2.1023488)
+position = Vector2(2159, 217.87495)
+scale = Vector2(1, 2.1560402)
 texture = ExtResource("17_1on4i")
 
 [node name="Area2D10" type="Area2D" parent="." unique_id=246523842 node_paths=PackedStringArray("platform")]
@@ -10957,7 +10995,6 @@ scale = Vector2(0.046426505, 0.15661712)
 texture = ExtResource("37_sngdr")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=714556838]
-visible = false
 color = Color(0.30249536, 0.30249542, 0.3024953, 1)
 
 [node name="Label4" type="Label" parent="." unique_id=2079249049]
@@ -10972,9 +11009,36 @@ text = "this is the
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1388061944]
 libraries/ = SubResource("AnimationLibrary_udfrc")
 
+[node name="nooooani" type="Node2D" parent="." unique_id=846266917]
+position = Vector2(2216, -1328)
+
+[node name="nooooo" type="Label" parent="nooooani" unique_id=1817696857]
+offset_left = 56.0
+offset_top = -16.0
+offset_right = 159.0
+offset_bottom = 7.0
+offset_transform_enabled = true
+text = "Nooooooo!!!!!"
+
+[node name="ahhhhhhhh" type="Node2D" parent="." unique_id=896386995]
+position = Vector2(2304, -1272)
+
+[node name="Label" type="Label" parent="ahhhhhhhh" unique_id=1796490260]
+offset_right = 119.0
+offset_bottom = 23.0
+text = "ahhhhhhhhh!!!!"
+
+[node name="Area2D14" type="Area2D" parent="." unique_id=859179621]
+position = Vector2(1896, -896)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D14" unique_id=377655254]
+position = Vector2(-56, 56)
+shape = SubResource("RectangleShape2D_jflkr")
+
 [connection signal="body_entered" from="Area2D13" to="Area2D13" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D13" to="Area2D13" method="_on_body_exited"]
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="button" to="." method="_on_button_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D12" to="Area2D12" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D14" to="." method="_on_area_2d_14_body_entered"]

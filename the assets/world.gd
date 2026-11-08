@@ -87,3 +87,10 @@ func _on_button_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_13_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+
+
+func _on_area_2d_14_body_entered(body: Node2D) -> void:
+	if body.is_in_group("players"):
+		$AnimationPlayer.play("RESET") # Replace with function body.
+		$Camera2D.followp2 = false
+		Maxdistance = 9999999
