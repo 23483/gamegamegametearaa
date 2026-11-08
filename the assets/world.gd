@@ -100,3 +100,10 @@ func _on_area_2d_15_body_entered(body: Node2D) -> void:
 	if body.is_in_group("players"):
 		$AnimationPlayer.play("cage")
 		$Camera2D.followp2 = true
+
+
+func _on_area_2d_17_body_entered(body: Node2D) -> void:
+		if body.is_in_group("players"):
+			$AnimationPlayer.play("nowinn") # Replace with function body.
+			$Camera2D.followp2 = false
+			Maxdistance = 9999999
