@@ -4,10 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://bi4u5rpxx6j60" path="res://the assets/Screenshot 2026-10-23 214845.png" id="2_blbh7"]
 [ext_resource type="Texture2D" uid="uid://ba2510k2p4n28" path="res://the assets/icon.svg" id="2_lx3ct"]
 [ext_resource type="Texture2D" uid="uid://b2h42gsa3vt4d" path="res://the assets/bridgereal.webp" id="2_tjndq"]
+[ext_resource type="Texture2D" uid="uid://drvda1ynayqse" path="res://the assets/cagestars.webp" id="2_udfrc"]
 [ext_resource type="Texture2D" uid="uid://dajaoyjasku1c" path="res://the assets/blackhole.jpg" id="3_4absh"]
 [ext_resource type="Texture2D" uid="uid://biuvvuu5xfo8h" path="res://the assets/theface.jpg" id="3_at6so"]
 [ext_resource type="Texture2D" uid="uid://dx6k28aau2xd7" path="res://the assets/sun.jpg" id="3_fk81r"]
 [ext_resource type="Script" uid="uid://cnrf5qwntxu62" path="res://the assets/scary.gd" id="3_j0mng"]
+[ext_resource type="Texture2D" uid="uid://b5einlelp3m03" path="res://the assets/cage.jpg" id="3_kfhba"]
 [ext_resource type="Script" uid="uid://d17xecw84sgo4" path="res://the assets/nope.gd" id="3_lx3ct"]
 [ext_resource type="Texture2D" uid="uid://2s60c4v5hh0" path="res://the assets/spinniy.jpg" id="4_5txt1"]
 [ext_resource type="Texture2D" uid="uid://l6fkcdvmvgwl" path="res://the assets/hand-on-grass.jpeg" id="4_evk7e"]
@@ -136,7 +138,7 @@ radius = 56.094116
 height = 112.18823
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr60s"]
-size = Vector2(840, 1888)
+size = Vector2(456, 1432)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_140hh"]
 size = Vector2(800, 304)
@@ -160,7 +162,16 @@ size = Vector2(2078, 98)
 size = Vector2(448.87036, 447.5952)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu4c8"]
-size = Vector2(2429.9756, 719.6045)
+size = Vector2(7038.3755, 1133.273)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfktk"]
+size = Vector2(55.84375, 966.3125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wd3ij"]
+size = Vector2(14823.943, 2561.7683)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shn48"]
+size = Vector2(58, 115)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jxej4"]
 shader = ExtResource("34_dg3cm")
@@ -9642,6 +9653,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [Vector2(88, -240), Vector2(2344, -751.99994)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6097, -2670)]
+}
 
 [sub_resource type="Animation" id="Animation_4gqr0"]
 resource_name = "bridge"
@@ -9671,19 +9694,73 @@ tracks/1/keys = {
 "values": [Vector2(264, 416), Vector2(400, 416)]
 }
 
+[sub_resource type="Animation" id="Animation_7qif1"]
+resource_name = "cage"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("p2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0223),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(136, 416), Vector2(6518, -2177)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("nope:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.95, 2.61),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(294, 417), Vector2(5872, -2077), Vector2(6127, -2086), Vector2(6127, -2086)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.92, 0.93333334, 2.63),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6097, -2670), Vector2(6097, -2670), Vector2(6062, -2137), Vector2(6062, -2137)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_udfrc"]
 _data = {
 &"RESET": SubResource("Animation_tjndq"),
-&"bridge": SubResource("Animation_4gqr0")
+&"bridge": SubResource("Animation_4gqr0"),
+&"cage": SubResource("Animation_7qif1")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jflkr"]
 size = Vector2(81, 193)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpneg"]
+size = Vector2(62, 384)
+
 [node name="World" type="Node2D" unique_id=492060198]
 script = ExtResource("1_7o8ph")
 tutorial_spawn = Vector2(192, 416)
 game_spawn = Vector2(488, -312)
+
+[node name="Cagestars" type="Sprite2D" parent="." unique_id=169569030]
+position = Vector2(6478.4624, -2086.4998)
+scale = Vector2(0.28720176, 0.29833362)
+texture = ExtResource("2_udfrc")
+
+[node name="Cage" type="Sprite2D" parent="Cagestars" unique_id=2048003449]
+position = Vector2(136.00781, -296)
+scale = Vector2(0.23815237, 0.2411615)
+texture = ExtResource("3_kfhba")
 
 [node name="StaticBody2D18" type="StaticBody2D" parent="." unique_id=1120804078]
 position = Vector2(2392.0002, -744.00006)
@@ -10170,6 +10247,16 @@ position = Vector2(20698.67, -3944.644)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="all the platforms" unique_id=1951834639]
+position = Vector2(21018.662, -2964.284)
+scale = Vector2(1.0000008, 1)
+shape = SubResource("RectangleShape2D_pv3gu")
+
+[node name="Plank40" type="Sprite2D" parent="all the platforms" unique_id=1210760936]
+position = Vector2(21018.664, -2964.2852)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("8_8qoub")
+
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="all the platforms" unique_id=1211152959]
 position = Vector2(21850.668, -4801.7856)
 scale = Vector2(1.0000008, 1)
@@ -10457,7 +10544,8 @@ explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_jxej4")
 
 [node name="PointLight2D" type="PointLight2D" parent="p2" unique_id=1750174547]
-position = Vector2(-8, 0)
+visible = false
+position = Vector2(0, 3)
 energy = 1.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_jxej4")
@@ -10475,7 +10563,7 @@ position = Vector2(-400, -1288)
 shape = SubResource("RectangleShape2D_140hh")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D7" unique_id=316997157]
-position = Vector2(2336, 1488)
+position = Vector2(2144, 1716)
 shape = SubResource("RectangleShape2D_wr60s")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=606835633 groups=["wgroup"]]
@@ -10529,11 +10617,11 @@ scale = Vector2(0.15399992, 0.18600024)
 texture = ExtResource("19_6xr1h")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="spikes" unique_id=708819725]
-position = Vector2(4561.002, -2081.625)
+position = Vector2(5352.0005, -1197.375)
 shape = SubResource("RectangleShape2D_crjw8")
 
 [node name="spike3" type="Sprite2D" parent="spikes" unique_id=1812590487]
-position = Vector2(4561.2563, -2085)
+position = Vector2(5352.255, -1200.75)
 scale = Vector2(0.15399992, 0.18600024)
 texture = ExtResource("19_6xr1h")
 
@@ -10543,12 +10631,12 @@ script = ExtResource("21_3b6by")
 platform = NodePath("../StaticBody2D11")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="button" unique_id=923226910]
-position = Vector2(4354.0015, -1339.2499)
+position = Vector2(3193, -1967.3749)
 scale = Vector2(0.05250005, 0.05250005)
 shape = SubResource("RectangleShape2D_0gdhc")
 
 [node name="Button" type="Sprite2D" parent="button" unique_id=1945177232]
-position = Vector2(4354.0015, -1343.25)
+position = Vector2(3193, -1971.375)
 scale = Vector2(0.05250005, 0.05250005)
 texture = ExtResource("21_52qn2")
 
@@ -10556,20 +10644,20 @@ texture = ExtResource("21_52qn2")
 position = Vector2(20, -784)
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="StaticBody2D11" unique_id=446095830]
-position = Vector2(4477.001, -1364.25)
+position = Vector2(3315.9995, -1992.375)
 scale = Vector2(0.1875002, 0.14000002)
 shape = SubResource("RectangleShape2D_pv3gu")
 
 [node name="Lefrarrow" type="Sprite2D" parent="StaticBody2D11" unique_id=21778663]
-position = Vector2(4477.0015, -1364.25)
+position = Vector2(3316, -1992.375)
 scale = Vector2(0.23850018, 0.09450018)
 texture = ExtResource("23_b0b1p")
 
 [node name="Label4" type="Label" parent="StaticBody2D11" unique_id=281226758]
-offset_left = 5373.0015
-offset_top = -1468.25
-offset_right = 5552.0015
-offset_bottom = -1277.25
+offset_left = 3188.0
+offset_top = -2088.0
+offset_right = 3367.0
+offset_bottom = -1897.0
 text = "if u missed the arrow 
 you can ust jump there"
 metadata/_edit_use_anchors_ = true
@@ -10628,8 +10716,8 @@ position = Vector2(-740, -1628)
 scale = Vector2(0.2673378, 0.84004474)
 shape = SubResource("RectangleShape2D_db4e7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13" unique_id=654245634]
-position = Vector2(2695.188, 344)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13" unique_id=654245634 groups=["gregroup"]]
+position = Vector2(3311.188, 524)
 scale = Vector2(0.2673378, 0.84004474)
 shape = SubResource("RectangleShape2D_qu4c8")
 
@@ -10638,16 +10726,41 @@ position = Vector2(-739.75, -1628.25)
 scale = Vector2(0.2673378, 0.84004474)
 texture = ExtResource("17_1on4i")
 
-[node name="Images2" type="Sprite2D" parent="StaticBody2D13" unique_id=900069344]
-position = Vector2(2686.125, 282.12503)
-scale = Vector2(1.4222593, 1.0643176)
-texture = ExtResource("17_1on4i")
+[node name="HandOnGrass" type="Sprite2D" parent="StaticBody2D13" unique_id=1564554559]
+position = Vector2(3292, 424)
+scale = Vector2(1.5866667, 1)
+texture = ExtResource("4_evk7e")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D13" unique_id=1668746210]
+position = Vector2(1944.0781, 1028.8438)
+shape = SubResource("RectangleShape2D_cfktk")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D13" unique_id=614985016]
+position = Vector2(6206.5, -180.00006)
+scale = Vector2(0.2673378, 0.84004474)
+shape = SubResource("RectangleShape2D_wd3ij")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D13" unique_id=1552377801]
+position = Vector2(6493.8047, -1303)
+shape = SubResource("RectangleShape2D_shn48")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D13" unique_id=1587998340]
+position = Vector2(6468, -1275)
+shape = SubResource("RectangleShape2D_shn48")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D13" unique_id=1814250334]
+position = Vector2(6442, -1246)
+shape = SubResource("RectangleShape2D_shn48")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D13/CollisionShape2D7" unique_id=1659894649]
+position = Vector2(-26, 30)
+shape = SubResource("RectangleShape2D_shn48")
 
 [node name="Label2" type="Label" parent="." unique_id=1296938989]
-offset_left = 4801.0015
-offset_top = -2252.25
-offset_right = 4961.0015
-offset_bottom = -2061.25
+offset_left = 3360.0
+offset_top = -2840.0
+offset_right = 3520.0
+offset_bottom = -2649.0
 text = "not this way
 heheee
 :)"
@@ -10666,6 +10779,7 @@ metadata/_edit_use_anchors_ = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1595189058]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2001471633]
+visible = false
 material = SubResource("ShaderMaterial_jxej4")
 anchors_preset = 15
 anchor_right = 1.0
@@ -10870,7 +10984,7 @@ position = Vector2(-1044, -2488)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="Area2D7" parent="." unique_id=1704332022 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
-position = Vector2(4201.0015, -2340.25)
+position = Vector2(2808, -2968)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="DarkMatterAnomaly" type="Sprite2D" parent="." unique_id=383454511]
@@ -10897,8 +11011,13 @@ position = Vector2(408, 296)
 core_counter = NodePath("../CanvasLayer/cores")
 
 [node name="Images" type="Sprite2D" parent="." unique_id=769475773]
-position = Vector2(2159, 217.87495)
-scale = Vector2(1, 2.1560402)
+position = Vector2(2071.75, 217.87495)
+scale = Vector2(0.6096197, 2.1560402)
+texture = ExtResource("17_1on4i")
+
+[node name="Images" type="Sprite2D" parent="Images" unique_id=2028540347]
+position = Vector2(6854.634, -566.96716)
+scale = Vector2(14.719489, 2.1488373)
 texture = ExtResource("17_1on4i")
 
 [node name="Area2D10" type="Area2D" parent="." unique_id=246523842 node_paths=PackedStringArray("platform")]
@@ -11035,6 +11154,48 @@ position = Vector2(1896, -896)
 position = Vector2(-56, 56)
 shape = SubResource("RectangleShape2D_jflkr")
 
+[node name="Box2" type="Sprite2D" parent="." unique_id=1859464869]
+position = Vector2(6504, -2173.875)
+scale = Vector2(0.00390625, 0.090331815)
+texture = ExtResource("6_fk81r")
+
+[node name="Box2" type="Sprite2D" parent="Box2" unique_id=793500116]
+position = Vector2(2048, -0.20657063)
+scale = Vector2(0.7050781, 0.9991985)
+texture = ExtResource("6_fk81r")
+
+[node name="Box2" type="Sprite2D" parent="Box2/Box2" unique_id=690295314]
+position = Vector2(2186.0527, -1.1202397)
+scale = Vector2(1.3884358, 0.99562544)
+texture = ExtResource("6_fk81r")
+
+[node name="Box2" type="Sprite2D" parent="Box2/Box2/Box2" unique_id=539283553]
+position = Vector2(1778.1348, -0.060702562)
+scale = Vector2(1.2050512, 0.99562544)
+texture = ExtResource("6_fk81r")
+
+[node name="Box2" type="Sprite2D" parent="Box2/Box2/Box2/Box2" unique_id=1917790537]
+position = Vector2(1340.9617, 0.001255393)
+scale = Vector2(1.0621737, 0.99562544)
+texture = ExtResource("6_fk81r")
+
+[node name="Area2D15" type="Area2D" parent="." unique_id=193808788]
+position = Vector2(5776, -2230)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D15" unique_id=1276687690]
+position = Vector2(18, -6)
+shape = SubResource("RectangleShape2D_hpneg")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=243277795]
+position = Vector2(6097, -2670)
+
+[node name="ur alive?" type="Label" parent="Node2D" unique_id=318452943]
+offset_left = 49.0
+offset_top = -14.0
+offset_right = 187.0
+offset_bottom = 41.0
+text = "ur alive!?!?!?!!?!?!?!"
+
 [connection signal="body_entered" from="Area2D13" to="Area2D13" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D13" to="Area2D13" method="_on_body_exited"]
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
@@ -11042,3 +11203,4 @@ shape = SubResource("RectangleShape2D_jflkr")
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D12" to="Area2D12" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D14" to="." method="_on_area_2d_14_body_entered"]
+[connection signal="body_entered" from="Area2D15" to="." method="_on_area_2d_15_body_entered"]
