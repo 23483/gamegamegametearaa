@@ -19,11 +19,21 @@ extends Node2D
 @export var tutorial_spawn: Vector2 = Vector2(150, -720)
 @export var game_spawn: Vector2 = Vector2(1200, -720)
 
+var ani1 = true
+var ani2 = true
+var ani3 = true
+var ani4 = true
+var ani5 = true
+var ani6 = true
+var ani7 = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var spawn_position = tutorial_spawn
+	
 
+	
+	
 	if GameData.skip_tutorial:
 		spawn_position = game_spawn
 	GameData.checkpoint_position = spawn_position
@@ -83,3 +93,56 @@ func _process(delta: float) -> void:
 
 func _on_button_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+
+
+func _on_area_2d_13_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_area_2d_14_body_entered(body: Node2D) -> void:
+	if body.is_in_group("players") and ani1:
+		$AnimationPlayer.play("RESET") # Replace with function body.
+		$Camera2D.followp2 = false
+		Maxdistance = 9999999
+		ani1 = false
+
+
+func _on_area_2d_15_body_entered(body: Node2D) -> void:
+	if body.is_in_group("players") and ani2:
+		$AnimationPlayer.play("cage")
+		$Camera2D.followp2 = true
+		ani2 = false
+
+
+func _on_area_2d_17_body_entered(body: Node2D) -> void:
+		if body.is_in_group("players") and ani3:
+			$AnimationPlayer.play("nowinn") # Replace with function body.
+			$Camera2D.followp2 = false
+			Maxdistance = 9999999
+			ani3 = false
+
+
+func _on_area_2d_18_body_entered(body: Node2D) -> void:
+	if body.is_in_group("players") and not ani3:
+		$AnimationPlayer.play("nowin2") # Replace with function body.
+		ani4 = false
+		print("thhe thingy2")
+	print("thhe thingy")
+
+
+func _on_area_2d_19_body_entered(body: Node2D) -> void:
+		if body.is_in_group("players") and ani5 and not ani3:
+			$AnimationPlayer.play("nowin3") # Replace with function body.
+			ani5 = false # Replace with function body.
+
+
+func _on_area_2d_20_body_entered(body: Node2D) -> void:
+		if body.is_in_group("players") and ani6 and not ani3:
+			$AnimationPlayer.play("nowin4") # Replace with function body.
+			ani6 = false # Replace with function body. # Replace with function body.
+
+
+func _on_area_2d_21_body_entered(body: Node2D) -> void:
+		if body.is_in_group("players") and ani7 and not ani3:
+			$AnimationPlayer.play("nowin5") # Replace with function body.
+			ani7 = false # Replace with function body. # Replace with function body.

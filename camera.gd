@@ -16,20 +16,29 @@ extends Camera2D
 var warning_shaking: bool = false
 var base_offset: Vector2 = Vector2(0, 0)
 
+var distance = 1
+
+var followp2 = true
+
 func _process(delta: float) -> void:
 	if nope == null or p2 == null:
 		return
 
-	var midpoint = (nope.global_position + p2.global_position) / 2.0
+	var midpoint = nope.global_position
+
+	if followp2:
+		midpoint = (p2.global_position + nope.global_position) / 2
 
 	global_position = global_position.lerp(
 		midpoint,
 		1.0 - exp(-follow_speed * delta)
 	)
-	
-	var distance = nope.global_position.distance_to(
-		p2.global_position
-	)
+	if followp2:
+		distance = nope.global_position.distance_to(
+			p2.global_position
+		)
+	else:
+		distance = 99999
 
 	var target_zoom = clamp(
 		zoom_margin / max(distance, 1.0),
