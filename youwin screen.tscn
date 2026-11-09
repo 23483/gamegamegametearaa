@@ -53,30 +53,28 @@ text = "you win!!!"
 
 [node name="time" type="Label" parent="." unique_id=2023417394]
 layout_mode = 0
-offset_left = 536.0
-offset_top = 200.0
-offset_right = 624.0
-offset_bottom = 248.0
+offset_left = 528.0
+offset_top = 208.0
+offset_right = 616.0
+offset_bottom = 256.0
 
 [node name="cores" type="Label" parent="." unique_id=1784509402]
 layout_mode = 0
-offset_left = 520.0
-offset_top = 144.0
-offset_right = 632.0
-offset_bottom = 184.0
+offset_left = 752.0
+offset_top = -112.0
+offset_right = 864.0
+offset_bottom = -72.0
 
 [node name="pb" type="Label" parent="." unique_id=101963630]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.014
 anchor_bottom = 0.025
-offset_left = 408.0
-offset_top = 576.0
-offset_right = 820.872
-offset_bottom = 608.8
-text = "my pb is 3 mins and 43
-seconds with 9/9 cores collected
-you should try beat it"
+offset_left = 744.0
+offset_top = 280.0
+offset_right = 1156.872
+offset_bottom = 338.8
+text = "ty for playingggggggggggg"
 
 [connection signal="pressed" from="main" to="." method="_on_main_pressed"]
 [connection signal="pressed" from="again" to="." method="_on_again_pressed"]
