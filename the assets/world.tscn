@@ -49,6 +49,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqqrh"]
 size = Vector2(544, 328)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a8ly"]
+size = Vector2(900, 77)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rioxy"]
 size = Vector2(269, 20)
 
@@ -9719,6 +9722,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2D3:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7880, -4136)]
+}
 
 [sub_resource type="Animation" id="Animation_4gqr0"]
 resource_name = "bridge"
@@ -9812,9 +9827,37 @@ tracks/4/keys = {
 "values": [Vector2(6297, -2569), Vector2(6445, -2250)]
 }
 
+[sub_resource type="Animation" id="Animation_kfhba"]
+resource_name = "nowin2"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("p2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.08666664, 0.6666667, 0.9866666, 1.5766666, 1.6078665),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(7408, -3783.9998), Vector2(7272.0005, -3064), Vector2(7272.0005, -3064), Vector2(6816, -3744), Vector2(2280, -424.00003)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("p2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.08666664),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+
 [sub_resource type="Animation" id="Animation_udfrc"]
 resource_name = "nowinn"
-length = 40.0
+length = 8.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -9834,10 +9877,10 @@ tracks/1/path = NodePath("p2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.0001, 0.48, 0.6238, 0.71, 0.78, 0.87, 0.96, 1.09, 1.23, 1.43, 1.64, 1.88),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.0001, 1.7333333, 1.8771334, 1.9633334, 2.0333333, 2.1233335, 2.2133334, 2.3433332, 2.4833333, 2.6833334, 2.8933334, 3.1333332, 4.4333334, 4.83, 5.09, 5.34, 5.57, 5.73, 6.3, 7.521333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(136, 416), Vector2(8408, -3656), Vector2(8368, -3648), Vector2(8344, -3648), Vector2(8376, -3648), Vector2(8352, -3648), Vector2(8368, -3648), Vector2(8352.001, -3648), Vector2(8328, -3648.0002), Vector2(8392, -3656.0002), Vector2(8400, -3656), Vector2(8368, -3656), Vector2(8304, -3664)]
+"values": [Vector2(136, 416), Vector2(8408, -3656), Vector2(8368, -3648), Vector2(8344, -3648), Vector2(8376, -3648), Vector2(8352, -3648), Vector2(8368, -3648), Vector2(8352.001, -3648), Vector2(8328, -3648.0002), Vector2(8392, -3656.0002), Vector2(8400, -3656), Vector2(8368, -3656), Vector2(8304, -3664), Vector2(8304, -3664), Vector2(8176, -3936), Vector2(8056.0005, -4000), Vector2(7960, -3912), Vector2(7896.0005, -3784), Vector2(7872.0005, -3672), Vector2(7872.0005, -3672), Vector2(7680.0005, -4496)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -9846,10 +9889,22 @@ tracks/2/path = NodePath("p2:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.71, 0.78, 0.87, 0.96, 1.09, 1.23, 1.43, 1.64, 1.88),
+"times": PackedFloat32Array(1.9633334, 2.0333333, 2.1233335, 2.2133334, 2.3433332, 2.4833333, 2.6833334, 2.8933334, 3.1333332),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 1.1), Vector2(1.2, 1.1), Vector2(1.5, 1.3), Vector2(1.5, 1.7), Vector2(2, 1.7), Vector2(2, 2.5), Vector2(3, 2.5), Vector2(3, 3)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.55, 3.5501, 3.5502),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(7880, -4136), Vector2(7880, -4136), Vector2(8288, -3768)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_udfrc"]
@@ -9857,6 +9912,7 @@ _data = {
 &"RESET": SubResource("Animation_tjndq"),
 &"bridge": SubResource("Animation_4gqr0"),
 &"cage": SubResource("Animation_7qif1"),
+&"nowin2": SubResource("Animation_kfhba"),
 &"nowinn": SubResource("Animation_udfrc")
 }
 
@@ -9880,6 +9936,26 @@ texture = ExtResource("24_x0745")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D17" unique_id=795681695]
 position = Vector2(0, -28)
 shape = SubResource("RectangleShape2D_eqqrh")
+
+[node name="Area2D18" type="Area2D" parent="." unique_id=274048433]
+position = Vector2(8736, -3788)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D18" unique_id=427214299]
+position = Vector2(-1114, 756)
+shape = SubResource("RectangleShape2D_7a8ly")
+
+[node name="Node2D3" type="Node2D" parent="." unique_id=1331887450]
+position = Vector2(7880, -4136)
+
+[node name="Label" type="Label" parent="Node2D3" unique_id=1103517333]
+offset_left = -272.0
+offset_top = 16.0
+offset_right = -57.0
+offset_bottom = 117.0
+text = "							                                                     		ahhhhhhhhh!!!!
+
+this is the part where u run 
+<-- that way"
 
 [node name="nowinner" type="Node2D" parent="." unique_id=1786122488]
 position = Vector2(8096, -4360)
@@ -10867,7 +10943,7 @@ scale = Vector2(0.2852349, 0.2852349)
 shape = SubResource("CapsuleShape2D_jxej4")
 
 [node name="Watergirl" type="Sprite2D" parent="p2" unique_id=646846608 groups=["blugroup"]]
-position = Vector2(0, 8.900955e-06)
+position = Vector2(77.333336, -37.333336)
 scale = Vector2(0.070469804, 0.070469804)
 texture = ExtResource("14_mihkp")
 
@@ -10894,7 +10970,7 @@ texture_scale = 1.5
 position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1661275362]
-position = Vector2(-420, 80)
+position = Vector2(-236, 464)
 shape = SubResource("RectangleShape2D_wr60s")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D7" unique_id=2005801869]
@@ -10922,7 +10998,7 @@ nope = NodePath("../nope")
 p2 = NodePath("../p2")
 
 [node name="wall" type="Sprite2D" parent="." unique_id=260062168]
-position = Vector2(-375.99997, -853.49994)
+position = Vector2(-391.99997, -800)
 scale = Vector2(1.7897092, 6.1454134)
 texture = ExtResource("17_1on4i")
 
@@ -10947,20 +11023,20 @@ scale = Vector2(0.15399992, 0.18600024)
 texture = ExtResource("19_6xr1h")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="spikes" unique_id=1013559634]
-position = Vector2(1372.0002, -1613.3749)
+position = Vector2(1376, -1616)
 shape = SubResource("RectangleShape2D_crjw8")
 
 [node name="spike2" type="Sprite2D" parent="spikes" unique_id=70256857]
-position = Vector2(1372.255, -1616.75)
+position = Vector2(1376.0001, -1616)
 scale = Vector2(0.15399992, 0.18600024)
 texture = ExtResource("19_6xr1h")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="spikes" unique_id=708819725]
-position = Vector2(5352.0005, -1197.375)
+position = Vector2(5328.0005, -213.375)
 shape = SubResource("RectangleShape2D_crjw8")
 
 [node name="spike3" type="Sprite2D" parent="spikes" unique_id=1812590487]
-position = Vector2(5352.255, -1200.75)
+position = Vector2(5328.255, -216.75)
 scale = Vector2(0.15399992, 0.18600024)
 texture = ExtResource("19_6xr1h")
 
@@ -11075,7 +11151,7 @@ position = Vector2(1944.0781, 1028.8438)
 shape = SubResource("RectangleShape2D_cfktk")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D13" unique_id=614985016]
-position = Vector2(6206.5, -180.00006)
+position = Vector2(6212, -176)
 scale = Vector2(0.2673378, 0.84004474)
 shape = SubResource("RectangleShape2D_wd3ij")
 
@@ -11355,7 +11431,7 @@ scale = Vector2(0.6096197, 2.1560402)
 texture = ExtResource("17_1on4i")
 
 [node name="Images" type="Sprite2D" parent="Images" unique_id=2028540347]
-position = Vector2(7103.9688, -566.96716)
+position = Vector2(7113.0425, -564.8666)
 scale = Vector2(15.835087, 2.1488373)
 texture = ExtResource("17_1on4i")
 
@@ -11552,6 +11628,7 @@ offset_bottom = 19.0
 text = "help meeeeee!!!!"
 
 [connection signal="body_entered" from="Area2D17" to="." method="_on_area_2d_17_body_entered"]
+[connection signal="body_entered" from="Area2D18" to="." method="_on_area_2d_18_body_entered"]
 [connection signal="body_entered" from="Area2D16" to="Area2D16" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D16" to="Area2D16" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D13" to="Area2D13" method="_on_body_entered"]
