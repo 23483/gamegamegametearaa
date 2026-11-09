@@ -64,6 +64,9 @@ size = Vector2(269, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjndq"]
 size = Vector2(258.80188, 62.093018)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7srl"]
+size = Vector2(250.4945, 145.38452)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrrg6"]
 size = Vector2(154.2024, 21.63636)
 
@@ -153,13 +156,17 @@ radius = 56.094116
 height = 112.18823
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr60s"]
-size = Vector2(456, 1432)
+size = Vector2(456, 1748)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_140hh"]
 size = Vector2(800, 304)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pa1jj"]
 size = Vector2(829, 506)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ysh27"]
+radius = 30.086548
+height = 116.35181
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crjw8"]
 size = Vector2(32.00003, 42.75)
@@ -199,7 +206,7 @@ size = Vector2(853.33203, 711.1113)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jxej4"]
 a = Vector2(-868, 1360)
-b = Vector2(-4796, -1856)
+b = Vector2(-4748, -1752)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m80ji"]
 texture = ExtResource("4_evk7e")
@@ -9893,6 +9900,21 @@ tracks/0/keys = {
 "values": [Vector2(4496.0005, -2736), Vector2(4176, -2144), Vector2(3712, -2824), Vector2(2112, -24)]
 }
 
+[sub_resource type="Animation" id="Animation_t7nkq"]
+resource_name = "nowin5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("p2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.98, 0.9801, 0.9802),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2352, -1456), Vector2(2176, -776), Vector2(1680, -1504), Vector2(3416, -1520), Vector2(2208.0002, -8)]
+}
+
 [sub_resource type="Animation" id="Animation_udfrc"]
 resource_name = "nowinn"
 length = 8.0
@@ -9953,6 +9975,7 @@ _data = {
 &"nowin2": SubResource("Animation_kfhba"),
 &"nowin3": SubResource("Animation_mji7v"),
 &"nowin4": SubResource("Animation_ytgkb"),
+&"nowin5": SubResource("Animation_t7nkq"),
 &"nowinn": SubResource("Animation_udfrc")
 }
 
@@ -9961,6 +9984,9 @@ size = Vector2(81, 193)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpneg"]
 size = Vector2(62, 384)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ysh27"]
+size = Vector2(28.75, 420.5)
 
 [node name="World" type="Node2D" unique_id=492060198]
 script = ExtResource("1_7o8ph")
@@ -10056,6 +10082,14 @@ shape = SubResource("RectangleShape2D_tjndq")
 position = Vector2(-115.02315, -13.023285)
 scale = Vector2(1.0714289, 1.0581393)
 texture = ExtResource("2_tjndq")
+
+[node name="Area2D21" type="Area2D" parent="." unique_id=193147156]
+position = Vector2(2200, -752.00006)
+scale = Vector2(1.7884622, 0.64999986)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D21" unique_id=1584144426]
+position = Vector2(0, -62.69226)
+shape = SubResource("RectangleShape2D_i7srl")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=530082860]
 offset_left = 1277.0
@@ -10958,10 +10992,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Label3" type="Label" parent="Label" unique_id=1621133604]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.06989247
-anchor_top = 5.673913
-anchor_right = 0.06989247
-anchor_bottom = 5.673913
+anchor_left = 7.8978496
+anchor_top = -4.0652175
+anchor_right = 7.8978496
+anchor_bottom = -4.0652175
 offset_left = -2802.5
 offset_top = -2234.5
 offset_right = -2522.5
@@ -10984,6 +11018,7 @@ offset_top = 232.0
 offset_right = 124.0
 offset_bottom = 255.0
 text = "<-- checkpoint"
+metadata/_edit_use_anchors_ = true
 
 [node name="p2" type="CharacterBody2D" parent="." unique_id=2036004828 groups=["blugroup", "players"]]
 position = Vector2(136, 416)
@@ -11023,7 +11058,7 @@ texture_scale = 1.5
 position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1661275362]
-position = Vector2(-236, 464)
+position = Vector2(-236, 306)
 shape = SubResource("RectangleShape2D_wr60s")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D7" unique_id=2005801869]
@@ -11031,14 +11066,14 @@ position = Vector2(-400, -1288)
 shape = SubResource("RectangleShape2D_140hh")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D7" unique_id=316997157]
-position = Vector2(2144, 1716)
+position = Vector2(2156, 1936)
 shape = SubResource("RectangleShape2D_wr60s")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=606835633 groups=["wgroup"]]
 position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=1843977273 groups=["wgroup"]]
-position = Vector2(1573.5, 293)
+position = Vector2(1588, 280)
 shape = SubResource("RectangleShape2D_pa1jj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2018529889 node_paths=PackedStringArray("nope", "p2")]
@@ -11051,13 +11086,41 @@ nope = NodePath("../nope")
 p2 = NodePath("../p2")
 
 [node name="wall" type="Sprite2D" parent="." unique_id=260062168]
-position = Vector2(-391.99997, -800)
+position = Vector2(-376, -848.00006)
 scale = Vector2(1.7897092, 6.1454134)
 texture = ExtResource("17_1on4i")
 
-[node name="Imawallges2" type="Sprite2D" parent="." unique_id=267857900]
-position = Vector2(1600.0001, -498.125)
+[node name="Area2D22" type="Area2D" parent="." unique_id=1173425879 node_paths=PackedStringArray("platform")]
+position = Vector2(1624, -1608)
 scale = Vector2(1.8612976, 1.1001117)
+script = ExtResource("21_3b6by")
+platform = NodePath("../Area2D")
+move_amount = Vector2(3600, 2000)
+move_duration = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D22" unique_id=1189385399]
+position = Vector2(-111.92314, 26.363968)
+shape = SubResource("CapsuleShape2D_ysh27")
+
+[node name="Button2" type="Sprite2D" parent="Area2D22" unique_id=43033465]
+position = Vector2(-107.62507, -2.7240295)
+scale = Vector2(0.14999995, 0.22952972)
+texture = ExtResource("21_52qn2")
+
+[node name="Label" type="Label" parent="Area2D22" unique_id=861212911]
+offset_left = -34.384678
+offset_top = -218.15964
+offset_right = 113.615326
+offset_bottom = -41.159637
+theme_override_font_sizes/font_size = 30
+text = "the big 
+\"you win\" 
+button
+"
+
+[node name="Imawallges2" type="Sprite2D" parent="." unique_id=267857900]
+position = Vector2(1608, -503.99994)
+scale = Vector2(1.8612975, 1.1001117)
 texture = ExtResource("17_1on4i")
 
 [node name="spikes" type="Area2D" parent="." unique_id=1718985038 node_paths=PackedStringArray("p2", "nope")]
@@ -11296,6 +11359,7 @@ offset_bottom = -192.96
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("27_gqeht")
+metadata/_edit_use_anchors_ = true
 
 [node name="cores" type="Label" parent="CanvasLayer" unique_id=376849550]
 offset_left = 20.0
@@ -11680,12 +11744,24 @@ offset_right = 156.0
 offset_bottom = 19.0
 text = "help meeeeee!!!!"
 
+[node name="Area2D23" type="Area2D" parent="." unique_id=992367801 node_paths=PackedStringArray("platform")]
+script = ExtResource("21_3b6by")
+platform = NodePath("../Area2D22")
+move_amount = Vector2(0, 750)
+move_duration = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D23" unique_id=1781031799]
+position = Vector2(7864, -3455.9998)
+rotation = -1.1137034
+shape = SubResource("RectangleShape2D_ysh27")
+
 [connection signal="body_entered" from="Area2D19" to="." method="_on_area_2d_19_body_entered"]
 [connection signal="body_entered" from="Area2D17" to="." method="_on_area_2d_17_body_entered"]
 [connection signal="body_entered" from="Area2D20" to="." method="_on_area_2d_20_body_entered"]
 [connection signal="body_entered" from="Area2D18" to="." method="_on_area_2d_18_body_entered"]
 [connection signal="body_entered" from="Area2D16" to="Area2D16" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D16" to="Area2D16" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D21" to="." method="_on_area_2d_21_body_entered"]
 [connection signal="body_entered" from="Area2D13" to="Area2D13" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D13" to="Area2D13" method="_on_body_exited"]
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]

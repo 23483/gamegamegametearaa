@@ -25,6 +25,7 @@ var ani3 = true
 var ani4 = true
 var ani5 = true
 var ani6 = true
+var ani7 = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -130,12 +131,18 @@ func _on_area_2d_18_body_entered(body: Node2D) -> void:
 
 
 func _on_area_2d_19_body_entered(body: Node2D) -> void:
-		if body.is_in_group("players") and not ani3:
+		if body.is_in_group("players") and ani5 and not ani3:
 			$AnimationPlayer.play("nowin3") # Replace with function body.
 			ani5 = false # Replace with function body.
 
 
 func _on_area_2d_20_body_entered(body: Node2D) -> void:
-	if body.is_in_group("players"):
-		$AnimationPlayer.play("nowin4") # Replace with function body.
-		ani6 = false # Replace with function body. # Replace with function body.
+		if body.is_in_group("players") and ani6 and not ani3:
+			$AnimationPlayer.play("nowin4") # Replace with function body.
+			ani6 = false # Replace with function body. # Replace with function body.
+
+
+func _on_area_2d_21_body_entered(body: Node2D) -> void:
+		if body.is_in_group("players") and ani7 and not ani3:
+			$AnimationPlayer.play("nowin5") # Replace with function body.
+			ani7 = false # Replace with function body. # Replace with function body.
