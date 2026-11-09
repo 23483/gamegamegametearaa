@@ -22,11 +22,11 @@ extends Node2D
 var ani1 = true
 var ani2 = true
 var ani3 = true
-var ani4
+var ani4 = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var spawn_position = tutorial_spawn
-	var ani4 = true
+	
 
 	
 	
@@ -115,11 +115,16 @@ func _on_area_2d_17_body_entered(body: Node2D) -> void:
 			$AnimationPlayer.play("nowinn") # Replace with function body.
 			$Camera2D.followp2 = false
 			Maxdistance = 9999999
+			ani3 = false
 
 
 func _on_area_2d_18_body_entered(body: Node2D) -> void:
-	if body.is_in_group("players") and ani4 and not ani3:
+	if body.is_in_group("players") and not ani3:
 		$AnimationPlayer.play("nowin2") # Replace with function body.
 		ani4 = false
-		print("thhe thingy")
+		print("thhe thingy2")
 	print("thhe thingy")
+
+
+func _on_area_2d_19_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

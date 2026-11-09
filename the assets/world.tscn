@@ -192,8 +192,8 @@ shader_parameter/saturation = 0.3
 size = Vector2(853.33203, 711.1113)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jxej4"]
-a = Vector2(-892, 1352)
-b = Vector2(-3372, -1088)
+a = Vector2(-1044, 1752)
+b = Vector2(-4972, -1856)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m80ji"]
 texture = ExtResource("4_evk7e")
@@ -10721,7 +10721,7 @@ scale = Vector2(1.0000008, 1)
 shape = SubResource("RectangleShape2D_pv3gu")
 
 [node name="Plank58" type="Sprite2D" parent="all the platforms" unique_id=814625825]
-position = Vector2(41514.66, -20314.283)
+position = Vector2(41514.67, -20314.281)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("8_8qoub")
 
@@ -10943,7 +10943,7 @@ scale = Vector2(0.2852349, 0.2852349)
 shape = SubResource("CapsuleShape2D_jxej4")
 
 [node name="Watergirl" type="Sprite2D" parent="p2" unique_id=646846608 groups=["blugroup"]]
-position = Vector2(77.333336, -37.333336)
+position = Vector2(-0.00016283989, -2.6226044e-06)
 scale = Vector2(0.070469804, 0.070469804)
 texture = ExtResource("14_mihkp")
 
