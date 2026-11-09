@@ -46,8 +46,14 @@
 [ext_resource type="Texture2D" uid="uid://cahjj2eyugdb0" path="res://the assets/Laser-Kiwi-open.webp" id="37_sngdr"]
 [ext_resource type="Texture2D" uid="uid://ds0yj0m44gobu" path="res://the assets/thingyconferi.png" id="37_w1cq4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2k7f"]
+size = Vector2(424, 50)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqqrh"]
 size = Vector2(544, 328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y551r"]
+size = Vector2(337, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7a8ly"]
 size = Vector2(900, 77)
@@ -192,8 +198,8 @@ shader_parameter/saturation = 0.3
 size = Vector2(853.33203, 711.1113)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jxej4"]
-a = Vector2(-1044, 1752)
-b = Vector2(-4972, -1856)
+a = Vector2(-868, 1360)
+b = Vector2(-4796, -1856)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m80ji"]
 texture = ExtResource("4_evk7e")
@@ -9855,6 +9861,38 @@ tracks/1/keys = {
 "values": [Vector2(3, 3)]
 }
 
+[sub_resource type="Animation" id="Animation_mji7v"]
+resource_name = "nowin3"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("p2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.53333336, 1.1633334, 1.8733335, 1.93),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6640, -2968), Vector2(6512, -2232), Vector2(5968, -2768), Vector2(2128, -336)]
+}
+
+[sub_resource type="Animation" id="Animation_ytgkb"]
+resource_name = "nowin4"
+length = 0.93333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("p2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.9, 0.93333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(4496.0005, -2736), Vector2(4176, -2144), Vector2(3712, -2824), Vector2(2112, -24)]
+}
+
 [sub_resource type="Animation" id="Animation_udfrc"]
 resource_name = "nowinn"
 length = 8.0
@@ -9877,10 +9915,10 @@ tracks/1/path = NodePath("p2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.0001, 1.7333333, 1.8771334, 1.9633334, 2.0333333, 2.1233335, 2.2133334, 2.3433332, 2.4833333, 2.6833334, 2.8933334, 3.1333332, 4.4333334, 4.83, 5.09, 5.34, 5.57, 5.73, 6.3, 7.521333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.0001, 1.7333333, 1.8771334, 1.9633334, 2.0333333, 2.1233335, 2.2133334, 2.3433332, 2.4833333, 2.6833334, 2.8933334, 3.1333332, 4.4333334, 4.83, 5.09, 5.34, 5.57, 5.73, 6.3, 7.521333, 7.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(136, 416), Vector2(8408, -3656), Vector2(8368, -3648), Vector2(8344, -3648), Vector2(8376, -3648), Vector2(8352, -3648), Vector2(8368, -3648), Vector2(8352.001, -3648), Vector2(8328, -3648.0002), Vector2(8392, -3656.0002), Vector2(8400, -3656), Vector2(8368, -3656), Vector2(8304, -3664), Vector2(8304, -3664), Vector2(8176, -3936), Vector2(8056.0005, -4000), Vector2(7960, -3912), Vector2(7896.0005, -3784), Vector2(7872.0005, -3672), Vector2(7872.0005, -3672), Vector2(7680.0005, -4496)]
+"values": [Vector2(136, 416), Vector2(8408, -3656), Vector2(8368, -3648), Vector2(8344, -3648), Vector2(8376, -3648), Vector2(8352, -3648), Vector2(8368, -3648), Vector2(8352.001, -3648), Vector2(8328, -3648.0002), Vector2(8392, -3656.0002), Vector2(8400, -3656), Vector2(8368, -3656), Vector2(8304, -3664), Vector2(8304, -3664), Vector2(8176, -3936), Vector2(8056.0005, -4000), Vector2(7960, -3912), Vector2(7896.0005, -3784), Vector2(7872.0005, -3672), Vector2(7872.0005, -3672), Vector2(7680.0005, -4496), Vector2(2216.0005, -48)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -9913,6 +9951,8 @@ _data = {
 &"bridge": SubResource("Animation_4gqr0"),
 &"cage": SubResource("Animation_7qif1"),
 &"nowin2": SubResource("Animation_kfhba"),
+&"nowin3": SubResource("Animation_mji7v"),
+&"nowin4": SubResource("Animation_ytgkb"),
 &"nowinn": SubResource("Animation_udfrc")
 }
 
@@ -9927,6 +9967,12 @@ script = ExtResource("1_7o8ph")
 tutorial_spawn = Vector2(192, 416)
 game_spawn = Vector2(488, -312)
 
+[node name="Area2D19" type="Area2D" parent="." unique_id=1800286244]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D19" unique_id=674273183]
+position = Vector2(6428, -2193)
+shape = SubResource("RectangleShape2D_w2k7f")
+
 [node name="Area2D17" type="Area2D" parent="." unique_id=303582934]
 position = Vector2(8736, -3760)
 
@@ -9936,6 +9982,13 @@ texture = ExtResource("24_x0745")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D17" unique_id=795681695]
 position = Vector2(0, -28)
 shape = SubResource("RectangleShape2D_eqqrh")
+
+[node name="Area2D20" type="Area2D" parent="." unique_id=204582868]
+position = Vector2(4152, -2232)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D20" unique_id=1960647860]
+position = Vector2(-191.5, 147)
+shape = SubResource("RectangleShape2D_y551r")
 
 [node name="Area2D18" type="Area2D" parent="." unique_id=274048433]
 position = Vector2(8736, -3788)
@@ -10943,7 +10996,7 @@ scale = Vector2(0.2852349, 0.2852349)
 shape = SubResource("CapsuleShape2D_jxej4")
 
 [node name="Watergirl" type="Sprite2D" parent="p2" unique_id=646846608 groups=["blugroup"]]
-position = Vector2(-0.00016283989, -2.6226044e-06)
+position = Vector2(45.33317, -18.66667)
 scale = Vector2(0.070469804, 0.070469804)
 texture = ExtResource("14_mihkp")
 
@@ -11431,7 +11484,7 @@ scale = Vector2(0.6096197, 2.1560402)
 texture = ExtResource("17_1on4i")
 
 [node name="Images" type="Sprite2D" parent="Images" unique_id=2028540347]
-position = Vector2(7113.0425, -564.8666)
+position = Vector2(7113.043, -564.8666)
 scale = Vector2(15.835087, 2.1488373)
 texture = ExtResource("17_1on4i")
 
@@ -11627,7 +11680,9 @@ offset_right = 156.0
 offset_bottom = 19.0
 text = "help meeeeee!!!!"
 
+[connection signal="body_entered" from="Area2D19" to="." method="_on_area_2d_19_body_entered"]
 [connection signal="body_entered" from="Area2D17" to="." method="_on_area_2d_17_body_entered"]
+[connection signal="body_entered" from="Area2D20" to="." method="_on_area_2d_20_body_entered"]
 [connection signal="body_entered" from="Area2D18" to="." method="_on_area_2d_18_body_entered"]
 [connection signal="body_entered" from="Area2D16" to="Area2D16" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D16" to="Area2D16" method="_on_body_exited"]

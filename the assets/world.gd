@@ -23,6 +23,9 @@ var ani1 = true
 var ani2 = true
 var ani3 = true
 var ani4 = true
+var ani5 = true
+var ani6 = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var spawn_position = tutorial_spawn
@@ -127,4 +130,12 @@ func _on_area_2d_18_body_entered(body: Node2D) -> void:
 
 
 func _on_area_2d_19_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+		if body.is_in_group("players") and not ani3:
+			$AnimationPlayer.play("nowin3") # Replace with function body.
+			ani5 = false # Replace with function body.
+
+
+func _on_area_2d_20_body_entered(body: Node2D) -> void:
+	if body.is_in_group("players"):
+		$AnimationPlayer.play("nowin4") # Replace with function body.
+		ani6 = false # Replace with function body. # Replace with function body.
