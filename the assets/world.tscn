@@ -10049,6 +10049,7 @@ text = "							                                                     		ahhhhhhhhh
 
 this is the part where u run 
 <-- that way"
+metadata/_edit_use_anchors_ = true
 
 [node name="nowinner" type="Node2D" parent="." unique_id=1786122488]
 position = Vector2(8096, -4360)
@@ -10059,6 +10060,7 @@ offset_top = 40.0
 offset_right = 384.0
 offset_bottom = 88.0
 text = "you need two players to win"
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D16" type="Area2D" parent="." unique_id=1758915144]
 script = ExtResource("3_j0mng")
@@ -10115,6 +10117,7 @@ offset_transform_scale = Vector2(0.1, 0.1)
 stream = ExtResource("34_lw5hh")
 autoplay = true
 loop = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D13" type="Area2D" parent="." unique_id=2067798938]
 position = Vector2(950.00006, 94)
@@ -11024,6 +11027,7 @@ offset_top = 1008.0
 offset_right = 960.0
 offset_bottom = 1120.0
 text = "buttons move stuff"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label6" type="Label" parent="Label" unique_id=1631405041]
 layout_mode = 0
@@ -11128,6 +11132,7 @@ text = "the big
 \"you win\" 
 button
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Imawallges2" type="Sprite2D" parent="." unique_id=267857900]
 position = Vector2(1608, -503.99994)
@@ -11327,6 +11332,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="CanvasLayer" unique_id=419347466]
 offset_left = 20.0
@@ -11666,6 +11672,7 @@ offset_bottom = 487.0
 theme_override_font_sizes/font_size = 500
 text = "this is the
  halooween one"
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1388061944]
 libraries/ = SubResource("AnimationLibrary_udfrc")
@@ -11680,6 +11687,7 @@ offset_right = 159.0
 offset_bottom = 7.0
 offset_transform_enabled = true
 text = "Nooooooo!!!!!"
+metadata/_edit_use_anchors_ = true
 
 [node name="ahhhhhhhh" type="Node2D" parent="." unique_id=896386995]
 position = Vector2(2304, -1272)
@@ -11688,6 +11696,7 @@ position = Vector2(2304, -1272)
 offset_right = 119.0
 offset_bottom = 23.0
 text = "ahhhhhhhhh!!!!"
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D14" type="Area2D" parent="." unique_id=859179621]
 position = Vector2(1896, -896)
@@ -11737,6 +11746,7 @@ offset_top = -14.0
 offset_right = 187.0
 offset_bottom = 41.0
 text = "ur alive!?!?!?!!?!?!?!"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Sprite2D" parent="." unique_id=394516089]
 position = Vector2(6726.0005, -2064)
@@ -11752,6 +11762,7 @@ offset_top = -8.0
 offset_right = 156.0
 offset_bottom = 19.0
 text = "help meeeeee!!!!"
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D23" type="Area2D" parent="." unique_id=992367801 node_paths=PackedStringArray("platform")]
 script = ExtResource("21_3b6by")
