@@ -10658,6 +10658,14 @@ position = Vector2(20, -784)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=1168963157 groups=["brogroup"]]
 shape = SubResource("SegmentShape2D_jxej4")
 
+[node name="Label" type="Label" parent="StaticBody2D14/CollisionShape2D" unique_id=302990774]
+offset_left = -6818.0
+offset_top = -691.0
+offset_right = -3292.0
+offset_bottom = -668.0
+theme_override_font_sizes/font_size = 406
+text = "the splitting one"
+
 [node name="Area2D6" parent="." unique_id=1171919665 node_paths=PackedStringArray("core_counter") instance=ExtResource("30_u7lg5")]
 position = Vector2(-1044, -2488)
 core_counter = NodePath("../CanvasLayer/cores")
