@@ -55,6 +55,23 @@ size = Vector2(1185, 95)
 [sub_resource type="CircleShape2D" id="CircleShape2D_jxej4"]
 radius = 40.792156
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jxej4"]
+particle_flag_disable_z = true
+radial_velocity_min = 999.99994
+radial_velocity_max = 999.99994
+gravity = Vector3(0, 98, 0)
+scale_min = 0.099999994
+scale_max = 0.099999994
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3towl"]
+particle_flag_disable_z = true
+radial_velocity_min = 999.99994
+radial_velocity_max = 999.99994
+linear_accel_min = -2.2351742e-06
+linear_accel_max = 74.67999
+scale_min = 0.06
+scale_max = 0.06
+
 [node name="Node2D" type="Node2D" unique_id=811282414]
 
 [node name="p2" type="CharacterBody2D" parent="." unique_id=1720935989 groups=["blugroup", "players"]]
@@ -96,98 +113,38 @@ texture = ExtResource("3_a1wjo")
 script = ExtResource("4_c430j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="o2" unique_id=1780359094]
-position = Vector2(648.05634, 476)
+position = Vector2(689.0546, 455.25)
 shape = SubResource("CircleShape2D_jxej4")
 
 [node name="nucu" type="Sprite2D" parent="o2" unique_id=1074432249]
-position = Vector2(648.11096, 476.25)
+position = Vector2(689.0546, 455.25)
 scale = Vector2(0.15038319, 0.15038317)
 texture = ExtResource("4_4lhp1")
 
-[node name="Protron" type="Sprite2D" parent="o2" unique_id=912448379]
-position = Vector2(629.05634, 498.99997)
-scale = Vector2(0.05092593, 0.050925918)
-texture = ExtResource("6_qq0es")
-
-[node name="Protron4" type="Sprite2D" parent="o2" unique_id=1657477242]
-position = Vector2(631.05634, 480.99997)
-scale = Vector2(0.05092593, 0.050925918)
-texture = ExtResource("6_qq0es")
-
-[node name="Protron5" type="Sprite2D" parent="o2" unique_id=711333213]
-position = Vector2(668.05634, 499.99997)
-scale = Vector2(0.05092593, 0.050925918)
-texture = ExtResource("6_qq0es")
-
-[node name="Protron6" type="Sprite2D" parent="o2" unique_id=396061826]
-position = Vector2(669.05634, 476.99997)
-scale = Vector2(0.05092593, 0.050925918)
-texture = ExtResource("6_qq0es")
-
-[node name="Protron7" type="Sprite2D" parent="o2" unique_id=1422222413]
-position = Vector2(658.05634, 461.99997)
-scale = Vector2(0.05092593, 0.050925918)
-texture = ExtResource("6_qq0es")
-
-[node name="Protron8" type="Sprite2D" parent="o2" unique_id=1150192961]
-position = Vector2(633.05634, 460.99997)
-scale = Vector2(0.05092593, 0.050925918)
-texture = ExtResource("6_qq0es")
-
-[node name="Nutron" type="Sprite2D" parent="o2" unique_id=2086772842]
-position = Vector2(650.05634, 481.00003)
-scale = Vector2(0.09808722, 0.0980872)
-texture = ExtResource("7_g1nyl")
-
-[node name="Protron2" type="Sprite2D" parent="o2" unique_id=1387131675]
-position = Vector2(648.05634, 494.99997)
-scale = Vector2(0.05092593, 0.050925918)
-texture = ExtResource("6_qq0es")
-
-[node name="Nutron2" type="Sprite2D" parent="o2" unique_id=1269331]
-position = Vector2(667.05634, 500.00003)
-scale = Vector2(0.09808722, 0.0980872)
-texture = ExtResource("7_g1nyl")
-
-[node name="Protron3" type="Sprite2D" parent="o2" unique_id=1253279437]
-position = Vector2(633.05634, 461)
-scale = Vector2(0.05092593, 0.050925918)
-texture = ExtResource("6_qq0es")
-
-[node name="Nutron3" type="Sprite2D" parent="o2" unique_id=353707036]
-position = Vector2(674.0564, 484.00003)
-scale = Vector2(0.09808722, 0.0980872)
-texture = ExtResource("7_g1nyl")
-
-[node name="Nutron4" type="Sprite2D" parent="o2" unique_id=465226927]
-position = Vector2(620.0564, 491.00003)
-scale = Vector2(0.09808722, 0.0980872)
-texture = ExtResource("7_g1nyl")
-
-[node name="Nutron5" type="Sprite2D" parent="o2" unique_id=1634371856]
-position = Vector2(676.0564, 457.00003)
-scale = Vector2(0.09808722, 0.0980872)
-texture = ExtResource("7_g1nyl")
-
-[node name="Nutron6" type="Sprite2D" parent="o2" unique_id=348313018]
-position = Vector2(628.0564, 462.00003)
-scale = Vector2(0.09808722, 0.0980872)
-texture = ExtResource("7_g1nyl")
-
-[node name="Nutron7" type="Sprite2D" parent="o2" unique_id=1068581815]
-position = Vector2(655.0564, 458.00003)
-scale = Vector2(0.09808722, 0.0980872)
-texture = ExtResource("7_g1nyl")
-
-[node name="Nutron8" type="Sprite2D" parent="o2" unique_id=621241993]
-position = Vector2(637.0564, 492.00003)
-scale = Vector2(0.09808722, 0.0980872)
-texture = ExtResource("7_g1nyl")
-
 [node name="electron" type="Sprite2D" parent="o2" unique_id=732046441]
-position = Vector2(751.05634, 493)
+position = Vector2(793.05457, 487.25)
 scale = Vector2(0.077586204, 0.077586204)
 texture = ExtResource("5_of3h5")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="o2" unique_id=402873400]
+position = Vector2(689.0546, 455.25)
+scale = Vector2(0.05, 0.05)
+emitting = false
+sub_emitter = NodePath(".")
+texture = ExtResource("7_g1nyl")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_jxej4")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="o2" unique_id=1118670150]
+position = Vector2(689.05457, 455.25)
+scale = Vector2(0.0025000002, 0.0025000002)
+emitting = false
+sub_emitter = NodePath(".")
+texture = ExtResource("6_qq0es")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_3towl")
 
 [node name="nuckp" type="Label" parent="." unique_id=533054237]
 offset_left = 16.0
