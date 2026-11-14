@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fqj2bipaxci1"
-path="res://.godot/imported/Screenshot 2026-11-14 160033.png-19e23d1eee8822346a57be6a6ccdd76d.ctex"
+uid="uid://4cwj0e50nbc5"
+path="res://.godot/imported/protron.png-38952a4ade88d8570fecad07068349f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://the assets/Screenshot 2026-11-14 160033.png"
-dest_files=["res://.godot/imported/Screenshot 2026-11-14 160033.png-19e23d1eee8822346a57be6a6ccdd76d.ctex"]
+source_file="res://the assets/protron.png"
+dest_files=["res://.godot/imported/protron.png-38952a4ade88d8570fecad07068349f6.ctex"]
 
 [params]
 

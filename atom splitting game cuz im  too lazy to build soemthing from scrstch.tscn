@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://bqg6mbx6gjiux" path="res://p2.gd" id="1_167mj"]
 [ext_resource type="Texture2D" uid="uid://d30iyjhurdvan" path="res://the assets/watergirl.jpg" id="2_a1wjo"]
 [ext_resource type="Texture2D" uid="uid://bfhanwx4y3fh5" path="res://the assets/wallnew.webp" id="3_a1wjo"]
-[ext_resource type="Texture2D" uid="uid://y1c27qrk380o" path="res://the assets/Screenshot 2026-11-14 160107.png" id="4_4lhp1"]
+[ext_resource type="Texture2D" uid="uid://y1c27qrk380o" path="res://the assets/nucula.png" id="4_4lhp1"]
 [ext_resource type="Script" uid="uid://bx5vbtk3ofrlq" path="res://o_2.gd" id="4_c430j"]
-[ext_resource type="Texture2D" uid="uid://fqj2bipaxci1" path="res://the assets/Screenshot 2026-11-14 160033.png" id="5_of3h5"]
+[ext_resource type="Texture2D" uid="uid://fqj2bipaxci1" path="res://the assets/electron.png" id="5_of3h5"]
+[ext_resource type="Texture2D" uid="uid://4cwj0e50nbc5" path="res://the assets/protron.png" id="6_qq0es"]
+[ext_resource type="Texture2D" uid="uid://xmco26n5qhca" path="res://the assets/nutron.png" id="7_g1nyl"]
 [ext_resource type="Script" uid="uid://de082aioqwd20" path="res://nuckp.gd" id="7_mc6hk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hk22y"]
@@ -93,19 +95,99 @@ texture = ExtResource("3_a1wjo")
 [node name="o2" type="Area2D" parent="." unique_id=1543606592]
 script = ExtResource("4_c430j")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="o2" unique_id=1780359094]
+position = Vector2(648.05634, 476)
+shape = SubResource("CircleShape2D_jxej4")
+
 [node name="nucu" type="Sprite2D" parent="o2" unique_id=1074432249]
-position = Vector2(521.0546, 167.25)
+position = Vector2(648.11096, 476.25)
 scale = Vector2(0.15038319, 0.15038317)
 texture = ExtResource("4_4lhp1")
 
+[node name="Protron" type="Sprite2D" parent="o2" unique_id=912448379]
+position = Vector2(629.05634, 498.99997)
+scale = Vector2(0.05092593, 0.050925918)
+texture = ExtResource("6_qq0es")
+
+[node name="Protron4" type="Sprite2D" parent="o2" unique_id=1657477242]
+position = Vector2(631.05634, 480.99997)
+scale = Vector2(0.05092593, 0.050925918)
+texture = ExtResource("6_qq0es")
+
+[node name="Protron5" type="Sprite2D" parent="o2" unique_id=711333213]
+position = Vector2(668.05634, 499.99997)
+scale = Vector2(0.05092593, 0.050925918)
+texture = ExtResource("6_qq0es")
+
+[node name="Protron6" type="Sprite2D" parent="o2" unique_id=396061826]
+position = Vector2(669.05634, 476.99997)
+scale = Vector2(0.05092593, 0.050925918)
+texture = ExtResource("6_qq0es")
+
+[node name="Protron7" type="Sprite2D" parent="o2" unique_id=1422222413]
+position = Vector2(658.05634, 461.99997)
+scale = Vector2(0.05092593, 0.050925918)
+texture = ExtResource("6_qq0es")
+
+[node name="Protron8" type="Sprite2D" parent="o2" unique_id=1150192961]
+position = Vector2(633.05634, 460.99997)
+scale = Vector2(0.05092593, 0.050925918)
+texture = ExtResource("6_qq0es")
+
+[node name="Nutron" type="Sprite2D" parent="o2" unique_id=2086772842]
+position = Vector2(650.05634, 481.00003)
+scale = Vector2(0.09808722, 0.0980872)
+texture = ExtResource("7_g1nyl")
+
+[node name="Protron2" type="Sprite2D" parent="o2" unique_id=1387131675]
+position = Vector2(648.05634, 494.99997)
+scale = Vector2(0.05092593, 0.050925918)
+texture = ExtResource("6_qq0es")
+
+[node name="Nutron2" type="Sprite2D" parent="o2" unique_id=1269331]
+position = Vector2(667.05634, 500.00003)
+scale = Vector2(0.09808722, 0.0980872)
+texture = ExtResource("7_g1nyl")
+
+[node name="Protron3" type="Sprite2D" parent="o2" unique_id=1253279437]
+position = Vector2(633.05634, 461)
+scale = Vector2(0.05092593, 0.050925918)
+texture = ExtResource("6_qq0es")
+
+[node name="Nutron3" type="Sprite2D" parent="o2" unique_id=353707036]
+position = Vector2(674.0564, 484.00003)
+scale = Vector2(0.09808722, 0.0980872)
+texture = ExtResource("7_g1nyl")
+
+[node name="Nutron4" type="Sprite2D" parent="o2" unique_id=465226927]
+position = Vector2(620.0564, 491.00003)
+scale = Vector2(0.09808722, 0.0980872)
+texture = ExtResource("7_g1nyl")
+
+[node name="Nutron5" type="Sprite2D" parent="o2" unique_id=1634371856]
+position = Vector2(676.0564, 457.00003)
+scale = Vector2(0.09808722, 0.0980872)
+texture = ExtResource("7_g1nyl")
+
+[node name="Nutron6" type="Sprite2D" parent="o2" unique_id=348313018]
+position = Vector2(628.0564, 462.00003)
+scale = Vector2(0.09808722, 0.0980872)
+texture = ExtResource("7_g1nyl")
+
+[node name="Nutron7" type="Sprite2D" parent="o2" unique_id=1068581815]
+position = Vector2(655.0564, 458.00003)
+scale = Vector2(0.09808722, 0.0980872)
+texture = ExtResource("7_g1nyl")
+
+[node name="Nutron8" type="Sprite2D" parent="o2" unique_id=621241993]
+position = Vector2(637.0564, 492.00003)
+scale = Vector2(0.09808722, 0.0980872)
+texture = ExtResource("7_g1nyl")
+
 [node name="electron" type="Sprite2D" parent="o2" unique_id=732046441]
-position = Vector2(624, 184)
+position = Vector2(751.05634, 493)
 scale = Vector2(0.077586204, 0.077586204)
 texture = ExtResource("5_of3h5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="o2" unique_id=1780359094]
-position = Vector2(521.0546, 167.25)
-shape = SubResource("CircleShape2D_jxej4")
 
 [node name="nuckp" type="Label" parent="." unique_id=533054237]
 offset_left = 16.0

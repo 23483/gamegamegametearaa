@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y1c27qrk380o"
-path="res://.godot/imported/Screenshot 2026-11-14 160107.png-e83e66820f5bf9ce18132285bf0b0220.ctex"
+uid="uid://xmco26n5qhca"
+path="res://.godot/imported/nutron.png-c1967768e8abf63af65aadc28bff31af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://the assets/Screenshot 2026-11-14 160107.png"
-dest_files=["res://.godot/imported/Screenshot 2026-11-14 160107.png-e83e66820f5bf9ce18132285bf0b0220.ctex"]
+source_file="res://the assets/nutron.png"
+dest_files=["res://.godot/imported/nutron.png-c1967768e8abf63af65aadc28bff31af.ctex"]
 
 [params]
 
