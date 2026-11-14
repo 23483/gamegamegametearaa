@@ -119,7 +119,7 @@ size = Vector2(840, 2192)
 size = Vector2(800, 304)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pa1jj"]
-size = Vector2(842, 1816)
+size = Vector2(842, 1823)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crjw8"]
 size = Vector2(32.00003, 42.75)
@@ -10283,7 +10283,7 @@ shape = SubResource("RectangleShape2D_wr60s")
 position = Vector2(20, -784)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=1843977273]
-position = Vector2(1571, -524)
+position = Vector2(1571, -527.5)
 shape = SubResource("RectangleShape2D_pa1jj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2018529889 node_paths=PackedStringArray("nope", "p2")]
@@ -10301,8 +10301,8 @@ scale = Vector2(1.7897092, 6.1342273)
 texture = ExtResource("17_1on4i")
 
 [node name="Imawallges2" type="Sprite2D" parent="." unique_id=267857900]
-position = Vector2(1569.2501, -1244.25)
-scale = Vector2(1.7885907, 4.383669)
+position = Vector2(1571, -1238.625)
+scale = Vector2(1.7885907, 4.404362)
 texture = ExtResource("17_1on4i")
 
 [node name="spikes" type="Area2D" parent="." unique_id=1718985038 node_paths=PackedStringArray("p2", "nope")]
@@ -10344,7 +10344,7 @@ script = ExtResource("21_3b6by")
 platform = NodePath("../StaticBody2D11")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="button" unique_id=923226910]
-position = Vector2(1308.9999, -1454.9999)
+position = Vector2(1309.0001, -1463.9999)
 scale = Vector2(0.05250005, 0.05250005)
 shape = SubResource("RectangleShape2D_0gdhc")
 
