@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://k5ya3524j203"]
+
+[ext_resource type="Script" uid="uid://bqg6mbx6gjiux" path="res://p2.gd" id="1_167mj"]
+[ext_resource type="Texture2D" uid="uid://d30iyjhurdvan" path="res://the assets/watergirl.jpg" id="2_a1wjo"]
+[ext_resource type="Texture2D" uid="uid://bfhanwx4y3fh5" path="res://the assets/wallnew.webp" id="3_a1wjo"]
+[ext_resource type="Texture2D" uid="uid://y1c27qrk380o" path="res://the assets/Screenshot 2026-11-14 160107.png" id="4_4lhp1"]
+[ext_resource type="Script" uid="uid://bx5vbtk3ofrlq" path="res://o_2.gd" id="4_c430j"]
+[ext_resource type="Texture2D" uid="uid://fqj2bipaxci1" path="res://the assets/Screenshot 2026-11-14 160033.png" id="5_of3h5"]
+[ext_resource type="Script" uid="uid://de082aioqwd20" path="res://nuckp.gd" id="7_mc6hk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hk22y"]
+radius = 56.094116
+height = 112.18823
+
+[sub_resource type="Gradient" id="Gradient_4lhp1"]
+offsets = PackedFloat32Array(0, 0.083333336)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sngdr"]
+gradient = SubResource("Gradient_4lhp1")
+fill = 1
+fill_from = Vector2(0.46134022, 0.52835053)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_of3h5"]
+diffuse_texture = SubResource("GradientTexture2D_sngdr")
+
+[sub_resource type="Curve" id="Curve_c430j"]
+_data = [Vector2(0.0860215, 0.9107144), 0.0, 0.0, 0, 0, Vector2(0.0860315, 0.9285715), 0.0, 0.0, 0, 0, Vector2(0.5107527, 0.4642858), -1.207792, -1.207792, 0, 0, Vector2(1, 0.09821439), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_hder0"]
+curve = SubResource("Curve_c430j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mc6hk"]
+lifetime_randomness = 0.56
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 0.4
+angle_min = -291.6
+angle_max = 528.60004
+direction = Vector3(0, -1, 0)
+spread = 90.506
+initial_velocity_min = 32.68
+initial_velocity_max = 71.9
+gravity = Vector3(0, 30, 0)
+scale_min = 0.5
+color = Color(0.76862746, 0.7411765, 0.65882355, 1)
+alpha_curve = SubResource("CurveTexture_hder0")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxej4"]
+size = Vector2(1185, 95)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jxej4"]
+radius = 40.792156
+
+[node name="Node2D" type="Node2D" unique_id=811282414]
+
+[node name="p2" type="CharacterBody2D" parent="." unique_id=1720935989 groups=["blugroup", "players"]]
+position = Vector2(499, 509)
+script = ExtResource("1_167mj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="p2" unique_id=1498213834]
+position = Vector2(0, -0.25)
+scale = Vector2(0.2852349, 0.2852349)
+shape = SubResource("CapsuleShape2D_hk22y")
+
+[node name="Watergirl" type="Sprite2D" parent="p2" unique_id=1680132139 groups=["blugroup"]]
+position = Vector2(-0.25, -0.25)
+scale = Vector2(0.070469804, 0.070469804)
+texture = ExtResource("2_a1wjo")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="p2" unique_id=1246517382]
+position = Vector2(0, 16)
+emitting = false
+amount = 20
+texture = SubResource("CanvasTexture_of3h5")
+lifetime = 0.63
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_mc6hk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=38885585]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=161390385]
+position = Vector2(566.5, 616.5)
+shape = SubResource("RectangleShape2D_jxej4")
+
+[node name="Wallnew" type="Sprite2D" parent="." unique_id=1321925174]
+position = Vector2(563.5, 620)
+scale = Vector2(1.5037501, 0.14206131)
+texture = ExtResource("3_a1wjo")
+
+[node name="o2" type="Area2D" parent="." unique_id=1543606592]
+script = ExtResource("4_c430j")
+
+[node name="nucu" type="Sprite2D" parent="o2" unique_id=1074432249]
+position = Vector2(521.0546, 167.25)
+scale = Vector2(0.15038319, 0.15038317)
+texture = ExtResource("4_4lhp1")
+
+[node name="electron" type="Sprite2D" parent="o2" unique_id=732046441]
+position = Vector2(624, 184)
+scale = Vector2(0.077586204, 0.077586204)
+texture = ExtResource("5_of3h5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="o2" unique_id=1780359094]
+position = Vector2(521.0546, 167.25)
+shape = SubResource("CircleShape2D_jxej4")
+
+[node name="nuckp" type="Label" parent="." unique_id=533054237]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 72.0
+script = ExtResource("7_mc6hk")
+
+[connection signal="body_entered" from="o2" to="o2" method="_on_body_entered"]

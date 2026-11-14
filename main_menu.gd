@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_play_pressed() -> void:
 	GameData.skip_tutorial = false
-	get_tree().change_scene_to_file("res://the assets/world.tscn")
+	get_tree().change_scene_to_file("res://atom splitting game cuz im  too lazy to build soemthing from scrstch.tscn")
 
 
 func _on_buttquiton_pressed() -> void:
@@ -26,4 +26,4 @@ func _on_controls_pressed() -> void:
 
 func _on_skip_pressed() -> void:
 	GameData.skip_tutorial = true 
-	get_tree().change_scene_to_file("res://the assets/world.tscn")
+	get_tree().change_scene_to_file("res://atom splitting game cuz im  too lazy to build soemthing from scrstch.tscn")

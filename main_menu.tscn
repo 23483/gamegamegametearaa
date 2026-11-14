@@ -22,7 +22,7 @@ offset_right = 464.0
 offset_bottom = 99.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 46
-text = "godot boy and water girl climb the tower!!"
+text = "godot boy and water girl split an atom!!"
 
 [node name="play" type="Button" parent="." unique_id=856315841]
 layout_mode = 1
