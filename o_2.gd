@@ -1,5 +1,7 @@
 extends Area2D
 
+@onready var electrons: CollisionShape2D = $CollisionShape2D
+
 var explode = false
 var resett = true
 @onready var nucparts: GPUParticles2D = $GPUParticles2D
@@ -8,9 +10,12 @@ var resett = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$nucu.visible = true
+	$CollisionShape2D.disabled = false
 
 
 
+func _process(delta: float) -> void:
+	electrons.rotate(delta * 5)
 
 
 
@@ -23,4 +28,5 @@ func _on_area_entered(area: Area2D) -> void:
 		nucparts.restart()
 		proparts.restart()
 	resett = false
-	$nucu.visible = false # Replace with function body.
+	$nucu.visible = false
+	$CollisionShape2D.set_deferred("disabled", true)

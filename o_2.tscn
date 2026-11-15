@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://d3ot0bf6855ih"]
+
+[ext_resource type="Script" uid="uid://bx5vbtk3ofrlq" path="res://o_2.gd" id="1_pjp18"]
+[ext_resource type="Texture2D" uid="uid://y1c27qrk380o" path="res://the assets/nucula.png" id="2_7kk3g"]
+[ext_resource type="Texture2D" uid="uid://fqj2bipaxci1" path="res://the assets/electron.png" id="3_rbdsy"]
+[ext_resource type="Texture2D" uid="uid://xmco26n5qhca" path="res://the assets/nutron.png" id="4_4qtch"]
+[ext_resource type="Texture2D" uid="uid://4cwj0e50nbc5" path="res://the assets/protron.png" id="5_ig5yn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jxej4"]
+radius = 40.792156
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jxej4"]
+particle_flag_disable_z = true
+radial_velocity_min = 999.99994
+radial_velocity_max = 999.99994
+gravity = Vector3(0, 98, 0)
+scale_min = 0.099999994
+scale_max = 0.099999994
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3towl"]
+particle_flag_disable_z = true
+radial_velocity_min = 999.99994
+radial_velocity_max = 999.99994
+linear_accel_min = -2.2351742e-06
+linear_accel_max = 74.67999
+scale_min = 0.06
+scale_max = 0.06
+
+[node name="o2" type="Area2D" unique_id=2138819475]
+script = ExtResource("1_pjp18")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=111958870]
+position = Vector2(689.0546, 455.25)
+shape = SubResource("CircleShape2D_jxej4")
+
+[node name="electron" type="Sprite2D" parent="CollisionShape2D" unique_id=267517083]
+position = Vector2(60.945374, 30.75)
+scale = Vector2(0.077586204, 0.077586204)
+texture = ExtResource("3_rbdsy")
+
+[node name="electron3" type="Sprite2D" parent="CollisionShape2D" unique_id=2066280376]
+position = Vector2(83.94537, 55.75)
+scale = Vector2(0.077586204, 0.077586204)
+texture = ExtResource("3_rbdsy")
+
+[node name="electron4" type="Sprite2D" parent="CollisionShape2D" unique_id=1950606310]
+position = Vector2(-74.05463, -66.25)
+scale = Vector2(0.077586204, 0.077586204)
+texture = ExtResource("3_rbdsy")
+
+[node name="electron5" type="Sprite2D" parent="CollisionShape2D" unique_id=356658276]
+position = Vector2(-60.054626, 61.75)
+scale = Vector2(0.077586204, 0.077586204)
+texture = ExtResource("3_rbdsy")
+
+[node name="electron6" type="Sprite2D" parent="CollisionShape2D" unique_id=1918565293]
+position = Vector2(66.72125, -57.25)
+scale = Vector2(0.077586204, 0.077586204)
+texture = ExtResource("3_rbdsy")
+
+[node name="electron7" type="Sprite2D" parent="CollisionShape2D" unique_id=2077422443]
+position = Vector2(92.72125, -78.25)
+scale = Vector2(0.077586204, 0.077586204)
+texture = ExtResource("3_rbdsy")
+
+[node name="electron8" type="Sprite2D" parent="CollisionShape2D" unique_id=1282900581]
+position = Vector2(-83.05463, 80.75)
+scale = Vector2(0.077586204, 0.077586204)
+texture = ExtResource("3_rbdsy")
+
+[node name="electron2" type="Sprite2D" parent="CollisionShape2D" unique_id=1635024319]
+position = Vector2(-56.054626, -45.25)
+scale = Vector2(0.077586204, 0.077586204)
+texture = ExtResource("3_rbdsy")
+
+[node name="nucu" type="Sprite2D" parent="." unique_id=1448596834]
+position = Vector2(689.0546, 455.25)
+scale = Vector2(0.15038319, 0.15038317)
+texture = ExtResource("2_7kk3g")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1240207763]
+position = Vector2(689.0546, 455.25)
+scale = Vector2(0.05, 0.05)
+emitting = false
+sub_emitter = NodePath(".")
+texture = ExtResource("4_4qtch")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_jxej4")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=1527573363]
+position = Vector2(689.05457, 455.25)
+scale = Vector2(0.0025000002, 0.0025000002)
+emitting = false
+sub_emitter = NodePath(".")
+texture = ExtResource("5_ig5yn")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_3towl")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
