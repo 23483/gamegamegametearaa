@@ -1,6 +1,8 @@
 extends Area2D
 
 @onready var electrons: CollisionShape2D = $CollisionShape2D
+@onready var atom: Area2D = $o2
+
 
 var explode = false
 var resett = true
@@ -16,7 +18,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	electrons.rotate(delta * 5)
-
+	position.y += delta * 30
 
 
 

@@ -55,7 +55,7 @@ size = Vector2(146, 20)
 [node name="Node2D" type="Node2D" unique_id=811282414]
 
 [node name="p2" type="CharacterBody2D" parent="." unique_id=1720935989 groups=["blugroup", "players"]]
-position = Vector2(499, 509)
+position = Vector2(152, 512)
 script = ExtResource("1_167mj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="p2" unique_id=1498213834]
@@ -90,7 +90,7 @@ scale = Vector2(1.5037501, 0.14206131)
 texture = ExtResource("3_a1wjo")
 
 [node name="o2" parent="." unique_id=2138819475 instance=ExtResource("4_4lhp1")]
-position = Vector2(-56, -56)
+position = Vector2(-24, -64)
 
 [node name="nuckp" type="Label" parent="." unique_id=533054237]
 offset_left = 16.0
@@ -100,9 +100,12 @@ offset_bottom = 72.0
 script = ExtResource("7_mc6hk")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2121961613]
-position = Vector2(-336, -120)
+position = Vector2(48, -280)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1655929089]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1655929089 node_paths=PackedStringArray("span")]
 position = Vector2(8, 72)
 shape = SubResource("RectangleShape2D_311yx")
 script = ExtResource("6_of3h5")
+span = NodePath(".")
+
+[node name="Timer" type="Timer" parent="StaticBody2D2" unique_id=231227979]
