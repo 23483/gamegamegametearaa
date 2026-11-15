@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://m380kcl3fh40"]
+
+[ext_resource type="Script" uid="uid://corqa71av40av" path="res://progetile.gd" id="1_fosgp"]
+[ext_resource type="Texture2D" uid="uid://xmco26n5qhca" path="res://the assets/nutron.png" id="2_vrrva"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxej4"]
+height = 32.0
+
+[node name="Area2D" type="Area2D" unique_id=1909882371]
+script = ExtResource("1_fosgp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=566108777]
+shape = SubResource("CapsuleShape2D_jxej4")
+
+[node name="Nutron" type="Sprite2D" parent="." unique_id=246560128]
+scale = Vector2(0.06514658, 0.11076512)
+texture = ExtResource("2_vrrva")

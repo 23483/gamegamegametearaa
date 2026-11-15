@@ -50,7 +50,7 @@ color = Color(0.76862746, 0.7411765, 0.65882355, 1)
 alpha_curve = SubResource("CurveTexture_hder0")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxej4"]
-size = Vector2(1185, 95)
+size = Vector2(1191, 119)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jxej4"]
 radius = 40.792156
@@ -101,10 +101,10 @@ process_material = SubResource("ParticleProcessMaterial_mc6hk")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=38885585]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=161390385]
-position = Vector2(566.5, 616.5)
+position = Vector2(563.5, 628.5)
 shape = SubResource("RectangleShape2D_jxej4")
 
-[node name="Wallnew" type="Sprite2D" parent="." unique_id=1321925174]
+[node name="Wallnew" type="Sprite2D" parent="StaticBody2D" unique_id=1321925174]
 position = Vector2(563.5, 620)
 scale = Vector2(1.5037501, 0.14206131)
 texture = ExtResource("3_a1wjo")

@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 @onready var parts: GPUParticles2D = $GPUParticles2D
 
+const PROJECTILE = preload("res://progetile.tscn")
 
 const SPEED = 250.0
 const JUMP_VELOCITY = -500.0
@@ -84,6 +85,18 @@ func _physics_process(delta: float) -> void:
 			parts.modulate = Color.SKY_BLUE
 
 		parts.restart()
+	if Input.is_action_just_pressed("shot"):
+		shoot()
+
+func shoot():
+	var bullet = PROJECTILE.instantiate()
+	get_tree().current_scene.add_child(bullet)
+
+	var direction = (get_global_mouse_position() - global_position).normalized()
+
+	bullet.global_position = global_position
+	bullet.direction = direction
+	
 func respawn() -> void:
 	global_position = GameData.checkpoint_position + Vector2(40, 0)
 	velocity = Vector2.ZERO
