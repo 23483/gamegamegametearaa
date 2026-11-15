@@ -12,11 +12,15 @@ func _ready() -> void:
 
 
 
-func _on_body_entered(body: Node2D) -> void:
+
+
+
+
+func _on_area_entered(area: Area2D) -> void:
 	$"../nuckp"._nuckp()
 	explode = true
 	if resett:
 		nucparts.restart()
 		proparts.restart()
 	resett = false
-	$nucu.visible = false
+	$nucu.visible = false # Replace with function body.

@@ -153,4 +153,5 @@ offset_right = 128.0
 offset_bottom = 72.0
 script = ExtResource("7_mc6hk")
 
+[connection signal="area_entered" from="o2" to="o2" method="_on_area_entered"]
 [connection signal="body_entered" from="o2" to="o2" method="_on_body_entered"]
