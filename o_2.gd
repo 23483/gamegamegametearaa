@@ -18,7 +18,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	electrons.rotate(delta * 5)
-	position.y += delta * 30
+	position.y += delta * 90
 
 
 
