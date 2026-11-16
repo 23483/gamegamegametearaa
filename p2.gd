@@ -18,6 +18,11 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	
+	
+	if Input.is_action_pressed("pause"):
+		get_tree().change_scene_to_file("res://main_menu.tscn")
+		
 	time += delta
 	var bounce = sin(time * 10) * 0.005
 	var breath = sin(time * 2) * abs(sin(time * 2)) * 0.0025

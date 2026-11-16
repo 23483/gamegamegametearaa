@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://bx5vbtk3ofrlq" path="res://o_2.gd" id="1_pjp18"]
 [ext_resource type="Texture2D" uid="uid://y1c27qrk380o" path="res://the assets/nucula.png" id="2_7kk3g"]
+[ext_resource type="Script" uid="uid://cevofepgq8xyy" path="res://spike.gd" id="3_7kk3g"]
 [ext_resource type="Texture2D" uid="uid://fqj2bipaxci1" path="res://the assets/electron.png" id="3_rbdsy"]
 [ext_resource type="Texture2D" uid="uid://xmco26n5qhca" path="res://the assets/nutron.png" id="4_4qtch"]
 [ext_resource type="Texture2D" uid="uid://4cwj0e50nbc5" path="res://the assets/protron.png" id="5_ig5yn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jxej4"]
 radius = 40.792156
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_311yx"]
+radius = 9.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jxej4"]
 particle_flag_disable_z = true
@@ -30,13 +34,48 @@ scale_max = 0.06
 script = ExtResource("1_pjp18")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=111958870]
-position = Vector2(689.0546, 455.25)
+position = Vector2(3.0546112, 1.2500076)
 shape = SubResource("CircleShape2D_jxej4")
 
 [node name="electron" type="Sprite2D" parent="CollisionShape2D" unique_id=267517083]
 position = Vector2(60.945374, 30.75)
 scale = Vector2(0.077586204, 0.077586204)
 texture = ExtResource("3_rbdsy")
+
+[node name="Area2D" type="Area2D" parent="CollisionShape2D" unique_id=531641754]
+script = ExtResource("3_7kk3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=1827257851]
+position = Vector2(65.94539, -57.250008)
+shape = SubResource("CircleShape2D_311yx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=249279542]
+position = Vector2(92.94539, -78.25001)
+shape = SubResource("CircleShape2D_311yx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=2028834882]
+position = Vector2(59.94539, 30.749992)
+shape = SubResource("CircleShape2D_311yx")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=565086149]
+position = Vector2(83.94539, 55.749992)
+shape = SubResource("CircleShape2D_311yx")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=698444642]
+position = Vector2(-60.054607, 61.749992)
+shape = SubResource("CircleShape2D_311yx")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=1908690104]
+position = Vector2(-55.054607, -45.250008)
+shape = SubResource("CircleShape2D_311yx")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=1664296883]
+position = Vector2(-83.05461, 79.74999)
+shape = SubResource("CircleShape2D_311yx")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=1017610103]
+position = Vector2(-74.05461, -66.25001)
+shape = SubResource("CircleShape2D_311yx")
 
 [node name="electron3" type="Sprite2D" parent="CollisionShape2D" unique_id=2066280376]
 position = Vector2(83.94537, 55.75)
@@ -54,7 +93,7 @@ scale = Vector2(0.077586204, 0.077586204)
 texture = ExtResource("3_rbdsy")
 
 [node name="electron6" type="Sprite2D" parent="CollisionShape2D" unique_id=1918565293]
-position = Vector2(66.72125, -57.25)
+position = Vector2(65.94539, -57.250008)
 scale = Vector2(0.077586204, 0.077586204)
 texture = ExtResource("3_rbdsy")
 
@@ -74,12 +113,12 @@ scale = Vector2(0.077586204, 0.077586204)
 texture = ExtResource("3_rbdsy")
 
 [node name="nucu" type="Sprite2D" parent="." unique_id=1448596834]
-position = Vector2(689.0546, 455.25)
+position = Vector2(3.0546112, 1.2500076)
 scale = Vector2(0.15038319, 0.15038317)
 texture = ExtResource("2_7kk3g")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1240207763]
-position = Vector2(689.0546, 455.25)
+position = Vector2(3.0546703, 1.2500379)
 scale = Vector2(0.05, 0.05)
 emitting = false
 sub_emitter = NodePath(".")
@@ -89,11 +128,21 @@ explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_jxej4")
 
 [node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=1527573363]
-position = Vector2(689.05457, 455.25)
+position = Vector2(3.054491, 1.2499471)
 scale = Vector2(0.0025000002, 0.0025000002)
 emitting = false
 sub_emitter = NodePath(".")
 texture = ExtResource("5_ig5yn")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_3towl")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=1944683273]
+position = Vector2(3.054491, 1.2499471)
+scale = Vector2(0.0025000002, 0.0025000002)
+emitting = false
+sub_emitter = NodePath(".")
+texture = ExtResource("3_rbdsy")
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_3towl")

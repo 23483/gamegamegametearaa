@@ -27,11 +27,11 @@ func _process(delta: float) -> void:
 	fdisplacenmt = displantment * 60
 	
 	if fdisplacenmt > 900:
-		displantment = 0
+		displantment = 2
 	
 	
 	if newatomtime > 5:
 			var bullet = atom.instantiate()
 			get_tree().current_scene.add_child.call_deferred(bullet)
-			bullet.global_position = span.global_position - Vector2(612, 400) + Vector2(fdisplacenmt, 0)
+			bullet.global_position = span.global_position + Vector2(fdisplacenmt, 0)
 			newatomtime = 0

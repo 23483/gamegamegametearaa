@@ -22,17 +22,20 @@ text = "return"
 
 [node name="controls" type="Label" parent="." unique_id=1827941227]
 layout_mode = 0
-offset_left = 336.0
-offset_top = 112.0
-offset_right = 376.0
-offset_bottom = 135.0
+offset_left = 272.0
+offset_top = 16.0
+offset_right = 901.0
+offset_bottom = 413.0
 theme_override_font_sizes/font_size = 27
 text = "Controls
 esc = main menu
-wad = godot player
-arrow keys = watergirl player
+wad = watergirl 
 
 main menuing doesnt save your place btw, 
-it kinda resets the lvl"
+it kinda resets the lvl
+
+if the electrons touch the ground 
+or you before to \"split the atom\" then
+ u go back to main menu"
 
 [connection signal="pressed" from="return" to="." method="_on_return_pressed"]

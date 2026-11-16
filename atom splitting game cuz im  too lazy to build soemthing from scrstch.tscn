@@ -49,12 +49,22 @@ alpha_curve = SubResource("CurveTexture_hder0")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxej4"]
 size = Vector2(1191, 119)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jxej4"]
+a = Vector2(-328, -112)
+b = Vector2(24, 816)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_311yx"]
+a = Vector2(1136, 640)
+b = Vector2(1384, -120)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_311yx"]
 size = Vector2(146, 20)
 
 [node name="Node2D" type="Node2D" unique_id=811282414]
 
 [node name="p2" type="CharacterBody2D" parent="." unique_id=1720935989 groups=["blugroup", "players"]]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(152, 512)
 script = ExtResource("1_167mj")
 
@@ -81,6 +91,8 @@ process_material = SubResource("ParticleProcessMaterial_mc6hk")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=38885585]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=161390385]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(563.5, 628.5)
 shape = SubResource("RectangleShape2D_jxej4")
 
@@ -89,8 +101,15 @@ position = Vector2(563.5, 620)
 scale = Vector2(1.5037501, 0.14206131)
 texture = ExtResource("3_a1wjo")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=918829257]
+position = Vector2(-40, -168)
+shape = SubResource("SegmentShape2D_jxej4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1332489396]
+shape = SubResource("SegmentShape2D_311yx")
+
 [node name="o2" parent="." unique_id=2138819475 instance=ExtResource("4_4lhp1")]
-position = Vector2(-24, -64)
+position = Vector2(568, -80)
 
 [node name="nuckp" type="Label" parent="." unique_id=533054237]
 offset_left = 16.0
@@ -101,9 +120,11 @@ script = ExtResource("7_mc6hk")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2121961613]
 position = Vector2(48, -280)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1655929089 node_paths=PackedStringArray("span")]
-position = Vector2(8, 72)
+position = Vector2(24, 128)
 shape = SubResource("RectangleShape2D_311yx")
 script = ExtResource("6_of3h5")
 span = NodePath(".")
