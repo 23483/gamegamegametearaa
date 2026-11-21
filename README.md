@@ -4,6 +4,11 @@ in this branch i learnt how to make projectiles
  but worse 
  and with atoms instead of aliens
 
+windows only btw
+
+idk how to make it anything else
+
+ill probally figure it out eventually but not today 
 
 
 
