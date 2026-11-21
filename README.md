@@ -3,6 +3,10 @@ im learning how to do stuff so like spinny and move i think
 its like a platformer now
 it has spikes now
 
+windows only btw
+idk how to make it anything else
+ill probally figure it out eventually but not today
+
 how to play
 go to the demo link and download the most recent zip thing
 then once its downloaded then unzip and you can play either one of the files there but i recommend the one that doesn't have the  word console in the name
