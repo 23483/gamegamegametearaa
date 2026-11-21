@@ -1,4 +1,9 @@
-im learning how to do stuff so like spinny and move i think
+im learning 
+
+windows only btw
+idk how to make it anything else
+ill probally figure it out eventually but not today
+
 
 its like a platformer now
 it has spikes now
