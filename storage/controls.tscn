@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dr40yq430votp"]
+
+[ext_resource type="Script" uid="uid://bj43a33j47dan" path="res://controls.gd" id="1_gpdjo"]
+
+[node name="Controls" type="Control" unique_id=1977976943]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gpdjo")
+
+[node name="return" type="Button" parent="." unique_id=1317592345]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 424.0
+offset_right = 503.0
+offset_bottom = 496.0
+theme_override_font_sizes/font_size = 41
+text = "return"
+
+[node name="controls" type="Label" parent="." unique_id=1827941227]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 112.0
+offset_right = 376.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 27
+text = "Controls
+esc = main menu
+wad = godot player
+arrow keys = watergirl player
+
+main menuing doesnt save your place btw, 
+it kinda resets the lvl"
+
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]
