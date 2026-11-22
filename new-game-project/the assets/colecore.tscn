@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://4ixwweuji582"]
+
+[ext_resource type="Script" uid="uid://dshls8jhrgeow" path="res://the assets/cores.gd" id="1_or0r5"]
+[ext_resource type="Texture2D" uid="uid://cifntiivufuqr" path="res://the assets/coree.jpg" id="2_x77rp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_311yx"]
+radius = 16.0
+height = 32.0
+
+[node name="Area2D2" type="Area2D" unique_id=951929805]
+script = ExtResource("1_or0r5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1244228861]
+position = Vector2(680, 192)
+shape = SubResource("CapsuleShape2D_311yx")
+
+[node name="Coree" type="Sprite2D" parent="." unique_id=1988089504]
+position = Vector2(680, 192)
+rotation = -0.95690745
+scale = Vector2(0.11666665, 0.10875705)
+texture = ExtResource("2_x77rp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

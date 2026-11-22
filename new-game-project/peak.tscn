@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://g0jwil5iohrd"]
+
+[ext_resource type="Script" uid="uid://d17xecw84sgo4" path="res://the assets/nope.gd" id="1_brycp"]
+[ext_resource type="Texture2D" uid="uid://d30iyjhurdvan" path="res://the assets/watergirl.jpg" id="2_r3hqb"]
+[ext_resource type="Script" uid="uid://de1sdidr60qru" path="res://static_body_2d.gd" id="3_udv0l"]
+[ext_resource type="Texture2D" uid="uid://l6fkcdvmvgwl" path="res://the assets/hand-on-grass.jpeg" id="3_w5vw6"]
+[ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="5_6o2x8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxej4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxej4"]
+size = Vector2(520, 207)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_311yx"]
+size = Vector2(138, 578)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jxej4"]
+a = Vector2(0, 456)
+b = Vector2(-48, -16)
+
+[node name="Node2D" type="Node2D" unique_id=933163338]
+
+[node name="nope" type="CharacterBody2D" parent="." unique_id=1929145827]
+position = Vector2(176, 384)
+script = ExtResource("1_brycp")
+
+[node name="nope" type="Sprite2D" parent="nope" unique_id=1291820892]
+position = Vector2(0, -1)
+scale = Vector2(0.073126405, 0.073126405)
+texture = ExtResource("2_r3hqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nope" unique_id=630516732]
+shape = SubResource("CapsuleShape2D_jxej4")
+
+[node name="StaticBody2D" type="AnimatableBody2D" parent="." unique_id=438243585 groups=["wgroup"]]
+position = Vector2(-88, 400)
+sync_to_physics = false
+script = ExtResource("3_udv0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2064714426]
+position = Vector2(248, 160)
+shape = SubResource("RectangleShape2D_jxej4")
+
+[node name="HandOnGrass2" type="Sprite2D" parent="StaticBody2D" unique_id=1443504950]
+position = Vector2(281.99994, 107)
+scale = Vector2(0.1272244, 0.12722425)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass3" type="Sprite2D" parent="StaticBody2D" unique_id=821153125]
+position = Vector2(433.9999, 106.99997)
+scale = Vector2(0.12732735, 0.12732714)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass" type="Sprite2D" parent="StaticBody2D" unique_id=994397777]
+position = Vector2(129.99997, 107)
+scale = Vector2(0.12707005, 0.12707004)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass5" type="Sprite2D" parent="StaticBody2D" unique_id=1348449871]
+position = Vector2(369.99994, 203)
+scale = Vector2(0.12727585, 0.12727569)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass4" type="Sprite2D" parent="StaticBody2D" unique_id=2080099162]
+position = Vector2(217.99998, 203)
+scale = Vector2(0.12712148, 0.12712142)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass6" type="Sprite2D" parent="StaticBody2D" unique_id=1009550921]
+position = Vector2(65.99999, 203)
+scale = Vector2(0.12717292, 0.12717281)
+texture = ExtResource("3_w5vw6")
+
+[node name="StaticBody2D4" type="AnimatableBody2D" parent="." unique_id=353926539 groups=["wgroup"]]
+position = Vector2(1280, 400)
+sync_to_physics = false
+script = ExtResource("3_udv0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1675083723]
+position = Vector2(248, 160)
+shape = SubResource("RectangleShape2D_jxej4")
+
+[node name="HandOnGrass2" type="Sprite2D" parent="StaticBody2D4" unique_id=417072178]
+position = Vector2(281.99994, 107)
+scale = Vector2(0.1272244, 0.12722425)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass3" type="Sprite2D" parent="StaticBody2D4" unique_id=1255980908]
+position = Vector2(433.9999, 106.99997)
+scale = Vector2(0.12732735, 0.12732714)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass" type="Sprite2D" parent="StaticBody2D4" unique_id=559643933]
+position = Vector2(129.99997, 107)
+scale = Vector2(0.12707005, 0.12707004)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass5" type="Sprite2D" parent="StaticBody2D4" unique_id=147924135]
+position = Vector2(369.99994, 203)
+scale = Vector2(0.12727585, 0.12727569)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass4" type="Sprite2D" parent="StaticBody2D4" unique_id=1839334014]
+position = Vector2(217.99998, 203)
+scale = Vector2(0.12712148, 0.12712142)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass6" type="Sprite2D" parent="StaticBody2D4" unique_id=2070367926]
+position = Vector2(65.99999, 203)
+scale = Vector2(0.12717292, 0.12717281)
+texture = ExtResource("3_w5vw6")
+
+[node name="StaticBody2D2" type="AnimatableBody2D" parent="." unique_id=1821383951 groups=["wgroup"]]
+position = Vector2(368, 400)
+sync_to_physics = false
+script = ExtResource("3_udv0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1706209915]
+position = Vector2(248, 160)
+shape = SubResource("RectangleShape2D_jxej4")
+
+[node name="HandOnGrass2" type="Sprite2D" parent="StaticBody2D2" unique_id=495778244]
+position = Vector2(281.99994, 107)
+scale = Vector2(0.1272244, 0.12722425)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass3" type="Sprite2D" parent="StaticBody2D2" unique_id=2114625752]
+position = Vector2(433.9999, 106.99997)
+scale = Vector2(0.12732735, 0.12732714)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass" type="Sprite2D" parent="StaticBody2D2" unique_id=1198041106]
+position = Vector2(129.99997, 107)
+scale = Vector2(0.12707005, 0.12707004)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass5" type="Sprite2D" parent="StaticBody2D2" unique_id=1536506967]
+position = Vector2(369.99994, 203)
+scale = Vector2(0.12727585, 0.12727569)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass4" type="Sprite2D" parent="StaticBody2D2" unique_id=421376857]
+position = Vector2(217.99998, 203)
+scale = Vector2(0.12712148, 0.12712142)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass6" type="Sprite2D" parent="StaticBody2D2" unique_id=642581720]
+position = Vector2(65.99999, 203)
+scale = Vector2(0.12717292, 0.12717281)
+texture = ExtResource("3_w5vw6")
+
+[node name="StaticBody2D3" type="AnimatableBody2D" parent="." unique_id=1171275835 groups=["wgroup"]]
+position = Vector2(824, 400)
+sync_to_physics = false
+script = ExtResource("3_udv0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1871239538]
+position = Vector2(248, 160)
+shape = SubResource("RectangleShape2D_jxej4")
+
+[node name="HandOnGrass2" type="Sprite2D" parent="StaticBody2D3" unique_id=2143867921]
+position = Vector2(281.99994, 107)
+scale = Vector2(0.1272244, 0.12722425)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass3" type="Sprite2D" parent="StaticBody2D3" unique_id=585439501]
+position = Vector2(433.9999, 106.99997)
+scale = Vector2(0.12732735, 0.12732714)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass" type="Sprite2D" parent="StaticBody2D3" unique_id=1289665623]
+position = Vector2(129.99997, 107)
+scale = Vector2(0.12707005, 0.12707004)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass5" type="Sprite2D" parent="StaticBody2D3" unique_id=580871163]
+position = Vector2(369.99994, 203)
+scale = Vector2(0.12727585, 0.12727569)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass4" type="Sprite2D" parent="StaticBody2D3" unique_id=1778964297]
+position = Vector2(217.99998, 203)
+scale = Vector2(0.12712148, 0.12712142)
+texture = ExtResource("3_w5vw6")
+
+[node name="HandOnGrass6" type="Sprite2D" parent="StaticBody2D3" unique_id=871315903]
+position = Vector2(65.99999, 203)
+scale = Vector2(0.12717292, 0.12717281)
+texture = ExtResource("3_w5vw6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1829429751]
+position = Vector2(-832, 112)
+script = ExtResource("5_6o2x8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=207922679]
+position = Vector2(128, 240)
+shape = SubResource("RectangleShape2D_311yx")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=2031833909]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1072697254]
+shape = SubResource("SegmentShape2D_jxej4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1512849356]
+position = Vector2(1152, 16)
+scale = Vector2(-0.67999995, 0.96000046)
+shape = SubResource("SegmentShape2D_jxej4")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
