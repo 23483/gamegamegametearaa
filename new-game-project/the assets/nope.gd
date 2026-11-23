@@ -62,8 +62,8 @@ func _physics_process(delta: float) -> void:
 		var plat = colli.get_collider()
 		if plat.is_in_group("wgroup"):
 			position.x -= delta * 0
-
-
-
+	if Input.is_action_just_pressed("esc"):
+		get_tree().change_scene_to_file("res://the assets/mainmenu.tscn")
+ 
 func respawn() -> void:
 	pass

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://govv2pkc2l8h"]
+
+[ext_resource type="Script" uid="uid://c8wd5v0pmyvhn" path="res://the assets/dieddd.gd" id="1_7qhiq"]
+
+[node name="Control" type="Control" unique_id=1245263092]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7qhiq")
+
+[node name="Button2" type="Button" parent="." unique_id=1228457317]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.042000003
+anchor_bottom = 0.54300004
+offset_left = 584.0
+offset_top = 352.0
+offset_right = 588.61597
+offset_bottom = 56.135986
+text = "menu"
+
+[node name="Button" type="Button" parent="." unique_id=533238403]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 256.0
+offset_right = 655.0
+offset_bottom = 320.0
+text = "play again
+"
+
+[node name="Button3" type="Button" parent="." unique_id=1184042337]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 424.0
+offset_right = 631.0
+offset_bottom = 464.0
+text = "quit"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
