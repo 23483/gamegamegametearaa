@@ -17,7 +17,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	bounce = sin(time2 * 2.6) * 100
-	thingy = sin(time2 * 4.5) * 0.5
+	thingy = sin(time2 * 4.5) * 0.4
 	thingy = thingy + 1
 	time2 += delta
 	time += delta
