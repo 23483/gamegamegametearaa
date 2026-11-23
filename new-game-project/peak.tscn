@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="5_6o2x8"]
 [ext_resource type="PackedScene" uid="uid://cn20flajqe0gc" path="res://spike.tscn" id="6_myhrx"]
 [ext_resource type="Script" uid="uid://bot4u5b6dpxt1" path="res://static_body_2d_6.gd" id="7_eynvg"]
+[ext_resource type="Texture2D" uid="uid://b3828a71bjfml" path="res://the assets/gCJMjc.png" id="7_myhrx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxej4"]
 
@@ -217,8 +218,13 @@ position = Vector2(992, 424)
 position = Vector2(1440, 376)
 script = ExtResource("7_eynvg")
 
+[node name="ppp" type="Sprite2D" parent="StaticBody2D6" unique_id=408842390]
+position = Vector2(-16, 40)
+scale = Vector2(0.25396848, 0.35200018)
+texture = ExtResource("7_myhrx")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=333532553]
-position = Vector2(-24, 0)
+position = Vector2(-24, 40)
 shape = SubResource("RectangleShape2D_wrrg6")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
