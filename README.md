@@ -2,6 +2,8 @@ idk how to make it anything else
 
 ill probally figure it out eventually but not today
 
+wad controls
+
 https://github.com/23483/gamegamegametearaa/releases/tag/1.1.6-1 
 ^release link
 
